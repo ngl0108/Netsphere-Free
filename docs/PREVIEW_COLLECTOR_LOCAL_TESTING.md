@@ -55,7 +55,7 @@ npm.cmd run build
 
 Open:
 
-- `http://127.0.0.1:18080`
+- `http://localhost:18080`
 
 Docker Desktop project name:
 

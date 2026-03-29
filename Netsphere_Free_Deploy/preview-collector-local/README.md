@@ -47,7 +47,14 @@ powershell -ExecutionPolicy Bypass -File .\Netsphere_Free_Deploy\preview-collect
 
 Open:
 
-- `http://127.0.0.1:18080`
+- `http://localhost:18080`
+
+The `up.ps1` script opens the browser automatically when the UI becomes ready.
+If you prefer not to auto-open the browser, use:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\Netsphere_Free_Deploy\preview-collector-local\up.ps1 -NoOpenBrowser
+```
 
 Stop:
 

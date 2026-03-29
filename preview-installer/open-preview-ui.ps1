@@ -4,6 +4,6 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-$url = "http://127.0.0.1:$Port"
+$url = "http://localhost:$Port"
 Start-Process $url | Out-Null
 Write-Host "Opened NetSphere Free UI at $url"

@@ -68,7 +68,7 @@ powershell -ExecutionPolicy Bypass -File .\Netsphere_Free_Deploy\preview-collect
 
 ### 2. Open the UI
 
-- `http://127.0.0.1:18080`
+- `http://localhost:18080`
 
 ### 3. Go deeper if needed
 

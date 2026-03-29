@@ -13,9 +13,9 @@ Before you touch the installer, confirm the services that NetSphere Free depends
 Required checks:
 
 1. Main API responds:
-   - `http://127.0.0.1:8000`
+   - `http://localhost:8000`
 2. NetSphere Cloud upload service responds:
-   - `http://127.0.0.1:8015`
+   - `http://localhost:8015`
 3. Public bootstrap endpoint responds:
    - `https://netsphereapp.com/api/v1/auth/bootstrap/status`
 

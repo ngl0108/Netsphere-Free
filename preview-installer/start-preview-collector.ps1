@@ -106,5 +106,5 @@ Set-Content -Path $pidFile -Value $process.Id -Encoding ascii
 
 Write-Host "NetSphere Free started."
 Write-Host "PID     : $($process.Id)"
-Write-Host "UI      : http://127.0.0.1:$Port"
-Write-Host "API Docs: http://127.0.0.1:$Port/docs"
+Write-Host "UI      : http://localhost:$Port"
+Write-Host "API Docs: http://localhost:$Port/docs"

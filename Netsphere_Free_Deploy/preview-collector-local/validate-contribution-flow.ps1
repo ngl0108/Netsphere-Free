@@ -7,7 +7,7 @@ $ErrorActionPreference = "Stop"
 . (Join-Path $PSScriptRoot "..\_common.ps1")
 
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
-$collectorBase = "http://127.0.0.1:18080/api/v1"
+$collectorBase = "http://localhost:18080/api/v1"
 $intakeStorage = Join-Path $repoRoot "Netsphere_Free_Backend\preview_contributions"
 $sampleRaw = @"
 hostname edge-sw-01
