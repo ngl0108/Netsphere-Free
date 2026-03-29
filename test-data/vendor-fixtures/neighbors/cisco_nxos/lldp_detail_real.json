@@ -1,0 +1,29 @@
+{
+  "id": "neighbors.cisco_nxos.lldp_detail_real",
+  "fixture_group": "global_switch",
+  "type": "neighbors",
+  "device_type": "cisco_nxos",
+  "driver_mode": "manager",
+  "commands": {
+    "show lldp neighbors detail|textfsm": null,
+    "show lldp neighbors detail": "Chassis id: 00a1.b2c3.d4e5\nPort id: Ethernet1/1\nLocal Port id: Eth1/49\nPort Description: Ethernet1/1\nSystem Name: Spine-9K-01\nManagement Address: 10.255.255.101\n",
+    "show cdp neighbors detail|textfsm": null,
+    "show cdp neighbors detail": ""
+  },
+  "expected": {
+    "min_rows": 1,
+    "driver_contains": "CiscoNXOSDriver",
+    "required_protocols": [
+      "LLDP"
+    ],
+    "contains_rows": [
+      {
+        "local_interface": "Ethernet1/49",
+        "remote_interface": "Ethernet1/1",
+        "neighbor_name": "Spine-9K-01",
+        "mgmt_ip": "10.255.255.101",
+        "protocol": "LLDP"
+      }
+    ]
+  }
+}

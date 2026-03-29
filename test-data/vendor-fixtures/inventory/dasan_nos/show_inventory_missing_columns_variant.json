@@ -1,0 +1,24 @@
+{
+  "id": "inventory.dasan_nos.show_inventory_missing_columns_variant",
+  "fixture_group": "domestic_switch",
+  "type": "inventory",
+  "device_type": "dasan_nos",
+  "commands": {
+    "show inventory|textfsm": null,
+    "show inventory": "NAME: \"1\", DESCR: \"Dasan Chassis\"\nPID: V8240\n\nNAME: \"Power Supply 1\", DESCR: \"Power Supply Module\"\nPID: PWR-AC-650W , SN: DSP65000123\n"
+  },
+  "expected": {
+    "min_rows": 2,
+    "parser_contains": "cisco_show_inventory",
+    "contains_rows": [
+      {
+        "name": "1",
+        "model_name": "V8240"
+      },
+      {
+        "model_name": "PWR-AC-650W",
+        "serial_number": "DSP65000123"
+      }
+    ]
+  }
+}

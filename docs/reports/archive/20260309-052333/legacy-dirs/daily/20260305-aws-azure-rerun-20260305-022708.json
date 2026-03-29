@@ -1,0 +1,39 @@
+﻿{
+    "generated_at":  "2026-03-05T02:27:15.7418851+09:00",
+    "results":  [
+                    {
+                        "account_id":  1,
+                        "name":  "aws-hq",
+                        "provider":  "aws",
+                        "preflight_status":  "ok",
+                        "preflight_message":  "AWS preflight passed",
+                        "pipeline_status":  "ok",
+                        "pipeline_scanned":  9,
+                        "pipeline_failed":  0,
+                        "pipeline_message":  "",
+                        "target_resource_id":  "i-0633250163187fa47",
+                        "target_state":  "stopped",
+                        "dryrun_status":  "failed",
+                        "dryrun_targets":  0,
+                        "dryrun_failed":  1,
+                        "dryrun_message":  ""
+                    },
+                    {
+                        "account_id":  5,
+                        "name":  "azure-hq",
+                        "provider":  "azure",
+                        "preflight_status":  "ok",
+                        "preflight_message":  "Azure preflight passed",
+                        "pipeline_status":  "ok",
+                        "pipeline_scanned":  4,
+                        "pipeline_failed":  0,
+                        "pipeline_message":  "",
+                        "target_resource_id":  "",
+                        "target_state":  "",
+                        "dryrun_status":  "skipped",
+                        "dryrun_targets":  0,
+                        "dryrun_failed":  0,
+                        "dryrun_message":  ""
+                    }
+                ]
+}

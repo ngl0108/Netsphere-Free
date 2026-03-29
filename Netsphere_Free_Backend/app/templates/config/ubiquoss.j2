@@ -1,0 +1,53 @@
+{# Ubiquoss Template (L2/L3 switch) #}
+{% for block in blocks %}
+
+{% if block.type == "vlan" %}
+vlan {{ block.id }}
+ name {{ block.name }}
+ exit
+{% endif %}
+
+{% if block.type == "interface" %}
+interface {{ block.name }}
+ {% if block.description %}description {{ block.description }}{% endif %}
+ {% if block.ipv4_address %}ip address {{ block.ipv4_address }} {{ block.ipv4_mask }}{% endif %}
+ {% if block.admin_status == "up" %}no shutdown{% elif block.admin_status == "down" %}shutdown{% endif %}
+ {% if block.vlan_mode == "access" %}
+ switchport mode access
+ switchport access vlan {{ block.vlan_id }}
+ {% elif block.vlan_mode == "trunk" %}
+ switchport mode trunk
+ {% if block.allowed_vlans %}switchport trunk allowed vlan add {{ block.allowed_vlans }}{% endif %}
+ {% endif %}
+ exit
+{% endif %}
+
+{% if block.type == "route" %}
+ip route {{ block.destination }} {{ block.mask }} {{ block.next_hop }}
+{% endif %}
+
+{% if block.type == "global" %}
+{% if block.hostname %}hostname {{ block.hostname }}{% endif %}
+{% if block.banner %}banner motd "{{ block.banner }}"{% endif %}
+
+{% if block.snmp %}
+ {% for comm in block.snmp.communities %}
+ snmp-server community {{ comm.name }} {{ comm.mode }}
+ {% endfor %}
+ {% if block.snmp.trap_server %}snmp-server host {{ block.snmp.trap_server }}{% endif %}
+{% endif %}
+
+{% if block.ntp %}
+ {% for srv in block.ntp.servers %}
+ ntp server {{ srv }}
+ {% endfor %}
+{% endif %}
+
+{% if block.logging %}
+ {% for srv in block.logging.servers %}
+ logging host {{ srv }}
+ {% endfor %}
+{% endif %}
+{% endif %}
+
+{% endfor %}

@@ -1,0 +1,200 @@
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+
+from app.db.session import Base
+from app.api.v1.endpoints import settings as settings_endpoint
+from app.models.settings import SystemSetting
+from app.models import device as _device
+from app.models import credentials as _credentials
+
+
+def test_settings_defaults_include_auto_discovery_status_keys():
+    engine = create_engine("sqlite:///:memory:", connect_args={"check_same_thread": False})
+    SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+    Base.metadata.create_all(bind=engine)
+    db = SessionLocal()
+    try:
+        assert db.query(SystemSetting).count() == 0
+        settings_endpoint.get_settings(db=db, current_user=None)
+        keys = {s.key for s in db.query(SystemSetting).all()}
+        assert "auto_discovery_last_run_at" in keys
+        assert "auto_discovery_last_job_id" in keys
+        assert "auto_discovery_last_job_cidr" in keys
+        assert "auto_discovery_last_error" in keys
+        assert "auto_topology_last_run_at" in keys
+        assert "auto_topology_last_job_id" in keys
+        assert "auto_topology_last_targets" in keys
+        assert "auto_topology_last_enqueued_ok" in keys
+        assert "auto_topology_last_enqueued_fail" in keys
+        assert "auto_topology_last_error" in keys
+        assert "config_drift_enabled" in keys
+        assert "config_drift_approval_enabled" in keys
+        assert "config_replace_vendor_dasan_nos" in keys
+        assert "config_replace_vendor_ubiquoss_l2" in keys
+        assert "config_replace_vendor_ubiquoss_l3" in keys
+        assert "config_replace_vendor_soltech_switch" in keys
+        assert "config_replace_vendor_coreedge_switch" in keys
+        assert "config_replace_vendor_nst_switch" in keys
+        assert "session_timeout" in keys
+        assert "max_login_attempts" in keys
+        assert "lockout_minutes" in keys
+        assert "enable_2fa" in keys
+        assert "password_min_length" in keys
+        assert "password_required_classes" in keys
+        assert "password_forbid_username" in keys
+        assert "password_history_count" in keys
+        assert "password_expire_days" in keys
+        assert "audit_chain_enabled" in keys
+        assert "audit_hmac_key" in keys
+        assert "audit_forward_syslog_enabled" in keys
+        assert "audit_forward_syslog_host" in keys
+        assert "audit_forward_syslog_port" in keys
+        assert "webhook_enabled" in keys
+        assert "webhook_url" in keys
+        assert "webhook_secret" in keys
+        assert "webhook_timeout_seconds" in keys
+        assert "webhook_delivery_mode" in keys
+        assert "webhook_auth_type" in keys
+        assert "webhook_auth_token" in keys
+        assert "webhook_auth_header_name" in keys
+        assert "webhook_jira_project_key" in keys
+        assert "webhook_jira_issue_type" in keys
+        assert "webhook_servicenow_table" in keys
+        assert "webhook_elastic_index" in keys
+        assert "webhook_retry_attempts" in keys
+        assert "webhook_retry_backoff_seconds" in keys
+        assert "webhook_retry_max_backoff_seconds" in keys
+        assert "webhook_retry_jitter_seconds" in keys
+        assert "webhook_retry_on_4xx" in keys
+        assert "post_check_role_core" in keys
+        assert "post_check_role_distribution" in keys
+        assert "post_check_role_access" in keys
+        assert "post_check_role_edge" in keys
+        assert "post_check_role_firewall" in keys
+        assert "topology_snapshot_auto_enabled" in keys
+        assert "topology_snapshot_auto_scope" in keys
+        assert "topology_snapshot_auto_interval_minutes" in keys
+        assert "topology_snapshot_auto_change_threshold_links" in keys
+        assert "topology_snapshot_auto_on_discovery_job_complete" in keys
+        assert "topology_snapshot_auto_on_topology_refresh" in keys
+        assert "change_policy_template_direct_max_devices" in keys
+        assert "change_policy_compliance_direct_max_devices" in keys
+        assert "change_policy_fabric_live_requires_approval" in keys
+        assert "change_policy_cloud_bootstrap_live_requires_approval" in keys
+        assert "intent_engine_enabled" in keys
+        assert "intent_apply_requires_approval" in keys
+        assert "intent_apply_execute_actions" in keys
+        assert "intent_max_auto_apply_risk_score" in keys
+        assert "intent_northbound_policy_enabled" in keys
+        assert "intent_northbound_max_auto_publish_risk_score" in keys
+        assert "closed_loop_engine_enabled" in keys
+        assert "closed_loop_auto_execute_enabled" in keys
+        assert "closed_loop_execute_change_actions" in keys
+        assert "closed_loop_default_cooldown_seconds" in keys
+        assert "closed_loop_default_max_actions_per_hour" in keys
+        assert "closed_loop_rules_json" in keys
+        assert "ops_alerts_min_closed_loop_execute_per_trigger_pct" in keys
+        assert "ops_alerts_max_closed_loop_blocked_per_trigger_pct" in keys
+        assert "ops_alerts_max_closed_loop_approvals_per_execution_pct" in keys
+        assert "ops_alerts_min_closed_loop_cycles_30d" in keys
+        assert "ops_alerts_min_auto_action_rate_pct" in keys
+        assert "ops_alerts_max_operator_intervention_rate_pct" in keys
+        assert "ops_alerts_min_change_success_rate_pct" in keys
+        assert "ops_alerts_max_change_failure_rate_pct" in keys
+        assert "ops_alerts_max_change_rollback_p95_ms" in keys
+        assert "ops_alerts_min_change_trace_coverage_pct" in keys
+        assert "ops_kpi_snapshot_enabled" in keys
+        assert "ops_kpi_snapshot_require_sample_minimums" in keys
+        assert "ops_kpi_snapshot_site_id" in keys
+        assert "ops_kpi_snapshot_discovery_days" in keys
+        assert "ops_kpi_snapshot_discovery_limit" in keys
+        assert "ops_kpi_snapshot_sample_min_discovery_jobs" in keys
+        assert "ops_kpi_snapshot_sample_min_change_events" in keys
+        assert "ops_kpi_snapshot_sample_min_northbound_deliveries" in keys
+        assert "ops_kpi_snapshot_sample_min_autonomy_issues_created" in keys
+        assert "ops_kpi_snapshot_sample_min_autonomy_actions_executed" in keys
+        assert "release_evidence_refresh_enabled" in keys
+        assert "release_evidence_refresh_profile" in keys
+        assert "release_evidence_refresh_include_synthetic" in keys
+        assert "release_evidence_refresh_include_northbound_probe" in keys
+        assert "preview_local_embedded_execution" in keys
+        assert "preview_contribution_opt_in_required" in keys
+        assert "preview_contribution_participation" in keys
+        assert "preview_contribution_participation_recorded_at" in keys
+        assert "preview_contribution_participation_actor" in keys
+        assert "preview_contribution_locked" in keys
+        assert "preview_contribution_change_requires_reset" in keys
+        assert "preview_contribution_scope" in keys
+        by_key = {s.key: s.value for s in db.query(SystemSetting).all()}
+        assert by_key.get("auto_approve_enabled") == "true"
+        assert by_key.get("auto_approve_trigger_topology") == "true"
+        assert by_key.get("auto_discovery_refresh_topology") == "true"
+        assert by_key.get("topology_candidate_low_confidence_threshold") == "0.7"
+        assert by_key.get("ops_alerts_min_auto_reflection_pct") == "70"
+        assert by_key.get("ops_alerts_max_false_positive_pct") == "20"
+        assert by_key.get("ops_alerts_max_low_confidence_rate_pct") == "30"
+        assert by_key.get("ops_alerts_max_candidate_backlog") == "100"
+        assert by_key.get("ops_alerts_max_stale_backlog_24h") == "20"
+        assert by_key.get("ops_alerts_min_closed_loop_execute_per_trigger_pct") == "30"
+        assert by_key.get("ops_alerts_max_closed_loop_blocked_per_trigger_pct") == "70"
+        assert by_key.get("ops_alerts_max_closed_loop_approvals_per_execution_pct") == "100"
+        assert by_key.get("ops_alerts_min_closed_loop_cycles_30d") == "1"
+        assert by_key.get("ops_alerts_min_auto_action_rate_pct") == "60"
+        assert by_key.get("ops_alerts_max_operator_intervention_rate_pct") == "40"
+        assert by_key.get("ops_alerts_min_change_success_rate_pct") == "98"
+        assert by_key.get("ops_alerts_max_change_failure_rate_pct") == "1"
+        assert by_key.get("ops_alerts_max_change_rollback_p95_ms") == "180000"
+        assert by_key.get("ops_alerts_min_change_trace_coverage_pct") == "100"
+        assert by_key.get("ops_kpi_snapshot_enabled") == "true"
+        assert by_key.get("ops_kpi_snapshot_require_sample_minimums") == "true"
+        assert by_key.get("ops_kpi_snapshot_site_id") == ""
+        assert by_key.get("ops_kpi_snapshot_discovery_days") == "30"
+        assert by_key.get("ops_kpi_snapshot_discovery_limit") == "300"
+        assert by_key.get("ops_kpi_snapshot_sample_min_discovery_jobs") == "30"
+        assert by_key.get("ops_kpi_snapshot_sample_min_change_events") == "60"
+        assert by_key.get("ops_kpi_snapshot_sample_min_northbound_deliveries") == "500"
+        assert by_key.get("ops_kpi_snapshot_sample_min_autonomy_issues_created") == "20"
+        assert by_key.get("ops_kpi_snapshot_sample_min_autonomy_actions_executed") == "20"
+        assert by_key.get("release_evidence_refresh_enabled") == "true"
+        assert by_key.get("release_evidence_refresh_profile") == "ci"
+        assert by_key.get("release_evidence_refresh_include_synthetic") == "false"
+        assert by_key.get("release_evidence_refresh_include_northbound_probe") == "false"
+        assert by_key.get("preview_local_embedded_execution") == "false"
+        assert by_key.get("preview_contribution_opt_in_required") == "false"
+        assert by_key.get("preview_contribution_participation") == "unset"
+        assert by_key.get("preview_contribution_participation_recorded_at") == ""
+        assert by_key.get("preview_contribution_participation_actor") == ""
+        assert by_key.get("preview_contribution_locked") == "false"
+        assert by_key.get("preview_contribution_change_requires_reset") == "false"
+        assert by_key.get("preview_contribution_scope") == "allowlisted_read_only_commands_only"
+        assert by_key.get("change_policy_template_direct_max_devices") == "3"
+        assert by_key.get("change_policy_compliance_direct_max_devices") == "3"
+        assert by_key.get("change_policy_fabric_live_requires_approval") == "true"
+        assert by_key.get("change_policy_cloud_bootstrap_live_requires_approval") == "true"
+        assert by_key.get("intent_engine_enabled") == "false"
+        assert by_key.get("intent_apply_requires_approval") == "true"
+        assert by_key.get("intent_apply_execute_actions") == "false"
+        assert by_key.get("intent_max_auto_apply_risk_score") == "30"
+        assert by_key.get("intent_northbound_policy_enabled") == "false"
+        assert by_key.get("intent_northbound_max_auto_publish_risk_score") == "30"
+        assert by_key.get("closed_loop_engine_enabled") == "false"
+        assert by_key.get("closed_loop_auto_execute_enabled") == "false"
+        assert by_key.get("closed_loop_execute_change_actions") == "false"
+        assert by_key.get("closed_loop_default_cooldown_seconds") == "300"
+        assert by_key.get("closed_loop_default_max_actions_per_hour") == "12"
+        assert by_key.get("closed_loop_rules_json") == "[]"
+        assert by_key.get("webhook_delivery_mode") == "generic"
+        assert by_key.get("webhook_auth_type") == "none"
+        assert by_key.get("webhook_auth_header_name") == "Authorization"
+        assert by_key.get("webhook_jira_project_key") == ""
+        assert by_key.get("webhook_jira_issue_type") == "Task"
+        assert by_key.get("webhook_servicenow_table") == "incident"
+        assert by_key.get("webhook_elastic_index") == "netsphere-events"
+        assert by_key.get("webhook_retry_attempts") == "3"
+        assert by_key.get("webhook_retry_backoff_seconds") == "1"
+        assert by_key.get("webhook_retry_max_backoff_seconds") == "8"
+        assert by_key.get("webhook_retry_jitter_seconds") == "0.2"
+        assert by_key.get("webhook_retry_on_4xx") == "false"
+    finally:
+        db.close()
+

@@ -1,0 +1,24 @@
+{
+  "id": "facts.handream_sg.show_version_domestic_switch",
+  "fixture_group": "domestic_switch",
+  "type": "facts",
+  "device_type": "handream_sg",
+  "driver_mode": "manager",
+  "commands": {
+    "show version": "HanDreamnet SG Software, Version 7.4.12\nModel : SG5000-48G\nSystem uptime is 58 days, 04:12:11\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "hostname": {
+        "equals": "fixture-host"
+      },
+      "vendor": {
+        "equals": "cisco_ios"
+      },
+      "raw_output": {
+        "contains": "HanDreamnet SG Software"
+      }
+    }
+  }
+}

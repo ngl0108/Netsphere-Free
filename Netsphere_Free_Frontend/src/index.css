@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html.dark body {
+  background-color: #0f172a;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.1) 0px, transparent 50%),
+    linear-gradient(#1e293b 1px, transparent 1px),
+    linear-gradient(90deg, #1e293b 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+  background-position: 0 0, 0 0, -1px -1px, -1px -1px;
+  color: #f8fafc;
+}
+
+html.light body {
+  background-color: #f1f5f9;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.10) 0px, transparent 55%),
+    radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.08) 0px, transparent 55%),
+    linear-gradient(rgba(148, 163, 184, 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.35) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+  background-position: 0 0, 0 0, -1px -1px, -1px -1px;
+  color: #0f172a;
+}
+
+/* --- Focus-visible accessibility --- */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid rgba(59, 130, 246, 0.8);
+  outline-offset: 2px;
+}
+
+/* --- Autofill styling for dark mode --- */
+html.dark input:-webkit-autofill,
+html.dark input:-webkit-autofill:hover,
+html.dark input:-webkit-autofill:focus,
+html.dark textarea:-webkit-autofill,
+html.dark textarea:-webkit-autofill:hover,
+html.dark textarea:-webkit-autofill:focus,
+html.dark select:-webkit-autofill,
+html.dark select:-webkit-autofill:hover,
+html.dark select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #f8fafc;
+  caret-color: #f8fafc;
+  -webkit-box-shadow: 0 0 0 1000px #0e1012 inset;
+  box-shadow: 0 0 0 1000px #0e1012 inset;
+  border-color: #374151;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* --- Autofill styling for light mode --- */
+html.light input:-webkit-autofill,
+html.light input:-webkit-autofill:hover,
+html.light input:-webkit-autofill:focus,
+html.light textarea:-webkit-autofill,
+html.light textarea:-webkit-autofill:hover,
+html.light textarea:-webkit-autofill:focus,
+html.light select:-webkit-autofill,
+html.light select:-webkit-autofill:hover,
+html.light select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #0f172a;
+  caret-color: #0f172a;
+  -webkit-box-shadow: 0 0 0 1000px #f1f5f9 inset;
+  box-shadow: 0 0 0 1000px #f1f5f9 inset;
+  border-color: #cbd5e1;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* --- Glass panel utility --- */
+.glass-panel {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+html.light .glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* --- Custom scrollbar --- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #283039;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3e4a59;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.55);
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.8);
+}
+
+/* --- Hide-scrollbar utility --- */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* --- Topology resize utilities --- */
+.topology-resize-line {
+  opacity: 0.9;
+  transition: background-color 120ms ease, box-shadow 120ms ease, opacity 120ms ease, border-color 120ms ease;
+}
+
+.topology-resize-line:hover {
+  opacity: 1;
+  background: rgba(34, 211, 238, 0.18) !important;
+  box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.4);
+}
+
+.topology-resize-handle {
+  transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease;
+}
+
+.topology-resize-handle:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.22);
+}

@@ -1,0 +1,35 @@
+{
+  "id": "neighbors.aruba_os.lldp_detail_aos_cx_real",
+  "fixture_group": "global_switch",
+  "type": "neighbors",
+  "device_type": "aruba_os",
+  "driver_mode": "generic",
+  "commands": {
+    "show lldp neighbor-info detail|textfsm": null,
+    "show lldp neighbor-info detail": "Local Port   : 1/1/49\nChassisType  : mac-address\nChassisId    : 00:2a:b1:cc:20:00\nPortType     : interface-name\nPortId       : Ethernet1/1\nSysName      : Spine-CE-01\nMgmt Address : 10.255.255.101\n",
+    "show lldp info remote-device detail|textfsm": null,
+    "show lldp info remote-device detail": "",
+    "show lldp neighbors detail|textfsm": null,
+    "show lldp neighbors detail": "",
+    "show lldp neighbors|textfsm": null,
+    "show lldp neighbors": "",
+    "show cdp neighbors detail|textfsm": null,
+    "show cdp neighbors detail": ""
+  },
+  "expected": {
+    "min_rows": 1,
+    "driver_contains": "GenericDriver",
+    "required_protocols": [
+      "LLDP"
+    ],
+    "contains_rows": [
+      {
+        "local_interface": "1/1/49",
+        "remote_interface": "Ethernet1/1",
+        "neighbor_name": "Spine-CE-01",
+        "mgmt_ip": "10.255.255.101",
+        "protocol": "LLDP"
+      }
+    ]
+  }
+}

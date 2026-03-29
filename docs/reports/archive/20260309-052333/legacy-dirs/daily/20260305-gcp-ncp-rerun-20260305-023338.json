@@ -1,0 +1,39 @@
+﻿{
+    "generated_at":  "2026-03-05T02:33:46.0621010+09:00",
+    "results":  [
+                    {
+                        "account_id":  2,
+                        "name":  "gcp-hq",
+                        "provider":  "gcp",
+                        "preflight_status":  "ok",
+                        "preflight_message":  "GCP preflight passed",
+                        "pipeline_status":  "ok",
+                        "pipeline_scanned":  7,
+                        "pipeline_failed":  0,
+                        "pipeline_message":  "",
+                        "target_resource_id":  "https://www.googleapis.com/compute/v1/projects/project-fe8bba10-b4f2-4640-8dc/zones/us-central1-c/instances/gcp-edge-1",
+                        "target_state":  "RUNNING",
+                        "dryrun_status":  "ok",
+                        "dryrun_targets":  1,
+                        "dryrun_failed":  0,
+                        "dryrun_message":  ""
+                    },
+                    {
+                        "account_id":  8,
+                        "name":  "ncp-hq",
+                        "provider":  "naver",
+                        "preflight_status":  "ok",
+                        "preflight_message":  "Naver Cloud preflight passed",
+                        "pipeline_status":  "ok",
+                        "pipeline_scanned":  4,
+                        "pipeline_failed":  0,
+                        "pipeline_message":  "",
+                        "target_resource_id":  "132709335",
+                        "target_state":  "RUN:ìë² RUN ìí",
+                        "dryrun_status":  "ok",
+                        "dryrun_targets":  1,
+                        "dryrun_failed":  0,
+                        "dryrun_message":  ""
+                    }
+                ]
+}

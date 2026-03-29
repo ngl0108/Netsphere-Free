@@ -1,0 +1,29 @@
+{
+  "id": "neighbors.soltech_switch.lldp_detail_cisco_like",
+  "fixture_group": "domestic_switch",
+  "type": "neighbors",
+  "device_type": "soltech_switch",
+  "driver_mode": "manager",
+  "commands": {
+    "show lldp neighbors detail|textfsm": null,
+    "show lldp neighbors detail": "Local Intf: Gi1/0/10\nChassis id: 0022.3344.5566\nPort id: Gi0/48\nSystem Name: SOLTECH-CORE-01\nManagement Address: 10.60.1.1\n",
+    "show cdp neighbors detail|textfsm": null,
+    "show cdp neighbors detail": ""
+  },
+  "expected": {
+    "min_rows": 1,
+    "driver_contains": "SoltechDriver",
+    "required_protocols": [
+      "LLDP"
+    ],
+    "contains_rows": [
+      {
+        "local_interface": "Gi1/0/10",
+        "remote_interface": "Gi0/48",
+        "neighbor_name": "SOLTECH-CORE-01",
+        "mgmt_ip": "10.60.1.1",
+        "protocol": "LLDP"
+      }
+    ]
+  }
+}

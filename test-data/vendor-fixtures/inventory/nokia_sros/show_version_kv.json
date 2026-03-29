@@ -1,0 +1,21 @@
+{
+  "id": "inventory.nokia_sros.show_version_kv",
+  "fixture_group": "global_switch",
+  "type": "inventory",
+  "device_type": "nokia_sros",
+  "commands": {
+    "show inventory|textfsm": null,
+    "show inventory": "",
+    "show version": "TiMOS-B-22.10.R1 both/i386 Nokia 7750 SR\nChassis Type : 7750 SR-1s\nSerial Number : NS123456\n"
+  },
+  "expected": {
+    "min_rows": 1,
+    "parser_contains": "generic_heuristic_inventory",
+    "contains_rows": [
+      {
+        "model_name": "7750 SR-1s",
+        "serial_number": "NS123456"
+      }
+    ]
+  }
+}

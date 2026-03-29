@@ -1,0 +1,24 @@
+{
+  "id": "facts.linux_sga.baseline_generic",
+  "type": "facts",
+  "device_type": "linux_sga",
+  "driver_mode": "generic",
+  "commands": {
+    "show version": "Synthetic linux_sga software output\nVersion: 1.0-test\nModel: LINUX_SGA-SIM\n",
+    "display version": "Synthetic linux_sga display output\nVRP Version V1R0 Test\nModel: LINUX_SGA-SIM\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "linux_sga"
+      },
+      "hostname": {
+        "equals": "fixture-host"
+      },
+      "raw_output": {
+        "contains": "Synthetic"
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "facts.nst_switch.show_version_domestic_switch",
+  "fixture_group": "domestic_switch",
+  "type": "facts",
+  "device_type": "nst_switch",
+  "driver_mode": "manager",
+  "commands": {
+    "show version": "NST Switching OS, Version 5.8.2\nSystem Name : NST-LAB\nModel : NST-4828G\nSerial Number : NST12345678\nSystem uptime is 15 days, 22:00:59\n"
+  },
+  "expected": {
+    "driver_contains": "NSTDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "NST"
+      },
+      "hostname": {
+        "equals": "NST-LAB"
+      },
+      "model": {
+        "equals": "NST-4828G"
+      },
+      "raw_output": {
+        "contains": "NST Switching OS"
+      }
+    }
+  }
+}

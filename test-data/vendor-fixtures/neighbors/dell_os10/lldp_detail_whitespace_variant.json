@@ -1,0 +1,29 @@
+{
+  "id": "neighbors.dell_os10.lldp_detail_whitespace_variant",
+  "fixture_group": "global_switch",
+  "type": "neighbors",
+  "device_type": "dell_os10",
+  "driver_mode": "manager",
+  "commands": {
+    "show lldp neighbors detail|textfsm": null,
+    "show lldp neighbors detail": "  Local Interface :   ethernet1/1/2\nPort ID: ethernet1/1/49\nSystem Name :  DC-LEAF-03\nManagement Address: 10.40.0.13\n",
+    "show cdp neighbors detail|textfsm": null,
+    "show cdp neighbors detail": ""
+  },
+  "expected": {
+    "min_rows": 1,
+    "driver_contains": "GenericDriver",
+    "required_protocols": [
+      "LLDP"
+    ],
+    "contains_rows": [
+      {
+        "local_interface": "ethernet1/1/2",
+        "remote_interface": "ethernet1/1/49",
+        "neighbor_name": "DC-LEAF-03",
+        "mgmt_ip": "10.40.0.13",
+        "protocol": "LLDP"
+      }
+    ]
+  }
+}

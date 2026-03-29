@@ -1,0 +1,574 @@
+﻿{
+    "run":  {
+                "generated_at":  "2026-03-05T00:50:11.3185751+09:00",
+                "account_count":  1,
+                "base_url":  "http://localhost:8000",
+                "accounts":  [
+                                 {
+                                     "id":  0,
+                                     "name":  "",
+                                     "provider":  "",
+                                     "is_active":  false,
+                                     "preflight":  null,
+                                     "pipeline":  null
+                                 }
+                             ]
+            },
+    "kpi_snapshot":  {
+                         "success":  true,
+                         "data":  {
+                                      "generated_at":  1772639411,
+                                      "readiness":  {
+                                                        "status":  "critical",
+                                                        "required_checks_total":  18,
+                                                        "pass_count":  9,
+                                                        "fail_count":  6,
+                                                        "unknown_count":  3
+                                                    },
+                                      "snapshot":  {
+                                                       "event_log_id":  381,
+                                                       "event_id":  "OPS_KPI_READINESS_SNAPSHOT",
+                                                       "source":  "OpsKPI",
+                                                       "severity":  "error",
+                                                       "payload":  {
+                                                                       "generated_at":  1772639411,
+                                                                       "generated_at_utc":  "2026-03-04T15:50:11+00:00",
+                                                                       "run_type":  "manual_api",
+                                                                       "scope":  {
+                                                                                     "site_id":  null,
+                                                                                     "discovery_days":  30,
+                                                                                     "discovery_limit":  300,
+                                                                                     "require_sample_minimums":  true
+                                                                                 },
+                                                                       "readiness":  {
+                                                                                         "status":  "critical",
+                                                                                         "required_checks_total":  18,
+                                                                                         "pass_count":  9,
+                                                                                         "fail_count":  6,
+                                                                                         "unknown_count":  3,
+                                                                                         "failed_check_ids":  [
+                                                                                                                  "plug_scan.auto_reflection_rate_pct",
+                                                                                                                  "plug_scan.false_positive_rate_pct",
+                                                                                                                  "autonomy.auto_action_rate_pct",
+                                                                                                                  "sample.change.events",
+                                                                                                                  "sample.northbound.deliveries",
+                                                                                                                  "sample.autonomy.actions_executed"
+                                                                                                              ],
+                                                                                         "unknown_check_ids":  [
+                                                                                                                   "plug_scan.first_map_p50_seconds",
+                                                                                                                   "plug_scan.first_map_p95_seconds",
+                                                                                                                   "change.rollback_p95_ms",
+                                                                                                                   "autonomy.mttd_improvement_pct",
+                                                                                                                   "autonomy.mttr_improvement_pct"
+                                                                                                               ]
+                                                                                     },
+                                                                       "evidence":  {
+                                                                                        "sample_minimums_enforced":  true,
+                                                                                        "sample_totals":  {
+                                                                                                              "discovery_jobs":  18,
+                                                                                                              "change_events":  0,
+                                                                                                              "northbound_deliveries":  0,
+                                                                                                              "autonomy_issues_created":  11,
+                                                                                                              "autonomy_actions_executed":  0
+                                                                                                          },
+                                                                                        "sample_thresholds":  {
+                                                                                                                  "discovery_jobs":  1,
+                                                                                                                  "change_events":  1,
+                                                                                                                  "northbound_deliveries":  1,
+                                                                                                                  "autonomy_issues_created":  1,
+                                                                                                                  "autonomy_actions_executed":  1
+                                                                                                              }
+                                                                                    }
+                                                                   }
+                                                   }
+                                  }
+                     },
+    "readiness":  {
+                      "success":  true,
+                      "data":  {
+                                   "generated_at":  1772639411,
+                                   "scope":  {
+                                                 "site_id":  null,
+                                                 "discovery_days":  30,
+                                                 "discovery_limit":  300,
+                                                 "require_sample_minimums":  true
+                                             },
+                                   "readiness":  {
+                                                     "status":  "critical",
+                                                     "required_checks_total":  18,
+                                                     "pass_count":  7,
+                                                     "fail_count":  8,
+                                                     "unknown_count":  3
+                                                 },
+                                   "checks":  [
+                                                  {
+                                                      "id":  "plug_scan.first_map_p50_seconds",
+                                                      "title":  "Plug \u0026 Scan first map P50",
+                                                      "value":  null,
+                                                      "threshold":  300,
+                                                      "operator":  "\u003c=",
+                                                      "status":  "unknown",
+                                                      "pass":  null,
+                                                      "required":  true,
+                                                      "source":  "discovery.kpi.summary"
+                                                  },
+                                                  {
+                                                      "id":  "plug_scan.first_map_p95_seconds",
+                                                      "title":  "Plug \u0026 Scan first map P95",
+                                                      "value":  null,
+                                                      "threshold":  900,
+                                                      "operator":  "\u003c=",
+                                                      "status":  "unknown",
+                                                      "pass":  null,
+                                                      "required":  true,
+                                                      "source":  "discovery.kpi.summary"
+                                                  },
+                                                  {
+                                                      "id":  "plug_scan.auto_reflection_rate_pct",
+                                                      "title":  "Plug \u0026 Scan auto reflection rate",
+                                                      "value":  2.19,
+                                                      "threshold":  75.0,
+                                                      "operator":  "\u003e=",
+                                                      "status":  "fail",
+                                                      "pass":  false,
+                                                      "required":  true,
+                                                      "source":  "discovery.kpi.summary"
+                                                  },
+                                                  {
+                                                      "id":  "plug_scan.false_positive_rate_pct",
+                                                      "title":  "Plug \u0026 Scan false positive rate",
+                                                      "value":  20.0,
+                                                      "threshold":  10.0,
+                                                      "operator":  "\u003c=",
+                                                      "status":  "fail",
+                                                      "pass":  false,
+                                                      "required":  true,
+                                                      "source":  "discovery.kpi.summary"
+                                                  },
+                                                  {
+                                                      "id":  "change.success_rate_pct",
+                                                      "title":  "Change success rate",
+                                                      "value":  100.0,
+                                                      "threshold":  98.0,
+                                                      "operator":  "\u003e=",
+                                                      "status":  "pass",
+                                                      "pass":  true,
+                                                      "required":  true,
+                                                      "source":  "sdn.dashboard.stats.change_kpi"
+                                                  },
+                                                  {
+                                                      "id":  "change.failure_rate_pct",
+                                                      "title":  "Change failure rate",
+                                                      "value":  0.0,
+                                                      "threshold":  1.0,
+                                                      "operator":  "\u003c=",
+                                                      "status":  "pass",
+                                                      "pass":  true,
+                                                      "required":  true,
+                                                      "source":  "sdn.dashboard.stats.change_kpi"
+                                                  },
+                                                  {
+                                                      "id":  "change.rollback_p95_ms",
+                                                      "title":  "Change rollback P95",
+                                                      "value":  null,
+                                                      "threshold":  180000,
+                                                      "operator":  "\u003c=",
+                                                      "status":  "unknown",
+                                                      "pass":  null,
+                                                      "required":  true,
+                                                      "source":  "sdn.dashboard.stats.change_kpi"
+                                                  },
+                                                  {
+                                                      "id":  "change.trace_coverage_pct",
+                                                      "title":  "Approval trace coverage",
+                                                      "value":  100.0,
+                                                      "threshold":  100.0,
+                                                      "operator":  "\u003e=",
+                                                      "status":  "pass",
+                                                      "pass":  true,
+                                                      "required":  true,
+                                                      "source":  "sdn.dashboard.stats.change_kpi"
+                                                  },
+                                                  {
+                                                      "id":  "autonomy.auto_action_rate_pct",
+                                                      "title":  "Autonomy auto action rate",
+                                                      "value":  0.0,
+                                                      "threshold":  60.0,
+                                                      "operator":  "\u003e=",
+                                                      "status":  "fail",
+                                                      "pass":  false,
+                                                      "required":  true,
+                                                      "source":  "sdn.dashboard.stats.autonomy_kpi"
+                                                  },
+                                                  {
+                                                      "id":  "autonomy.operator_intervention_rate_pct",
+                                                      "title":  "Autonomy operator intervention rate",
+                                                      "value":  0.0,
+                                                      "threshold":  40.0,
+                                                      "operator":  "\u003c=",
+                                                      "status":  "pass",
+                                                      "pass":  true,
+                                                      "required":  true,
+                                                      "source":  "sdn.dashboard.stats.autonomy_kpi"
+                                                  },
+                                                  {
+                                                      "id":  "autonomy.mttd_improvement_pct",
+                                                      "title":  "MTTD improvement vs baseline",
+                                                      "value":  null,
+                                                      "threshold":  30.0,
+                                                      "operator":  "\u003e=",
+                                                      "status":  "unknown",
+                                                      "pass":  null,
+                                                      "required":  false,
+                                                      "source":  "sdn.dashboard.stats.autonomy_kpi"
+                                                  },
+                                                  {
+                                                      "id":  "autonomy.mttr_improvement_pct",
+                                                      "title":  "MTTR improvement vs baseline",
+                                                      "value":  null,
+                                                      "threshold":  40.0,
+                                                      "operator":  "\u003e=",
+                                                      "status":  "unknown",
+                                                      "pass":  null,
+                                                      "required":  false,
+                                                      "source":  "sdn.dashboard.stats.autonomy_kpi"
+                                                  },
+                                                  {
+                                                      "id":  "northbound.success_rate_pct",
+                                                      "title":  "Northbound delivery success rate",
+                                                      "value":  100.0,
+                                                      "threshold":  95.0,
+                                                      "operator":  "\u003e=",
+                                                      "status":  "pass",
+                                                      "pass":  true,
+                                                      "required":  true,
+                                                      "source":  "sdn.dashboard.stats.northbound_kpi"
+                                                  },
+                                                  {
+                                                      "id":  "northbound.p95_attempts",
+                                                      "title":  "Northbound delivery attempts P95",
+                                                      "value":  0,
+                                                      "threshold":  3,
+                                                      "operator":  "\u003c=",
+                                                      "status":  "pass",
+                                                      "pass":  true,
+                                                      "required":  true,
+                                                      "source":  "sdn.dashboard.stats.northbound_kpi"
+                                                  },
+                                                  {
+                                                      "id":  "northbound.failed_24h",
+                                                      "title":  "Northbound failed deliveries (24h)",
+                                                      "value":  0,
+                                                      "threshold":  5,
+                                                      "operator":  "\u003c=",
+                                                      "status":  "pass",
+                                                      "pass":  true,
+                                                      "required":  true,
+                                                      "source":  "sdn.dashboard.stats.northbound_kpi"
+                                                  },
+                                                  {
+                                                      "id":  "sample.discovery.jobs_count",
+                                                      "title":  "Sample minimum: discovery jobs",
+                                                      "value":  18,
+                                                      "threshold":  30,
+                                                      "operator":  "\u003e=",
+                                                      "status":  "fail",
+                                                      "pass":  false,
+                                                      "required":  true,
+                                                      "source":  "ops.kpi.readiness.sample_gate"
+                                                  },
+                                                  {
+                                                      "id":  "sample.change.events",
+                                                      "title":  "Sample minimum: change events",
+                                                      "value":  0,
+                                                      "threshold":  60,
+                                                      "operator":  "\u003e=",
+                                                      "status":  "fail",
+                                                      "pass":  false,
+                                                      "required":  true,
+                                                      "source":  "ops.kpi.readiness.sample_gate"
+                                                  },
+                                                  {
+                                                      "id":  "sample.northbound.deliveries",
+                                                      "title":  "Sample minimum: northbound deliveries",
+                                                      "value":  0,
+                                                      "threshold":  500,
+                                                      "operator":  "\u003e=",
+                                                      "status":  "fail",
+                                                      "pass":  false,
+                                                      "required":  true,
+                                                      "source":  "ops.kpi.readiness.sample_gate"
+                                                  },
+                                                  {
+                                                      "id":  "sample.autonomy.issues_created",
+                                                      "title":  "Sample minimum: autonomy issues created",
+                                                      "value":  11,
+                                                      "threshold":  20,
+                                                      "operator":  "\u003e=",
+                                                      "status":  "fail",
+                                                      "pass":  false,
+                                                      "required":  true,
+                                                      "source":  "ops.kpi.readiness.sample_gate"
+                                                  },
+                                                  {
+                                                      "id":  "sample.autonomy.actions_executed",
+                                                      "title":  "Sample minimum: autonomy actions executed",
+                                                      "value":  0,
+                                                      "threshold":  20,
+                                                      "operator":  "\u003e=",
+                                                      "status":  "fail",
+                                                      "pass":  false,
+                                                      "required":  true,
+                                                      "source":  "ops.kpi.readiness.sample_gate"
+                                                  }
+                                              ],
+                                   "snapshots":  {
+                                                     "discovery":  {
+                                                                       "jobs_count":  18,
+                                                                       "totals":  {
+                                                                                      "discovered":  868,
+                                                                                      "approved":  4,
+                                                                                      "existing":  15,
+                                                                                      "ignored":  1,
+                                                                                      "auto_reflected":  19,
+                                                                                      "reviewed":  5,
+                                                                                      "low_confidence_candidates":  0
+                                                                                  },
+                                                                       "kpi":  {
+                                                                                   "first_map_seconds_avg":  null,
+                                                                                   "first_map_seconds_median":  null,
+                                                                                   "first_map_seconds_p95":  null,
+                                                                                   "auto_reflection_rate_pct":  2.19,
+                                                                                   "false_positive_rate_pct":  20.0,
+                                                                                   "low_confidence_rate_pct":  0.0
+                                                                               }
+                                                                   },
+                                                     "change_kpi":  {
+                                                                        "window_days":  30,
+                                                                        "status":  "idle",
+                                                                        "change_success_rate_pct":  100.0,
+                                                                        "change_failure_rate_pct":  0.0,
+                                                                        "rollback_p95_ms":  null,
+                                                                        "rollback_success_rate_pct":  100.0,
+                                                                        "approval_execution_trace_coverage_pct":  100.0,
+                                                                        "alerts":  [
+
+                                                                                   ],
+                                                                        "failure_causes":  [
+
+                                                                                           ],
+                                                                        "targets":  {
+                                                                                        "min_success_rate_pct":  98.0,
+                                                                                        "max_failure_rate_pct":  1.0,
+                                                                                        "max_rollback_p95_ms":  180000,
+                                                                                        "min_trace_coverage_pct":  100.0
+                                                                                    },
+                                                                        "totals":  {
+                                                                                       "events":  0,
+                                                                                       "success":  0,
+                                                                                       "failed":  0,
+                                                                                       "post_check_failures":  0,
+                                                                                       "rollback_attempted":  0,
+                                                                                       "rollback_success":  0,
+                                                                                       "approval_context_events":  0,
+                                                                                       "approval_traced":  0
+                                                                                   }
+                                                                    },
+                                                     "autonomy_kpi":  {
+                                                                          "window_days":  30,
+                                                                          "status":  "warning",
+                                                                          "mttd_seconds":  0.0,
+                                                                          "mttd_p95_seconds":  0,
+                                                                          "mttr_seconds":  99565.22,
+                                                                          "mttr_p95_seconds":  214409,
+                                                                          "auto_action_rate_pct":  0.0,
+                                                                          "operator_intervention_rate_pct":  0.0,
+                                                                          "mttd_signal_coverage_pct":  27.27,
+                                                                          "mttr_coverage_pct":  100.0,
+                                                                          "targets":  {
+                                                                                          "min_auto_action_rate_pct":  60.0,
+                                                                                          "max_operator_intervention_rate_pct":  40.0
+                                                                                      },
+                                                                          "trend_7d":  [
+                                                                                           {
+                                                                                               "date":  "2026-02-26",
+                                                                                               "issues_created":  0,
+                                                                                               "issues_resolved":  0,
+                                                                                               "actions_executed":  0,
+                                                                                               "actions_auto":  0,
+                                                                                               "actions_manual":  0,
+                                                                                               "auto_action_rate_pct":  0.0,
+                                                                                               "operator_intervention_rate_pct":  0.0
+                                                                                           },
+                                                                                           {
+                                                                                               "date":  "2026-02-27",
+                                                                                               "issues_created":  0,
+                                                                                               "issues_resolved":  0,
+                                                                                               "actions_executed":  0,
+                                                                                               "actions_auto":  0,
+                                                                                               "actions_manual":  0,
+                                                                                               "auto_action_rate_pct":  0.0,
+                                                                                               "operator_intervention_rate_pct":  0.0
+                                                                                           },
+                                                                                           {
+                                                                                               "date":  "2026-02-28",
+                                                                                               "issues_created":  0,
+                                                                                               "issues_resolved":  0,
+                                                                                               "actions_executed":  0,
+                                                                                               "actions_auto":  0,
+                                                                                               "actions_manual":  0,
+                                                                                               "auto_action_rate_pct":  0.0,
+                                                                                               "operator_intervention_rate_pct":  0.0
+                                                                                           },
+                                                                                           {
+                                                                                               "date":  "2026-03-01",
+                                                                                               "issues_created":  0,
+                                                                                               "issues_resolved":  0,
+                                                                                               "actions_executed":  0,
+                                                                                               "actions_auto":  0,
+                                                                                               "actions_manual":  0,
+                                                                                               "auto_action_rate_pct":  0.0,
+                                                                                               "operator_intervention_rate_pct":  0.0
+                                                                                           },
+                                                                                           {
+                                                                                               "date":  "2026-03-02",
+                                                                                               "issues_created":  0,
+                                                                                               "issues_resolved":  0,
+                                                                                               "actions_executed":  0,
+                                                                                               "actions_auto":  0,
+                                                                                               "actions_manual":  0,
+                                                                                               "auto_action_rate_pct":  0.0,
+                                                                                               "operator_intervention_rate_pct":  0.0
+                                                                                           },
+                                                                                           {
+                                                                                               "date":  "2026-03-03",
+                                                                                               "issues_created":  0,
+                                                                                               "issues_resolved":  0,
+                                                                                               "actions_executed":  0,
+                                                                                               "actions_auto":  0,
+                                                                                               "actions_manual":  0,
+                                                                                               "auto_action_rate_pct":  0.0,
+                                                                                               "operator_intervention_rate_pct":  0.0
+                                                                                           },
+                                                                                           {
+                                                                                               "date":  "2026-03-04",
+                                                                                               "issues_created":  0,
+                                                                                               "issues_resolved":  0,
+                                                                                               "actions_executed":  0,
+                                                                                               "actions_auto":  0,
+                                                                                               "actions_manual":  0,
+                                                                                               "auto_action_rate_pct":  0.0,
+                                                                                               "operator_intervention_rate_pct":  0.0
+                                                                                           }
+                                                                                       ],
+                                                                          "totals":  {
+                                                                                         "issues_created":  11,
+                                                                                         "issues_resolved":  9,
+                                                                                         "mttd_samples":  3,
+                                                                                         "mttr_samples":  9,
+                                                                                         "actions_executed":  0,
+                                                                                         "actions_auto":  0,
+                                                                                         "actions_manual":  0
+                                                                                     }
+                                                                      },
+                                                     "northbound_kpi":  {
+                                                                            "window_days":  30,
+                                                                            "status":  "idle",
+                                                                            "success_rate_pct":  100.0,
+                                                                            "avg_attempts":  0.0,
+                                                                            "p95_attempts":  0,
+                                                                            "failure_causes":  [
+
+                                                                                               ],
+                                                                            "modes":  [
+
+                                                                                      ],
+                                                                            "totals":  {
+                                                                                           "deliveries":  0,
+                                                                                           "success":  0,
+                                                                                           "failed":  0,
+                                                                                           "failed_24h":  0
+                                                                                       }
+                                                                        }
+                                                 },
+                                   "evidence":  {
+                                                    "sample_minimums_enforced":  true,
+                                                    "sample_totals":  {
+                                                                          "discovery_jobs":  18,
+                                                                          "change_events":  0,
+                                                                          "northbound_deliveries":  0,
+                                                                          "autonomy_issues_created":  11,
+                                                                          "autonomy_actions_executed":  0
+                                                                      },
+                                                    "sample_thresholds":  {
+                                                                              "discovery_jobs":  30,
+                                                                              "change_events":  60,
+                                                                              "northbound_deliveries":  500,
+                                                                              "autonomy_issues_created":  20,
+                                                                              "autonomy_actions_executed":  20
+                                                                          }
+                                                }
+                               }
+                  },
+    "cloud_kpi_summary":  {
+                              "success":  true,
+                              "data":  {
+                                           "days":  30,
+                                           "runs":  25,
+                                           "first_map_seconds_p50":  2.427,
+                                           "first_map_seconds_p95":  7.962,
+                                           "auto_reflection_rate_pct":  0.0,
+                                           "false_positive_rate_pct":  0.0,
+                                           "reflected_links":  0,
+                                           "low_confidence_queued":  0,
+                                           "ok_runs":  25,
+                                           "partial_runs":  0,
+                                           "failed_runs":  0,
+                                           "last_run_at":  "2026-03-03T16:20:54.180068Z",
+                                           "trend":  [
+                                                         {
+                                                             "date":  "2026-02-26",
+                                                             "runs":  0,
+                                                             "reflected_links":  0,
+                                                             "low_confidence_queued":  0
+                                                         },
+                                                         {
+                                                             "date":  "2026-02-27",
+                                                             "runs":  6,
+                                                             "reflected_links":  0,
+                                                             "low_confidence_queued":  0
+                                                         },
+                                                         {
+                                                             "date":  "2026-02-28",
+                                                             "runs":  3,
+                                                             "reflected_links":  0,
+                                                             "low_confidence_queued":  0
+                                                         },
+                                                         {
+                                                             "date":  "2026-03-01",
+                                                             "runs":  6,
+                                                             "reflected_links":  0,
+                                                             "low_confidence_queued":  0
+                                                         },
+                                                         {
+                                                             "date":  "2026-03-02",
+                                                             "runs":  2,
+                                                             "reflected_links":  0,
+                                                             "low_confidence_queued":  0
+                                                         },
+                                                         {
+                                                             "date":  "2026-03-03",
+                                                             "runs":  8,
+                                                             "reflected_links":  0,
+                                                             "low_confidence_queued":  0
+                                                         },
+                                                         {
+                                                             "date":  "2026-03-04",
+                                                             "runs":  0,
+                                                             "reflected_links":  0,
+                                                             "low_confidence_queued":  0
+                                                         }
+                                                     ]
+                                       }
+                          }
+}

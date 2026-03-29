@@ -1,0 +1,21 @@
+{
+  "id": "inventory.paloalto_panos.system_info_kv",
+  "fixture_group": "global_switch",
+  "type": "inventory",
+  "device_type": "paloalto_panos",
+  "commands": {
+    "show inventory|textfsm": null,
+    "show inventory": "",
+    "show system info": "hostname: pa-core-01\nmodel: PA-3220\nserial: 007801000123\nsw-version: 11.0.2\n"
+  },
+  "expected": {
+    "min_rows": 1,
+    "parser_contains": "generic_heuristic_inventory",
+    "contains_rows": [
+      {
+        "model_name": "PA-3220",
+        "serial_number": "007801000123"
+      }
+    ]
+  }
+}

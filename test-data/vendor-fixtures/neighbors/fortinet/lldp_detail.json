@@ -1,0 +1,29 @@
+{
+  "id": "neighbors.fortinet.lldp_detail",
+  "fixture_group": "global_switch",
+  "type": "neighbors",
+  "device_type": "fortinet",
+  "driver_mode": "manager",
+  "commands": {
+    "show lldp neighbors detail|textfsm": null,
+    "show lldp neighbors detail": "Local Intf: port1\nPort id: Gi0/24\nSystem Name: DIST-FW-PAIR\nManagement Address: 10.43.0.10\n",
+    "show cdp neighbors detail|textfsm": null,
+    "show cdp neighbors detail": ""
+  },
+  "expected": {
+    "min_rows": 1,
+    "driver_contains": "GenericDriver",
+    "required_protocols": [
+      "LLDP"
+    ],
+    "contains_rows": [
+      {
+        "local_interface": "port1",
+        "remote_interface": "Gi0/24",
+        "neighbor_name": "DIST-FW-PAIR",
+        "mgmt_ip": "10.43.0.10",
+        "protocol": "LLDP"
+      }
+    ]
+  }
+}

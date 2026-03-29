@@ -1,0 +1,22 @@
+{
+  "id": "inventory.aruba_os.show_modules_aos_switch_real",
+  "fixture_group": "global_switch",
+  "type": "inventory",
+  "device_type": "aruba_os",
+  "commands": {
+    "show inventory|textfsm": null,
+    "show inventory": "",
+    "show modules": " Status and Counters - Module Information\n\n  Chassis: JL254A Aruba 2930F-48G-4SFP+ Switch\n\n  Slot   Module Description                     Serial Number    Status\n  ------ -------------------------------------- ---------------- -------\n  1      Aruba 2930F-48G-4SFP+ Switch           SG76AABCD1       Up\n  2      Aruba 2930F-48G-4SFP+ Switch           SG76AABCD2       Up\n"
+  },
+  "expected": {
+    "min_rows": 2,
+    "parser_contains": "hpe_aruba_inventory",
+    "contains_rows": [
+      {
+        "name": "Chassis",
+        "model_name": "JL254A Aruba 2930F-48G-4SFP+ Switch",
+        "serial_number": "SG76AABCD1"
+      }
+    ]
+  }
+}

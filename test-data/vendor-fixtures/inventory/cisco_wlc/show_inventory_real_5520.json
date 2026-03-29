@@ -1,0 +1,21 @@
+{
+  "id": "inventory.cisco_wlc.show_inventory_real_5520",
+  "fixture_group": "global_switch",
+  "type": "inventory",
+  "device_type": "cisco_wlc",
+  "commands": {
+    "show inventory|textfsm": null,
+    "show inventory": "Burned-in MAC Address............................ 00:11:22:aa:bb:cc\nMaximum number of APs supported.................. 1500\nNAME: \"Chassis\"    , DESCR: \"Cisco 5520 Wireless LAN Controller\"\nPID: AIR-CT5520-K9,  VID: V02,  SN: FDO2115XXXX\n"
+  },
+  "expected": {
+    "min_rows": 1,
+    "parser_contains": "cisco_show_inventory",
+    "contains_rows": [
+      {
+        "name": "Chassis",
+        "model_name": "AIR-CT5520-K9",
+        "serial_number": "FDO2115XXXX"
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "neighbors.paloalto_panos.cdp_detail",
+  "fixture_group": "global_switch",
+  "type": "neighbors",
+  "device_type": "paloalto_panos",
+  "driver_mode": "manager",
+  "commands": {
+    "show lldp neighbors detail|textfsm": null,
+    "show lldp neighbors detail": "",
+    "show lldp neighbors|textfsm": null,
+    "show lldp neighbors": "",
+    "show cdp neighbors detail|textfsm": null,
+    "show cdp neighbors detail": "Device ID: PA-DMZ-EDGE\nEntry address(es):\n  IP address: 10.44.0.5\nPlatform: Palo Alto PA-3220,  Capabilities: Router\nInterface: ethernet1/1,  Port ID (outgoing port): GigabitEthernet1/0/47\n"
+  },
+  "expected": {
+    "min_rows": 1,
+    "driver_contains": "GenericDriver",
+    "required_protocols": [
+      "CDP"
+    ],
+    "contains_rows": [
+      {
+        "neighbor_name": "PA-DMZ-EDGE",
+        "mgmt_ip": "10.44.0.5",
+        "protocol": "CDP"
+      }
+    ]
+  }
+}

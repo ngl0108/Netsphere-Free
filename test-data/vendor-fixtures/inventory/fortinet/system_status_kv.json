@@ -1,0 +1,22 @@
+{
+  "id": "inventory.fortinet.system_status_kv",
+  "fixture_group": "global_switch",
+  "type": "inventory",
+  "device_type": "fortinet",
+  "commands": {
+    "show inventory|textfsm": null,
+    "show inventory": "",
+    "show version": "",
+    "get system status": "Version: FortiGate-VM64 v7.2.4,build1396\nModel: FortiGate-VM64\nSerial-Number: FGVM02TM21000123\n"
+  },
+  "expected": {
+    "min_rows": 1,
+    "parser_contains": "generic_heuristic_inventory",
+    "contains_rows": [
+      {
+        "model_name": "FortiGate-VM64",
+        "serial_number": "FGVM02TM21000123"
+      }
+    ]
+  }
+}

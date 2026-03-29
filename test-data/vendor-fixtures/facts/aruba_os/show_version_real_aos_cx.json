@@ -1,0 +1,31 @@
+{
+  "id": "facts.aruba_os.show_version_real_aos_cx",
+  "fixture_group": "global_switch",
+  "type": "facts",
+  "device_type": "aruba_os",
+  "driver_mode": "generic",
+  "commands": {
+    "show version": "-----------------------------------------------------------------------------\nArubaOS-CX\n-----------------------------------------------------------------------------\nVersion      : 10.10.1010\nSystem Uptime: 20 weeks, 5 days, 10 hours, 12 minutes\n",
+    "show inventory": "-------------------------------------------------------------------------\nSystem      :\n-------------------------------------------------------------------------\nVendor               : Aruba\nProduct Name         : Aruba 8325-48Y8C Switch\nChassis Serial Nbr   : SG99XXXXXX\nPart Number          : JL624A\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "aruba_os"
+      },
+      "model": {
+        "equals": "Aruba 8325-48Y8C Switch"
+      },
+      "serial_number": {
+        "equals": "SG99XXXXXX"
+      },
+      "os_version": {
+        "equals": "10.10.1010"
+      },
+      "uptime": {
+        "contains": "20 weeks, 5 days, 10 hours, 12 minutes"
+      }
+    }
+  }
+}

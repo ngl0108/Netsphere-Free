@@ -1,0 +1,30 @@
+{
+  "id": "neighbors.dasan_nos.lldp_summary",
+  "fixture_group": "domestic_switch",
+  "type": "neighbors",
+  "device_type": "dasan_nos",
+  "driver_mode": "manager",
+  "commands": {
+    "show lldp neighbors detail|textfsm": null,
+    "show lldp neighbors detail": "",
+    "show lldp neighbors|textfsm": null,
+    "show lldp neighbors": "",
+    "show cdp neighbors detail|textfsm": null,
+    "show cdp neighbors detail": "",
+    "show lldp neighbor": "Local Port   Device ID          Port ID          System Name\n---------------------------------------------------------------\n1/1          00:11:22:33:44:55  gi0/1            Switch-A\n1/2          00:AA:BB:CC:DD:EE  gi0/2            Switch-B\n"
+  },
+  "expected": {
+    "min_rows": 2,
+    "driver_contains": "DasanDriver",
+    "required_protocols": [
+      "LLDP"
+    ],
+    "contains_rows": [
+      {
+        "local_interface": "1/1",
+        "remote_interface": "gi0/1",
+        "neighbor_name": "Switch-A"
+      }
+    ]
+  }
+}

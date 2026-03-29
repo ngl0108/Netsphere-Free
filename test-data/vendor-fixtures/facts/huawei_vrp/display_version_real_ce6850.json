@@ -1,0 +1,27 @@
+{
+  "id": "facts.huawei_vrp.display_version_real_ce6850",
+  "fixture_group": "global_switch",
+  "type": "facts",
+  "device_type": "huawei_vrp",
+  "driver_mode": "generic",
+  "commands": {
+    "display version": "Huawei Versatile Routing Platform Software\nVRP (R) software, Version 8.150 (CE6850EI V200R005C10SPC800)\nHUAWEI CE6850-48S6Q-HI uptime is 120 days, 14 hours, 32 minutes\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "huawei_vrp"
+      },
+      "model": {
+        "equals": "CE6850-48S6Q-HI"
+      },
+      "os_version": {
+        "equals": "8.150 (CE6850EI V200R005C10SPC800)"
+      },
+      "uptime": {
+        "equals": "120 days, 14 hours, 32 minutes"
+      }
+    }
+  }
+}

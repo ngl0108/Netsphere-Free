@@ -1,0 +1,24 @@
+{
+  "id": "facts.linux_wins.baseline_generic",
+  "type": "facts",
+  "device_type": "linux_wins",
+  "driver_mode": "generic",
+  "commands": {
+    "show version": "Synthetic linux_wins software output\nVersion: 1.0-test\nModel: LINUX_WINS-SIM\n",
+    "display version": "Synthetic linux_wins display output\nVRP Version V1R0 Test\nModel: LINUX_WINS-SIM\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "linux_wins"
+      },
+      "hostname": {
+        "equals": "fixture-host"
+      },
+      "raw_output": {
+        "contains": "Synthetic"
+      }
+    }
+  }
+}

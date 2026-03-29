@@ -1,0 +1,23 @@
+{
+  "id": "inventory.cisco_ios_xe.chassis_basic",
+  "type": "inventory",
+  "device_type": "cisco_ios_xe",
+  "commands": {
+    "show inventory|textfsm": null,
+    "show inventory": "NAME: \"1\", DESCR: \"Chassis\"\nPID: C9300-48P , VID: V04, SN: FOC1234ABCD\n\nNAME: \"Switch 1 - Power Supply A\", DESCR: \"Switch 1 - Power Supply A\"\nPID: PWR-C1-715WAC , VID: V01, SN: DCA98765432\n"
+  },
+  "expected": {
+    "min_rows": 2,
+    "parser_contains": "cisco_show_inventory",
+    "contains_rows": [
+      {
+        "name": "1",
+        "model_name": "C9300-48P",
+        "serial_number": "FOC1234ABCD"
+      },
+      {
+        "model_name": "PWR-C1-715WAC"
+      }
+    ]
+  }
+}

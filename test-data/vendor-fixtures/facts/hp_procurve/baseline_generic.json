@@ -1,0 +1,24 @@
+{
+  "id": "facts.hp_procurve.baseline_generic",
+  "type": "facts",
+  "device_type": "hp_procurve",
+  "driver_mode": "generic",
+  "commands": {
+    "show version": "Synthetic hp_procurve software output\nVersion: 1.0-test\nModel: HP_PROCURVE-SIM\n",
+    "display version": "Synthetic hp_procurve display output\nVRP Version V1R0 Test\nModel: HP_PROCURVE-SIM\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "hp_procurve"
+      },
+      "hostname": {
+        "equals": "fixture-host"
+      },
+      "raw_output": {
+        "contains": "Synthetic"
+      }
+    }
+  }
+}

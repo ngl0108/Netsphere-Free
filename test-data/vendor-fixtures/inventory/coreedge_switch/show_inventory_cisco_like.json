@@ -1,0 +1,21 @@
+{
+  "id": "inventory.coreedge_switch.show_inventory_cisco_like",
+  "fixture_group": "domestic_switch",
+  "type": "inventory",
+  "device_type": "coreedge_switch",
+  "commands": {
+    "show inventory|textfsm": null,
+    "show inventory": "NAME: \"1\", DESCR: \"CoreEdge Chassis\"\nPID: C3300-48GT , VID: V01, SN: CE12345678\n\nNAME: \"FAN1\", DESCR: \"Cooling Fan\"\nPID: CE-FAN-1 , VID: V01, SN: CEFAN1234\n"
+  },
+  "expected": {
+    "min_rows": 2,
+    "parser_contains": "cisco_show_inventory",
+    "contains_rows": [
+      {
+        "name": "1",
+        "model_name": "C3300-48GT",
+        "serial_number": "CE12345678"
+      }
+    ]
+  }
+}

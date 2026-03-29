@@ -1,0 +1,24 @@
+{
+  "id": "facts.cisco_nxos.baseline_generic",
+  "type": "facts",
+  "device_type": "cisco_nxos",
+  "driver_mode": "generic",
+  "commands": {
+    "show version": "Synthetic cisco_nxos software output\nVersion: 1.0-test\nModel: CISCO_NXOS-SIM\n",
+    "display version": "Synthetic cisco_nxos display output\nVRP Version V1R0 Test\nModel: CISCO_NXOS-SIM\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "cisco_nxos"
+      },
+      "hostname": {
+        "equals": "fixture-host"
+      },
+      "raw_output": {
+        "contains": "Synthetic"
+      }
+    }
+  }
+}

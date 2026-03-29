@@ -1,0 +1,28 @@
+{
+  "id": "facts.hp_comware.display_version_real",
+  "fixture_group": "global_switch",
+  "type": "facts",
+  "device_type": "hp_comware",
+  "driver_mode": "generic",
+  "commands": {
+    "display version": "H3C Comware Software, Version 7.1.070, Release 6616P51\nH3C S6800-54QT uptime is 25 weeks, 4 days, 10 hours, 15 minutes\nBOARD TYPE:         S6800-54QT\n",
+    "display device": "Slot Type             State    Subslot  Operate   Power  Description\n1    S6800-54QT       Master   0        Normal    On     S6800-54QT\n2    S6800-54QT       Standby  0        Normal    On     S6800-54QT\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "hp_comware"
+      },
+      "model": {
+        "equals": "S6800-54QT"
+      },
+      "os_version": {
+        "contains": "Version 7.1.070, Release 6616P51"
+      },
+      "uptime": {
+        "contains": "25 weeks, 4 days, 10 hours, 15 minutes"
+      }
+    }
+  }
+}

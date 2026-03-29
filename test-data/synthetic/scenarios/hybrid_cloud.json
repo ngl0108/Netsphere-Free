@@ -1,0 +1,1514 @@
+{
+  "scenario": "hybrid_cloud",
+  "title": "Hybrid Cloud Edge",
+  "seed": 3330327785,
+  "generated_at": "2026-02-19T11:03:05+00:00",
+  "focus_areas": [
+    "hybrid",
+    "cloud",
+    "bgp"
+  ],
+  "protocols": [
+    "bgp",
+    "cloud",
+    "lldp"
+  ],
+  "vendor_mix": {
+    "arista": 7,
+    "cisco": 6,
+    "f5": 4,
+    "fortinet": 4,
+    "juniper": 9,
+    "mikrotik": 6,
+    "nokia": 9,
+    "paloalto": 4,
+    "vyos": 5
+  },
+  "tag_mix": {
+    "cloud_gateway": 15,
+    "failure_candidate": 2
+  },
+  "counts": {
+    "devices": 54,
+    "links": 78,
+    "events": 22
+  },
+  "kpi_snapshot": {
+    "first_map_seconds_p50": 226,
+    "auto_reflection_rate_pct": 79.8,
+    "false_positive_rate_pct": 5.1
+  },
+  "devices": [
+    {
+      "id": 1,
+      "name": "SR-0001",
+      "ip_address": "10.11.0.1",
+      "vendor": "nokia",
+      "device_type": "nokia_sros",
+      "site": "hq-core",
+      "status": "online",
+      "confidence": 0.895,
+      "platform": "routing",
+      "os_family": "sros",
+      "cloud_provider": "azure",
+      "tags": [
+        "cloud_gateway"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "C9K-0002",
+      "ip_address": "10.12.0.2",
+      "vendor": "cisco",
+      "device_type": "cisco_ios_xe",
+      "site": "branch-a",
+      "status": "online",
+      "confidence": 0.722,
+      "platform": "campus_switch",
+      "os_family": "ios_xe",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 3,
+      "name": "QFX-0003",
+      "ip_address": "10.13.0.3",
+      "vendor": "juniper",
+      "device_type": "juniper_junos",
+      "site": "branch-b",
+      "status": "online",
+      "confidence": 0.939,
+      "platform": "datacenter_switch",
+      "os_family": "junos",
+      "cloud_provider": "azure",
+      "tags": [
+        "cloud_gateway"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "PA-0004",
+      "ip_address": "10.14.0.4",
+      "vendor": "paloalto",
+      "device_type": "paloalto_panos",
+      "site": "dc-west",
+      "status": "online",
+      "confidence": 0.87,
+      "platform": "security",
+      "os_family": "panos",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 5,
+      "name": "VEOS-0005",
+      "ip_address": "10.15.0.5",
+      "vendor": "arista",
+      "device_type": "arista_eos",
+      "site": "dc-east",
+      "status": "online",
+      "confidence": 0.972,
+      "platform": "datacenter_switch",
+      "os_family": "eos",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 6,
+      "name": "VEOS-0006",
+      "ip_address": "10.16.0.6",
+      "vendor": "arista",
+      "device_type": "arista_eos",
+      "site": "hq-core",
+      "status": "online",
+      "confidence": 0.903,
+      "platform": "datacenter_switch",
+      "os_family": "eos",
+      "cloud_provider": "gcp",
+      "tags": [
+        "cloud_gateway"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "SR-0007",
+      "ip_address": "10.11.0.7",
+      "vendor": "nokia",
+      "device_type": "nokia_sros",
+      "site": "branch-a",
+      "status": "online",
+      "confidence": 0.874,
+      "platform": "routing",
+      "os_family": "sros",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 8,
+      "name": "C9K-0008",
+      "ip_address": "10.12.0.8",
+      "vendor": "cisco",
+      "device_type": "cisco_ios_xe",
+      "site": "branch-b",
+      "status": "offline",
+      "confidence": 0.771,
+      "platform": "campus_switch",
+      "os_family": "ios_xe",
+      "cloud_provider": "aws",
+      "tags": [
+        "failure_candidate",
+        "cloud_gateway"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "BIGIP-0009",
+      "ip_address": "10.13.0.9",
+      "vendor": "f5",
+      "device_type": "f5_ltm",
+      "site": "dc-west",
+      "status": "online",
+      "confidence": 0.87,
+      "platform": "adc",
+      "os_family": "tmos",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 10,
+      "name": "FGT-0010",
+      "ip_address": "10.14.0.10",
+      "vendor": "fortinet",
+      "device_type": "fortinet",
+      "site": "dc-east",
+      "status": "online",
+      "confidence": 0.74,
+      "platform": "security",
+      "os_family": "fortios",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 11,
+      "name": "VEOS-0011",
+      "ip_address": "10.15.0.11",
+      "vendor": "arista",
+      "device_type": "arista_eos",
+      "site": "hq-core",
+      "status": "online",
+      "confidence": 0.952,
+      "platform": "datacenter_switch",
+      "os_family": "eos",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 12,
+      "name": "VEOS-0012",
+      "ip_address": "10.16.0.12",
+      "vendor": "arista",
+      "device_type": "arista_eos",
+      "site": "branch-a",
+      "status": "online",
+      "confidence": 0.932,
+      "platform": "datacenter_switch",
+      "os_family": "eos",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 13,
+      "name": "VEOS-0013",
+      "ip_address": "10.11.0.13",
+      "vendor": "arista",
+      "device_type": "arista_eos",
+      "site": "branch-b",
+      "status": "online",
+      "confidence": 0.773,
+      "platform": "datacenter_switch",
+      "os_family": "eos",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 14,
+      "name": "VYOS-0014",
+      "ip_address": "10.12.0.14",
+      "vendor": "vyos",
+      "device_type": "linux",
+      "site": "dc-west",
+      "status": "online",
+      "confidence": 0.819,
+      "platform": "routing",
+      "os_family": "linux",
+      "cloud_provider": "azure",
+      "tags": [
+        "cloud_gateway"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "CHR-0015",
+      "ip_address": "10.13.0.15",
+      "vendor": "mikrotik",
+      "device_type": "linux",
+      "site": "dc-east",
+      "status": "online",
+      "confidence": 0.822,
+      "platform": "routing",
+      "os_family": "routeros",
+      "cloud_provider": "gcp",
+      "tags": [
+        "cloud_gateway"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "PA-0016",
+      "ip_address": "10.14.0.16",
+      "vendor": "paloalto",
+      "device_type": "paloalto_panos",
+      "site": "hq-core",
+      "status": "online",
+      "confidence": 0.892,
+      "platform": "security",
+      "os_family": "panos",
+      "cloud_provider": "gcp",
+      "tags": [
+        "cloud_gateway"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "C9K-0017",
+      "ip_address": "10.15.0.17",
+      "vendor": "cisco",
+      "device_type": "cisco_ios_xe",
+      "site": "branch-a",
+      "status": "online",
+      "confidence": 0.96,
+      "platform": "campus_switch",
+      "os_family": "ios_xe",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 18,
+      "name": "SR-0018",
+      "ip_address": "10.16.0.18",
+      "vendor": "nokia",
+      "device_type": "nokia_sros",
+      "site": "branch-b",
+      "status": "online",
+      "confidence": 0.732,
+      "platform": "routing",
+      "os_family": "sros",
+      "cloud_provider": "gcp",
+      "tags": [
+        "cloud_gateway"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "SR-0019",
+      "ip_address": "10.11.0.19",
+      "vendor": "nokia",
+      "device_type": "nokia_sros",
+      "site": "dc-west",
+      "status": "online",
+      "confidence": 0.778,
+      "platform": "routing",
+      "os_family": "sros",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 20,
+      "name": "C9K-0020",
+      "ip_address": "10.12.0.20",
+      "vendor": "cisco",
+      "device_type": "cisco_ios_xe",
+      "site": "dc-east",
+      "status": "online",
+      "confidence": 0.954,
+      "platform": "campus_switch",
+      "os_family": "ios_xe",
+      "cloud_provider": "azure",
+      "tags": [
+        "cloud_gateway"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "QFX-0021",
+      "ip_address": "10.13.0.21",
+      "vendor": "juniper",
+      "device_type": "juniper_junos",
+      "site": "hq-core",
+      "status": "online",
+      "confidence": 0.929,
+      "platform": "datacenter_switch",
+      "os_family": "junos",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 22,
+      "name": "FGT-0022",
+      "ip_address": "10.14.0.22",
+      "vendor": "fortinet",
+      "device_type": "fortinet",
+      "site": "branch-a",
+      "status": "online",
+      "confidence": 0.739,
+      "platform": "security",
+      "os_family": "fortios",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 23,
+      "name": "FGT-0023",
+      "ip_address": "10.15.0.23",
+      "vendor": "fortinet",
+      "device_type": "fortinet",
+      "site": "branch-b",
+      "status": "online",
+      "confidence": 0.775,
+      "platform": "security",
+      "os_family": "fortios",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 24,
+      "name": "QFX-0024",
+      "ip_address": "10.16.0.24",
+      "vendor": "juniper",
+      "device_type": "juniper_junos",
+      "site": "dc-west",
+      "status": "online",
+      "confidence": 0.83,
+      "platform": "datacenter_switch",
+      "os_family": "junos",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 25,
+      "name": "VYOS-0025",
+      "ip_address": "10.11.0.25",
+      "vendor": "vyos",
+      "device_type": "linux",
+      "site": "dc-east",
+      "status": "online",
+      "confidence": 0.789,
+      "platform": "routing",
+      "os_family": "linux",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 26,
+      "name": "C9K-0026",
+      "ip_address": "10.12.0.26",
+      "vendor": "cisco",
+      "device_type": "cisco_ios_xe",
+      "site": "hq-core",
+      "status": "online",
+      "confidence": 0.888,
+      "platform": "campus_switch",
+      "os_family": "ios_xe",
+      "cloud_provider": "aws",
+      "tags": [
+        "cloud_gateway"
+      ]
+    },
+    {
+      "id": 27,
+      "name": "VYOS-0027",
+      "ip_address": "10.13.0.27",
+      "vendor": "vyos",
+      "device_type": "linux",
+      "site": "branch-a",
+      "status": "online",
+      "confidence": 0.939,
+      "platform": "routing",
+      "os_family": "linux",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 28,
+      "name": "QFX-0028",
+      "ip_address": "10.14.0.28",
+      "vendor": "juniper",
+      "device_type": "juniper_junos",
+      "site": "branch-b",
+      "status": "online",
+      "confidence": 0.932,
+      "platform": "datacenter_switch",
+      "os_family": "junos",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 29,
+      "name": "CHR-0029",
+      "ip_address": "10.15.0.29",
+      "vendor": "mikrotik",
+      "device_type": "linux",
+      "site": "dc-west",
+      "status": "online",
+      "confidence": 0.91,
+      "platform": "routing",
+      "os_family": "routeros",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 30,
+      "name": "CHR-0030",
+      "ip_address": "10.16.0.30",
+      "vendor": "mikrotik",
+      "device_type": "linux",
+      "site": "dc-east",
+      "status": "online",
+      "confidence": 0.888,
+      "platform": "routing",
+      "os_family": "routeros",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 31,
+      "name": "QFX-0031",
+      "ip_address": "10.11.0.31",
+      "vendor": "juniper",
+      "device_type": "juniper_junos",
+      "site": "hq-core",
+      "status": "online",
+      "confidence": 0.779,
+      "platform": "datacenter_switch",
+      "os_family": "junos",
+      "cloud_provider": "ncp",
+      "tags": [
+        "cloud_gateway"
+      ]
+    },
+    {
+      "id": 32,
+      "name": "BIGIP-0032",
+      "ip_address": "10.12.0.32",
+      "vendor": "f5",
+      "device_type": "f5_ltm",
+      "site": "branch-a",
+      "status": "online",
+      "confidence": 0.798,
+      "platform": "adc",
+      "os_family": "tmos",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 33,
+      "name": "SR-0033",
+      "ip_address": "10.13.0.33",
+      "vendor": "nokia",
+      "device_type": "nokia_sros",
+      "site": "branch-b",
+      "status": "online",
+      "confidence": 0.894,
+      "platform": "routing",
+      "os_family": "sros",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 34,
+      "name": "VEOS-0034",
+      "ip_address": "10.14.0.34",
+      "vendor": "arista",
+      "device_type": "arista_eos",
+      "site": "dc-west",
+      "status": "online",
+      "confidence": 0.89,
+      "platform": "datacenter_switch",
+      "os_family": "eos",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 35,
+      "name": "CHR-0035",
+      "ip_address": "10.15.0.35",
+      "vendor": "mikrotik",
+      "device_type": "linux",
+      "site": "dc-east",
+      "status": "online",
+      "confidence": 0.888,
+      "platform": "routing",
+      "os_family": "routeros",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 36,
+      "name": "FGT-0036",
+      "ip_address": "10.16.0.36",
+      "vendor": "fortinet",
+      "device_type": "fortinet",
+      "site": "hq-core",
+      "status": "online",
+      "confidence": 0.986,
+      "platform": "security",
+      "os_family": "fortios",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 37,
+      "name": "BIGIP-0037",
+      "ip_address": "10.11.0.37",
+      "vendor": "f5",
+      "device_type": "f5_ltm",
+      "site": "branch-a",
+      "status": "online",
+      "confidence": 0.81,
+      "platform": "adc",
+      "os_family": "tmos",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 38,
+      "name": "PA-0038",
+      "ip_address": "10.12.0.38",
+      "vendor": "paloalto",
+      "device_type": "paloalto_panos",
+      "site": "branch-b",
+      "status": "online",
+      "confidence": 0.89,
+      "platform": "security",
+      "os_family": "panos",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 39,
+      "name": "SR-0039",
+      "ip_address": "10.13.0.39",
+      "vendor": "nokia",
+      "device_type": "nokia_sros",
+      "site": "dc-west",
+      "status": "online",
+      "confidence": 0.967,
+      "platform": "routing",
+      "os_family": "sros",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 40,
+      "name": "BIGIP-0040",
+      "ip_address": "10.14.0.40",
+      "vendor": "f5",
+      "device_type": "f5_ltm",
+      "site": "dc-east",
+      "status": "online",
+      "confidence": 0.977,
+      "platform": "adc",
+      "os_family": "tmos",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 41,
+      "name": "C9K-0041",
+      "ip_address": "10.15.0.41",
+      "vendor": "cisco",
+      "device_type": "cisco_ios_xe",
+      "site": "hq-core",
+      "status": "degraded",
+      "confidence": 0.815,
+      "platform": "campus_switch",
+      "os_family": "ios_xe",
+      "cloud_provider": null,
+      "tags": [
+        "failure_candidate"
+      ]
+    },
+    {
+      "id": 42,
+      "name": "QFX-0042",
+      "ip_address": "10.16.0.42",
+      "vendor": "juniper",
+      "device_type": "juniper_junos",
+      "site": "branch-a",
+      "status": "online",
+      "confidence": 0.8,
+      "platform": "datacenter_switch",
+      "os_family": "junos",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 43,
+      "name": "SR-0043",
+      "ip_address": "10.11.0.43",
+      "vendor": "nokia",
+      "device_type": "nokia_sros",
+      "site": "branch-b",
+      "status": "online",
+      "confidence": 0.941,
+      "platform": "routing",
+      "os_family": "sros",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 44,
+      "name": "CHR-0044",
+      "ip_address": "10.12.0.44",
+      "vendor": "mikrotik",
+      "device_type": "linux",
+      "site": "dc-west",
+      "status": "online",
+      "confidence": 0.881,
+      "platform": "routing",
+      "os_family": "routeros",
+      "cloud_provider": "ncp",
+      "tags": [
+        "cloud_gateway"
+      ]
+    },
+    {
+      "id": 45,
+      "name": "QFX-0045",
+      "ip_address": "10.13.0.45",
+      "vendor": "juniper",
+      "device_type": "juniper_junos",
+      "site": "dc-east",
+      "status": "online",
+      "confidence": 0.771,
+      "platform": "datacenter_switch",
+      "os_family": "junos",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 46,
+      "name": "PA-0046",
+      "ip_address": "10.14.0.46",
+      "vendor": "paloalto",
+      "device_type": "paloalto_panos",
+      "site": "hq-core",
+      "status": "online",
+      "confidence": 0.736,
+      "platform": "security",
+      "os_family": "panos",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 47,
+      "name": "QFX-0047",
+      "ip_address": "10.15.0.47",
+      "vendor": "juniper",
+      "device_type": "juniper_junos",
+      "site": "branch-a",
+      "status": "online",
+      "confidence": 0.968,
+      "platform": "datacenter_switch",
+      "os_family": "junos",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 48,
+      "name": "SR-0048",
+      "ip_address": "10.16.0.48",
+      "vendor": "nokia",
+      "device_type": "nokia_sros",
+      "site": "branch-b",
+      "status": "online",
+      "confidence": 0.838,
+      "platform": "routing",
+      "os_family": "sros",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 49,
+      "name": "CHR-0049",
+      "ip_address": "10.11.0.49",
+      "vendor": "mikrotik",
+      "device_type": "linux",
+      "site": "dc-west",
+      "status": "online",
+      "confidence": 0.812,
+      "platform": "routing",
+      "os_family": "routeros",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 50,
+      "name": "VEOS-0050",
+      "ip_address": "10.12.0.50",
+      "vendor": "arista",
+      "device_type": "arista_eos",
+      "site": "dc-east",
+      "status": "online",
+      "confidence": 0.749,
+      "platform": "datacenter_switch",
+      "os_family": "eos",
+      "cloud_provider": "gcp",
+      "tags": [
+        "cloud_gateway"
+      ]
+    },
+    {
+      "id": 51,
+      "name": "SR-0051",
+      "ip_address": "10.13.0.51",
+      "vendor": "nokia",
+      "device_type": "nokia_sros",
+      "site": "hq-core",
+      "status": "online",
+      "confidence": 0.733,
+      "platform": "routing",
+      "os_family": "sros",
+      "cloud_provider": "ncp",
+      "tags": [
+        "cloud_gateway"
+      ]
+    },
+    {
+      "id": 52,
+      "name": "VYOS-0052",
+      "ip_address": "10.14.0.52",
+      "vendor": "vyos",
+      "device_type": "linux",
+      "site": "branch-a",
+      "status": "online",
+      "confidence": 0.835,
+      "platform": "routing",
+      "os_family": "linux",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 53,
+      "name": "QFX-0053",
+      "ip_address": "10.15.0.53",
+      "vendor": "juniper",
+      "device_type": "juniper_junos",
+      "site": "branch-b",
+      "status": "online",
+      "confidence": 0.974,
+      "platform": "datacenter_switch",
+      "os_family": "junos",
+      "cloud_provider": null,
+      "tags": []
+    },
+    {
+      "id": 54,
+      "name": "VYOS-0054",
+      "ip_address": "10.16.0.54",
+      "vendor": "vyos",
+      "device_type": "linux",
+      "site": "dc-west",
+      "status": "online",
+      "confidence": 0.813,
+      "platform": "routing",
+      "os_family": "linux",
+      "cloud_provider": "azure",
+      "tags": [
+        "cloud_gateway"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source_id": 1,
+      "target_id": 2,
+      "protocol": "cloud",
+      "confidence": 0.792
+    },
+    {
+      "id": 2,
+      "source_id": 1,
+      "target_id": 49,
+      "protocol": "cloud",
+      "confidence": 0.979
+    },
+    {
+      "id": 3,
+      "source_id": 1,
+      "target_id": 54,
+      "protocol": "bgp",
+      "confidence": 0.841
+    },
+    {
+      "id": 4,
+      "source_id": 2,
+      "target_id": 3,
+      "protocol": "cloud",
+      "confidence": 0.857
+    },
+    {
+      "id": 5,
+      "source_id": 2,
+      "target_id": 12,
+      "protocol": "cloud",
+      "confidence": 0.773
+    },
+    {
+      "id": 6,
+      "source_id": 2,
+      "target_id": 20,
+      "protocol": "bgp",
+      "confidence": 0.632
+    },
+    {
+      "id": 7,
+      "source_id": 2,
+      "target_id": 28,
+      "protocol": "lldp",
+      "confidence": 0.79
+    },
+    {
+      "id": 8,
+      "source_id": 3,
+      "target_id": 4,
+      "protocol": "bgp",
+      "confidence": 0.896
+    },
+    {
+      "id": 9,
+      "source_id": 3,
+      "target_id": 17,
+      "protocol": "cloud",
+      "confidence": 0.971
+    },
+    {
+      "id": 10,
+      "source_id": 4,
+      "target_id": 5,
+      "protocol": "cloud",
+      "confidence": 0.803
+    },
+    {
+      "id": 11,
+      "source_id": 5,
+      "target_id": 6,
+      "protocol": "bgp",
+      "confidence": 0.789
+    },
+    {
+      "id": 12,
+      "source_id": 5,
+      "target_id": 47,
+      "protocol": "cloud",
+      "confidence": 0.76
+    },
+    {
+      "id": 13,
+      "source_id": 6,
+      "target_id": 7,
+      "protocol": "cloud",
+      "confidence": 0.989
+    },
+    {
+      "id": 14,
+      "source_id": 6,
+      "target_id": 51,
+      "protocol": "cloud",
+      "confidence": 0.96
+    },
+    {
+      "id": 15,
+      "source_id": 7,
+      "target_id": 8,
+      "protocol": "bgp",
+      "confidence": 0.626
+    },
+    {
+      "id": 16,
+      "source_id": 8,
+      "target_id": 9,
+      "protocol": "bgp",
+      "confidence": 0.992
+    },
+    {
+      "id": 17,
+      "source_id": 9,
+      "target_id": 10,
+      "protocol": "bgp",
+      "confidence": 0.942
+    },
+    {
+      "id": 18,
+      "source_id": 10,
+      "target_id": 11,
+      "protocol": "lldp",
+      "confidence": 0.637
+    },
+    {
+      "id": 19,
+      "source_id": 11,
+      "target_id": 12,
+      "protocol": "bgp",
+      "confidence": 0.657
+    },
+    {
+      "id": 20,
+      "source_id": 11,
+      "target_id": 50,
+      "protocol": "cloud",
+      "confidence": 0.704
+    },
+    {
+      "id": 21,
+      "source_id": 12,
+      "target_id": 13,
+      "protocol": "cloud",
+      "confidence": 0.843
+    },
+    {
+      "id": 22,
+      "source_id": 12,
+      "target_id": 39,
+      "protocol": "cloud",
+      "confidence": 0.983
+    },
+    {
+      "id": 23,
+      "source_id": 13,
+      "target_id": 14,
+      "protocol": "cloud",
+      "confidence": 0.751
+    },
+    {
+      "id": 24,
+      "source_id": 13,
+      "target_id": 53,
+      "protocol": "bgp",
+      "confidence": 0.642
+    },
+    {
+      "id": 25,
+      "source_id": 14,
+      "target_id": 15,
+      "protocol": "bgp",
+      "confidence": 0.89
+    },
+    {
+      "id": 26,
+      "source_id": 14,
+      "target_id": 34,
+      "protocol": "cloud",
+      "confidence": 0.684
+    },
+    {
+      "id": 27,
+      "source_id": 15,
+      "target_id": 16,
+      "protocol": "bgp",
+      "confidence": 0.676
+    },
+    {
+      "id": 28,
+      "source_id": 15,
+      "target_id": 40,
+      "protocol": "cloud",
+      "confidence": 0.9
+    },
+    {
+      "id": 29,
+      "source_id": 15,
+      "target_id": 41,
+      "protocol": "bgp",
+      "confidence": 0.776
+    },
+    {
+      "id": 30,
+      "source_id": 16,
+      "target_id": 17,
+      "protocol": "bgp",
+      "confidence": 0.991
+    },
+    {
+      "id": 31,
+      "source_id": 17,
+      "target_id": 18,
+      "protocol": "bgp",
+      "confidence": 0.687
+    },
+    {
+      "id": 32,
+      "source_id": 17,
+      "target_id": 45,
+      "protocol": "cloud",
+      "confidence": 0.925
+    },
+    {
+      "id": 33,
+      "source_id": 18,
+      "target_id": 19,
+      "protocol": "cloud",
+      "confidence": 0.867
+    },
+    {
+      "id": 34,
+      "source_id": 18,
+      "target_id": 34,
+      "protocol": "cloud",
+      "confidence": 0.744
+    },
+    {
+      "id": 35,
+      "source_id": 18,
+      "target_id": 43,
+      "protocol": "cloud",
+      "confidence": 0.733
+    },
+    {
+      "id": 36,
+      "source_id": 19,
+      "target_id": 20,
+      "protocol": "bgp",
+      "confidence": 0.877
+    },
+    {
+      "id": 37,
+      "source_id": 20,
+      "target_id": 21,
+      "protocol": "bgp",
+      "confidence": 0.741
+    },
+    {
+      "id": 38,
+      "source_id": 20,
+      "target_id": 33,
+      "protocol": "cloud",
+      "confidence": 0.753
+    },
+    {
+      "id": 39,
+      "source_id": 21,
+      "target_id": 22,
+      "protocol": "lldp",
+      "confidence": 0.71
+    },
+    {
+      "id": 40,
+      "source_id": 22,
+      "target_id": 23,
+      "protocol": "cloud",
+      "confidence": 0.768
+    },
+    {
+      "id": 41,
+      "source_id": 23,
+      "target_id": 24,
+      "protocol": "bgp",
+      "confidence": 0.933
+    },
+    {
+      "id": 42,
+      "source_id": 23,
+      "target_id": 33,
+      "protocol": "cloud",
+      "confidence": 0.783
+    },
+    {
+      "id": 43,
+      "source_id": 23,
+      "target_id": 45,
+      "protocol": "bgp",
+      "confidence": 0.977
+    },
+    {
+      "id": 44,
+      "source_id": 23,
+      "target_id": 51,
+      "protocol": "bgp",
+      "confidence": 0.878
+    },
+    {
+      "id": 45,
+      "source_id": 24,
+      "target_id": 25,
+      "protocol": "bgp",
+      "confidence": 0.86
+    },
+    {
+      "id": 46,
+      "source_id": 25,
+      "target_id": 26,
+      "protocol": "bgp",
+      "confidence": 0.956
+    },
+    {
+      "id": 47,
+      "source_id": 26,
+      "target_id": 27,
+      "protocol": "bgp",
+      "confidence": 0.737
+    },
+    {
+      "id": 48,
+      "source_id": 27,
+      "target_id": 28,
+      "protocol": "bgp",
+      "confidence": 0.637
+    },
+    {
+      "id": 49,
+      "source_id": 27,
+      "target_id": 49,
+      "protocol": "bgp",
+      "confidence": 0.652
+    },
+    {
+      "id": 50,
+      "source_id": 28,
+      "target_id": 29,
+      "protocol": "bgp",
+      "confidence": 0.879
+    },
+    {
+      "id": 51,
+      "source_id": 28,
+      "target_id": 52,
+      "protocol": "cloud",
+      "confidence": 0.967
+    },
+    {
+      "id": 52,
+      "source_id": 29,
+      "target_id": 30,
+      "protocol": "bgp",
+      "confidence": 0.761
+    },
+    {
+      "id": 53,
+      "source_id": 30,
+      "target_id": 31,
+      "protocol": "bgp",
+      "confidence": 0.671
+    },
+    {
+      "id": 54,
+      "source_id": 31,
+      "target_id": 32,
+      "protocol": "bgp",
+      "confidence": 0.861
+    },
+    {
+      "id": 55,
+      "source_id": 31,
+      "target_id": 39,
+      "protocol": "cloud",
+      "confidence": 0.712
+    },
+    {
+      "id": 56,
+      "source_id": 32,
+      "target_id": 33,
+      "protocol": "bgp",
+      "confidence": 0.903
+    },
+    {
+      "id": 57,
+      "source_id": 33,
+      "target_id": 34,
+      "protocol": "bgp",
+      "confidence": 0.654
+    },
+    {
+      "id": 58,
+      "source_id": 34,
+      "target_id": 35,
+      "protocol": "cloud",
+      "confidence": 0.725
+    },
+    {
+      "id": 59,
+      "source_id": 34,
+      "target_id": 53,
+      "protocol": "lldp",
+      "confidence": 0.852
+    },
+    {
+      "id": 60,
+      "source_id": 35,
+      "target_id": 36,
+      "protocol": "lldp",
+      "confidence": 0.62
+    },
+    {
+      "id": 61,
+      "source_id": 36,
+      "target_id": 37,
+      "protocol": "cloud",
+      "confidence": 0.924
+    },
+    {
+      "id": 62,
+      "source_id": 37,
+      "target_id": 38,
+      "protocol": "lldp",
+      "confidence": 0.953
+    },
+    {
+      "id": 63,
+      "source_id": 38,
+      "target_id": 39,
+      "protocol": "bgp",
+      "confidence": 0.733
+    },
+    {
+      "id": 64,
+      "source_id": 39,
+      "target_id": 40,
+      "protocol": "bgp",
+      "confidence": 0.884
+    },
+    {
+      "id": 65,
+      "source_id": 40,
+      "target_id": 41,
+      "protocol": "bgp",
+      "confidence": 0.941
+    },
+    {
+      "id": 66,
+      "source_id": 41,
+      "target_id": 42,
+      "protocol": "lldp",
+      "confidence": 0.912
+    },
+    {
+      "id": 67,
+      "source_id": 42,
+      "target_id": 43,
+      "protocol": "lldp",
+      "confidence": 0.833
+    },
+    {
+      "id": 68,
+      "source_id": 43,
+      "target_id": 44,
+      "protocol": "cloud",
+      "confidence": 0.648
+    },
+    {
+      "id": 69,
+      "source_id": 44,
+      "target_id": 45,
+      "protocol": "bgp",
+      "confidence": 0.716
+    },
+    {
+      "id": 70,
+      "source_id": 45,
+      "target_id": 46,
+      "protocol": "bgp",
+      "confidence": 0.806
+    },
+    {
+      "id": 71,
+      "source_id": 46,
+      "target_id": 47,
+      "protocol": "bgp",
+      "confidence": 0.779
+    },
+    {
+      "id": 72,
+      "source_id": 47,
+      "target_id": 48,
+      "protocol": "lldp",
+      "confidence": 0.669
+    },
+    {
+      "id": 73,
+      "source_id": 48,
+      "target_id": 49,
+      "protocol": "lldp",
+      "confidence": 0.95
+    },
+    {
+      "id": 74,
+      "source_id": 49,
+      "target_id": 50,
+      "protocol": "bgp",
+      "confidence": 0.986
+    },
+    {
+      "id": 75,
+      "source_id": 50,
+      "target_id": 51,
+      "protocol": "bgp",
+      "confidence": 0.815
+    },
+    {
+      "id": 76,
+      "source_id": 51,
+      "target_id": 52,
+      "protocol": "cloud",
+      "confidence": 0.893
+    },
+    {
+      "id": 77,
+      "source_id": 52,
+      "target_id": 53,
+      "protocol": "bgp",
+      "confidence": 0.946
+    },
+    {
+      "id": 78,
+      "source_id": 53,
+      "target_id": 54,
+      "protocol": "cloud",
+      "confidence": 0.817
+    }
+  ],
+  "events": [
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "cloud_inventory_sync_completed",
+      "device_id": 1,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "hybrid_bgp_peer_up",
+      "device_id": 1,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "cloud_inventory_sync_completed",
+      "device_id": 3,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "hybrid_bgp_peer_up",
+      "device_id": 3,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "cloud_inventory_sync_completed",
+      "device_id": 6,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "hybrid_bgp_peer_up",
+      "device_id": 6,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "cloud_inventory_sync_completed",
+      "device_id": 8,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "hybrid_bgp_peer_up",
+      "device_id": 8,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "cloud_inventory_sync_completed",
+      "device_id": 14,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "hybrid_bgp_peer_up",
+      "device_id": 14,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "cloud_inventory_sync_completed",
+      "device_id": 15,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "hybrid_bgp_peer_up",
+      "device_id": 15,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "cloud_inventory_sync_completed",
+      "device_id": 16,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "hybrid_bgp_peer_up",
+      "device_id": 16,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "cloud_inventory_sync_completed",
+      "device_id": 18,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "hybrid_bgp_peer_up",
+      "device_id": 18,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "cloud_inventory_sync_completed",
+      "device_id": 20,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "hybrid_bgp_peer_up",
+      "device_id": 20,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "cloud_inventory_sync_completed",
+      "device_id": 26,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "hybrid_bgp_peer_up",
+      "device_id": 26,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "hybrid_path_recomputed",
+      "device_count": 15,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "cloud_link_latency_warning",
+      "device_count": 7,
+      "severity": "warning"
+    }
+  ]
+}

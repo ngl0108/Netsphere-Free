@@ -1,0 +1,307 @@
+{
+  "run_id": "20260217-142301",
+  "generated_at_utc": "2026-02-17 14:26:04",
+  "status": "pass",
+  "summary": {
+    "duration_seconds": 180,
+    "interval_seconds": 10.0,
+    "total_attempts": 18,
+    "success_count": 18,
+    "failure_count": 0,
+    "success_rate_pct": 100.0,
+    "attempts_p95": 2
+  },
+  "thresholds": {
+    "min_success_rate_pct": 95.0,
+    "max_attempts_p95": 3,
+    "max_failed_24h": 5,
+    "min_signature_valid_rate_pct": 100.0
+  },
+  "scope": {
+    "base_url": "http://localhost:8000",
+    "modes": [
+      "jira",
+      "servicenow",
+      "splunk",
+      "elastic"
+    ],
+    "mode_urls": {
+      "jira": "set",
+      "servicenow": "set",
+      "splunk": "set",
+      "elastic": "set"
+    }
+  },
+  "mode_stats": [
+    {
+      "mode": "jira",
+      "attempts": 5,
+      "success": 5,
+      "fail": 0,
+      "success_rate_pct": 100.0,
+      "attempts_p95": 1
+    },
+    {
+      "mode": "servicenow",
+      "attempts": 5,
+      "success": 5,
+      "fail": 0,
+      "success_rate_pct": 100.0,
+      "attempts_p95": 2
+    },
+    {
+      "mode": "splunk",
+      "attempts": 4,
+      "success": 4,
+      "fail": 0,
+      "success_rate_pct": 100.0,
+      "attempts_p95": 1
+    },
+    {
+      "mode": "elastic",
+      "attempts": 4,
+      "success": 4,
+      "fail": 0,
+      "success_rate_pct": 100.0,
+      "attempts_p95": 1
+    }
+  ],
+  "northbound_kpi": {
+    "window_days": 30,
+    "status": "idle",
+    "success_rate_pct": 100.0,
+    "avg_attempts": 0.0,
+    "p95_attempts": 0,
+    "failure_causes": [],
+    "modes": [],
+    "totals": {
+      "deliveries": 0,
+      "success": 0,
+      "failed": 0,
+      "failed_24h": 0
+    }
+  },
+  "local_receiver": {
+    "enabled": true,
+    "total_requests": 19,
+    "signature_valid": 19,
+    "signature_invalid": 0,
+    "signature_valid_rate_pct": 100.0,
+    "responses_2xx": 18,
+    "responses_5xx": 1,
+    "fail_every": 10,
+    "enforce_signature": true
+  },
+  "checks": [
+    {
+      "id": "northbound.success_rate_pct",
+      "value": 100.0,
+      "threshold": 95.0,
+      "operator": ">=",
+      "status": "pass"
+    },
+    {
+      "id": "northbound.attempts_p95",
+      "value": 2.0,
+      "threshold": 3.0,
+      "operator": "<=",
+      "status": "pass"
+    },
+    {
+      "id": "northbound.failed_24h",
+      "value": 0.0,
+      "threshold": 5.0,
+      "operator": "<=",
+      "status": "pass"
+    },
+    {
+      "id": "receiver.signature_valid_rate_pct",
+      "value": 100.0,
+      "threshold": 100.0,
+      "operator": ">=",
+      "status": "pass"
+    }
+  ],
+  "samples": [
+    {
+      "index": 1,
+      "mode": "jira",
+      "http_status": 200,
+      "latency_ms": 70.39,
+      "ok": true,
+      "attempts": 1,
+      "delivery_status_code": 200,
+      "timestamp": "2026-02-17T14:23:01.312292+00:00"
+    },
+    {
+      "index": 2,
+      "mode": "servicenow",
+      "http_status": 200,
+      "latency_ms": 69.45,
+      "ok": true,
+      "attempts": 1,
+      "delivery_status_code": 200,
+      "timestamp": "2026-02-17T14:23:11.419808+00:00"
+    },
+    {
+      "index": 3,
+      "mode": "splunk",
+      "http_status": 200,
+      "latency_ms": 62.5,
+      "ok": true,
+      "attempts": 1,
+      "delivery_status_code": 200,
+      "timestamp": "2026-02-17T14:23:21.514102+00:00"
+    },
+    {
+      "index": 4,
+      "mode": "elastic",
+      "http_status": 200,
+      "latency_ms": 61.76,
+      "ok": true,
+      "attempts": 1,
+      "delivery_status_code": 200,
+      "timestamp": "2026-02-17T14:23:31.609733+00:00"
+    },
+    {
+      "index": 5,
+      "mode": "jira",
+      "http_status": 200,
+      "latency_ms": 63.24,
+      "ok": true,
+      "attempts": 1,
+      "delivery_status_code": 200,
+      "timestamp": "2026-02-17T14:23:41.698465+00:00"
+    },
+    {
+      "index": 6,
+      "mode": "servicenow",
+      "http_status": 200,
+      "latency_ms": 63.24,
+      "ok": true,
+      "attempts": 1,
+      "delivery_status_code": 200,
+      "timestamp": "2026-02-17T14:23:51.807087+00:00"
+    },
+    {
+      "index": 7,
+      "mode": "splunk",
+      "http_status": 200,
+      "latency_ms": 67.43,
+      "ok": true,
+      "attempts": 1,
+      "delivery_status_code": 200,
+      "timestamp": "2026-02-17T14:24:01.904922+00:00"
+    },
+    {
+      "index": 8,
+      "mode": "elastic",
+      "http_status": 200,
+      "latency_ms": 62.7,
+      "ok": true,
+      "attempts": 1,
+      "delivery_status_code": 200,
+      "timestamp": "2026-02-17T14:24:12.007483+00:00"
+    },
+    {
+      "index": 9,
+      "mode": "jira",
+      "http_status": 200,
+      "latency_ms": 62.14,
+      "ok": true,
+      "attempts": 1,
+      "delivery_status_code": 200,
+      "timestamp": "2026-02-17T14:24:22.104264+00:00"
+    },
+    {
+      "index": 10,
+      "mode": "servicenow",
+      "http_status": 200,
+      "latency_ms": 1090.28,
+      "ok": true,
+      "attempts": 2,
+      "delivery_status_code": 200,
+      "timestamp": "2026-02-17T14:24:33.219408+00:00"
+    },
+    {
+      "index": 11,
+      "mode": "splunk",
+      "http_status": 200,
+      "latency_ms": 67.12,
+      "ok": true,
+      "attempts": 1,
+      "delivery_status_code": 200,
+      "timestamp": "2026-02-17T14:24:43.331930+00:00"
+    },
+    {
+      "index": 12,
+      "mode": "elastic",
+      "http_status": 200,
+      "latency_ms": 72.29,
+      "ok": true,
+      "attempts": 1,
+      "delivery_status_code": 200,
+      "timestamp": "2026-02-17T14:24:53.439907+00:00"
+    },
+    {
+      "index": 13,
+      "mode": "jira",
+      "http_status": 200,
+      "latency_ms": 64.24,
+      "ok": true,
+      "attempts": 1,
+      "delivery_status_code": 200,
+      "timestamp": "2026-02-17T14:25:03.532935+00:00"
+    },
+    {
+      "index": 14,
+      "mode": "servicenow",
+      "http_status": 200,
+      "latency_ms": 63.61,
+      "ok": true,
+      "attempts": 1,
+      "delivery_status_code": 200,
+      "timestamp": "2026-02-17T14:25:13.630314+00:00"
+    },
+    {
+      "index": 15,
+      "mode": "splunk",
+      "http_status": 200,
+      "latency_ms": 64.33,
+      "ok": true,
+      "attempts": 1,
+      "delivery_status_code": 200,
+      "timestamp": "2026-02-17T14:25:23.729320+00:00"
+    },
+    {
+      "index": 16,
+      "mode": "elastic",
+      "http_status": 200,
+      "latency_ms": 62.69,
+      "ok": true,
+      "attempts": 1,
+      "delivery_status_code": 200,
+      "timestamp": "2026-02-17T14:25:33.831272+00:00"
+    },
+    {
+      "index": 17,
+      "mode": "jira",
+      "http_status": 200,
+      "latency_ms": 62.21,
+      "ok": true,
+      "attempts": 1,
+      "delivery_status_code": 200,
+      "timestamp": "2026-02-17T14:25:43.932844+00:00"
+    },
+    {
+      "index": 18,
+      "mode": "servicenow",
+      "http_status": 200,
+      "latency_ms": 68.14,
+      "ok": true,
+      "attempts": 1,
+      "delivery_status_code": 200,
+      "timestamp": "2026-02-17T14:25:54.031154+00:00"
+    }
+  ]
+}

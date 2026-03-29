@@ -1,0 +1,22 @@
+{
+  "id": "inventory.dell_os10.show_version_kv",
+  "fixture_group": "global_switch",
+  "type": "inventory",
+  "device_type": "dell_os10",
+  "commands": {
+    "show inventory|textfsm": null,
+    "show inventory": "",
+    "show version": "Dell EMC Networking OS10\nSystem Model ID: S5248F-ON\nService Tag: 9ZQ1234\n"
+  },
+  "expected": {
+    "min_rows": 1,
+    "parser_contains": "generic_heuristic_inventory",
+    "contains_rows": [
+      {
+        "name": "Chassis",
+        "model_name": "S5248F-ON",
+        "serial_number": "9ZQ1234"
+      }
+    ]
+  }
+}

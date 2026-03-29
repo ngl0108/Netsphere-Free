@@ -1,0 +1,412 @@
+{
+  "meta": {
+    "seed": 3765885100,
+    "generated_at": "2026-02-19T15:11:40+00:00",
+    "cases": [
+      "normal",
+      "timeout",
+      "partial",
+      "malformed"
+    ],
+    "vendors": [
+      "cisco",
+      "arista",
+      "juniper",
+      "fortinet",
+      "paloalto",
+      "f5",
+      "nokia",
+      "vyos",
+      "mikrotik"
+    ]
+  },
+  "vendors": {
+    "cisco": {
+      "normal": {
+        "status": "ok",
+        "inventory": [
+          {
+            "name": "chassis",
+            "class_name": "chassis",
+            "model_name": "C9K-core",
+            "serial_number": "CI-856924"
+          },
+          {
+            "name": "linecard-1",
+            "class_name": "module",
+            "model_name": "C9K-lc",
+            "serial_number": "CI-237951"
+          }
+        ],
+        "neighbors": [
+          {
+            "local_port": "Ethernet1",
+            "neighbor_ip": "10.23.140.133"
+          }
+        ]
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "SSH command timeout"
+      },
+      "partial": {
+        "status": "ok",
+        "inventory": [
+          {
+            "name": "chassis",
+            "class_name": "chassis"
+          }
+        ],
+        "neighbors": []
+      },
+      "malformed": {
+        "status": "malformed",
+        "inventory": "bad-format"
+      }
+    },
+    "arista": {
+      "normal": {
+        "status": "ok",
+        "inventory": [
+          {
+            "name": "chassis",
+            "class_name": "chassis",
+            "model_name": "VEOS-core",
+            "serial_number": "AR-681707"
+          },
+          {
+            "name": "linecard-1",
+            "class_name": "module",
+            "model_name": "VEOS-lc",
+            "serial_number": "AR-536952"
+          }
+        ],
+        "neighbors": [
+          {
+            "local_port": "Ethernet1",
+            "neighbor_ip": "10.51.85.165"
+          }
+        ]
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "SSH command timeout"
+      },
+      "partial": {
+        "status": "ok",
+        "inventory": [
+          {
+            "name": "chassis",
+            "class_name": "chassis"
+          }
+        ],
+        "neighbors": []
+      },
+      "malformed": {
+        "status": "malformed",
+        "inventory": "bad-format"
+      }
+    },
+    "juniper": {
+      "normal": {
+        "status": "ok",
+        "inventory": [
+          {
+            "name": "chassis",
+            "class_name": "chassis",
+            "model_name": "QFX-core",
+            "serial_number": "JU-102852"
+          },
+          {
+            "name": "linecard-1",
+            "class_name": "module",
+            "model_name": "QFX-lc",
+            "serial_number": "JU-654835"
+          }
+        ],
+        "neighbors": [
+          {
+            "local_port": "Ethernet1",
+            "neighbor_ip": "10.53.177.90"
+          }
+        ]
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "SSH command timeout"
+      },
+      "partial": {
+        "status": "ok",
+        "inventory": [
+          {
+            "name": "chassis",
+            "class_name": "chassis"
+          }
+        ],
+        "neighbors": []
+      },
+      "malformed": {
+        "status": "malformed",
+        "inventory": "bad-format"
+      }
+    },
+    "fortinet": {
+      "normal": {
+        "status": "ok",
+        "inventory": [
+          {
+            "name": "chassis",
+            "class_name": "chassis",
+            "model_name": "FGT-core",
+            "serial_number": "FO-861029"
+          },
+          {
+            "name": "linecard-1",
+            "class_name": "module",
+            "model_name": "FGT-lc",
+            "serial_number": "FO-297221"
+          }
+        ],
+        "neighbors": [
+          {
+            "local_port": "Ethernet1",
+            "neighbor_ip": "10.115.111.21"
+          }
+        ]
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "SSH command timeout"
+      },
+      "partial": {
+        "status": "ok",
+        "inventory": [
+          {
+            "name": "chassis",
+            "class_name": "chassis"
+          }
+        ],
+        "neighbors": []
+      },
+      "malformed": {
+        "status": "malformed",
+        "inventory": "bad-format"
+      }
+    },
+    "paloalto": {
+      "normal": {
+        "status": "ok",
+        "inventory": [
+          {
+            "name": "chassis",
+            "class_name": "chassis",
+            "model_name": "PA-core",
+            "serial_number": "PA-309500"
+          },
+          {
+            "name": "linecard-1",
+            "class_name": "module",
+            "model_name": "PA-lc",
+            "serial_number": "PA-982148"
+          }
+        ],
+        "neighbors": [
+          {
+            "local_port": "Ethernet1",
+            "neighbor_ip": "10.7.14.101"
+          }
+        ]
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "SSH command timeout"
+      },
+      "partial": {
+        "status": "ok",
+        "inventory": [
+          {
+            "name": "chassis",
+            "class_name": "chassis"
+          }
+        ],
+        "neighbors": []
+      },
+      "malformed": {
+        "status": "malformed",
+        "inventory": "bad-format"
+      }
+    },
+    "f5": {
+      "normal": {
+        "status": "ok",
+        "inventory": [
+          {
+            "name": "chassis",
+            "class_name": "chassis",
+            "model_name": "BIGIP-core",
+            "serial_number": "F5-955574"
+          },
+          {
+            "name": "linecard-1",
+            "class_name": "module",
+            "model_name": "BIGIP-lc",
+            "serial_number": "F5-398704"
+          }
+        ],
+        "neighbors": [
+          {
+            "local_port": "Ethernet1",
+            "neighbor_ip": "10.54.233.60"
+          }
+        ]
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "SSH command timeout"
+      },
+      "partial": {
+        "status": "ok",
+        "inventory": [
+          {
+            "name": "chassis",
+            "class_name": "chassis"
+          }
+        ],
+        "neighbors": []
+      },
+      "malformed": {
+        "status": "malformed",
+        "inventory": "bad-format"
+      }
+    },
+    "nokia": {
+      "normal": {
+        "status": "ok",
+        "inventory": [
+          {
+            "name": "chassis",
+            "class_name": "chassis",
+            "model_name": "SR-core",
+            "serial_number": "NO-235071"
+          },
+          {
+            "name": "linecard-1",
+            "class_name": "module",
+            "model_name": "SR-lc",
+            "serial_number": "NO-199606"
+          }
+        ],
+        "neighbors": [
+          {
+            "local_port": "Ethernet1",
+            "neighbor_ip": "10.198.78.242"
+          }
+        ]
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "SSH command timeout"
+      },
+      "partial": {
+        "status": "ok",
+        "inventory": [
+          {
+            "name": "chassis",
+            "class_name": "chassis"
+          }
+        ],
+        "neighbors": []
+      },
+      "malformed": {
+        "status": "malformed",
+        "inventory": "bad-format"
+      }
+    },
+    "vyos": {
+      "normal": {
+        "status": "ok",
+        "inventory": [
+          {
+            "name": "chassis",
+            "class_name": "chassis",
+            "model_name": "VYOS-core",
+            "serial_number": "VY-928471"
+          },
+          {
+            "name": "linecard-1",
+            "class_name": "module",
+            "model_name": "VYOS-lc",
+            "serial_number": "VY-236841"
+          }
+        ],
+        "neighbors": [
+          {
+            "local_port": "Ethernet1",
+            "neighbor_ip": "10.150.57.132"
+          }
+        ]
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "SSH command timeout"
+      },
+      "partial": {
+        "status": "ok",
+        "inventory": [
+          {
+            "name": "chassis",
+            "class_name": "chassis"
+          }
+        ],
+        "neighbors": []
+      },
+      "malformed": {
+        "status": "malformed",
+        "inventory": "bad-format"
+      }
+    },
+    "mikrotik": {
+      "normal": {
+        "status": "ok",
+        "inventory": [
+          {
+            "name": "chassis",
+            "class_name": "chassis",
+            "model_name": "CHR-core",
+            "serial_number": "MI-875502"
+          },
+          {
+            "name": "linecard-1",
+            "class_name": "module",
+            "model_name": "CHR-lc",
+            "serial_number": "MI-219879"
+          }
+        ],
+        "neighbors": [
+          {
+            "local_port": "Ethernet1",
+            "neighbor_ip": "10.189.149.4"
+          }
+        ]
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "SSH command timeout"
+      },
+      "partial": {
+        "status": "ok",
+        "inventory": [
+          {
+            "name": "chassis",
+            "class_name": "chassis"
+          }
+        ],
+        "neighbors": []
+      },
+      "malformed": {
+        "status": "malformed",
+        "inventory": "bad-format"
+      }
+    }
+  }
+}

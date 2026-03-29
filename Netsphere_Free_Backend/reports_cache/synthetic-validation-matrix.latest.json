@@ -1,0 +1,593 @@
+{
+  "generated_at": "2026-03-22T20:56:47.091822+00:00",
+  "profile": "ci",
+  "manifest": {
+    "path": "test-data/synthetic/manifest.json",
+    "generated_at": "2026-02-19T11:50:19+00:00",
+    "base_seed": 20260219,
+    "file_count": 10,
+    "missing_files": [],
+    "hash_mismatches": [],
+    "protocols_present": [
+      "snmp",
+      "ssh",
+      "gnmi"
+    ],
+    "digital_twin_vendors": [
+      "arista",
+      "cisco",
+      "f5",
+      "fortinet",
+      "juniper",
+      "mikrotik",
+      "nokia",
+      "paloalto",
+      "vyos"
+    ],
+    "protocol_vendor_map": {
+      "snmp": [
+        "arista",
+        "cisco",
+        "f5",
+        "fortinet",
+        "juniper",
+        "mikrotik",
+        "nokia",
+        "paloalto",
+        "vyos"
+      ],
+      "ssh": [
+        "arista",
+        "cisco",
+        "f5",
+        "fortinet",
+        "juniper",
+        "mikrotik",
+        "nokia",
+        "paloalto",
+        "vyos"
+      ],
+      "gnmi": [
+        "arista",
+        "cisco",
+        "f5",
+        "fortinet",
+        "juniper",
+        "mikrotik",
+        "nokia",
+        "paloalto",
+        "vyos"
+      ]
+    },
+    "pass": {
+      "manifest_file_exists": true,
+      "manifest_has_entries": true,
+      "manifest_hashes_match": true,
+      "digital_twin_protocols_present": true,
+      "digital_twin_vendor_floor": true,
+      "digital_twin_case_consistency": true
+    }
+  },
+  "scenario_catalog": {
+    "scenarios": [
+      {
+        "name": "failure",
+        "path": "test-data/synthetic/scenarios/failure.json",
+        "focus_areas": [
+          "failure",
+          "retry",
+          "recovery"
+        ],
+        "protocols": [
+          "bgp",
+          "cdp",
+          "lldp"
+        ],
+        "event_types": [
+          "auto_rollback_executed",
+          "snmp_timeout",
+          "ssh_auth_failed",
+          "topology_link_flap"
+        ],
+        "counts": {
+          "devices": 64,
+          "links": 96,
+          "events": 12
+        },
+        "vendor_mix": {
+          "arista": 10,
+          "cisco": 4,
+          "f5": 8,
+          "fortinet": 3,
+          "juniper": 12,
+          "mikrotik": 5,
+          "nokia": 6,
+          "paloalto": 6,
+          "vyos": 10
+        },
+        "severities": {
+          "critical": 1,
+          "warning": 11,
+          "info": 0
+        }
+      },
+      {
+        "name": "hybrid_cloud",
+        "path": "test-data/synthetic/scenarios/hybrid_cloud.json",
+        "focus_areas": [
+          "hybrid",
+          "cloud",
+          "bgp"
+        ],
+        "protocols": [
+          "bgp",
+          "cloud",
+          "lldp"
+        ],
+        "event_types": [
+          "cloud_inventory_sync_completed",
+          "cloud_link_latency_warning",
+          "hybrid_bgp_peer_up",
+          "hybrid_path_recomputed"
+        ],
+        "counts": {
+          "devices": 54,
+          "links": 78,
+          "events": 22
+        },
+        "vendor_mix": {
+          "arista": 7,
+          "cisco": 6,
+          "f5": 4,
+          "fortinet": 4,
+          "juniper": 9,
+          "mikrotik": 6,
+          "nokia": 9,
+          "paloalto": 4,
+          "vyos": 5
+        },
+        "severities": {
+          "critical": 0,
+          "warning": 1,
+          "info": 21
+        }
+      },
+      {
+        "name": "large_scale",
+        "path": "test-data/synthetic/scenarios/large_scale.json",
+        "focus_areas": [
+          "scale",
+          "throughput",
+          "topology"
+        ],
+        "protocols": [
+          "bgp",
+          "fdb",
+          "lldp"
+        ],
+        "event_types": [
+          "discovery_batch_chunk"
+        ],
+        "counts": {
+          "devices": 260,
+          "links": 468,
+          "events": 60
+        },
+        "vendor_mix": {
+          "arista": 20,
+          "cisco": 29,
+          "f5": 30,
+          "fortinet": 30,
+          "juniper": 41,
+          "mikrotik": 26,
+          "nokia": 25,
+          "paloalto": 29,
+          "vyos": 30
+        },
+        "severities": {
+          "critical": 0,
+          "warning": 0,
+          "info": 60
+        }
+      },
+      {
+        "name": "normal",
+        "path": "test-data/synthetic/scenarios/normal.json",
+        "focus_areas": [
+          "baseline",
+          "inventory",
+          "topology"
+        ],
+        "protocols": [
+          "cdp",
+          "fdb",
+          "lldp"
+        ],
+        "event_types": [
+          "discovery_completed",
+          "sync_completed",
+          "topology_refreshed"
+        ],
+        "counts": {
+          "devices": 24,
+          "links": 33,
+          "events": 20
+        },
+        "vendor_mix": {
+          "arista": 6,
+          "cisco": 2,
+          "f5": 2,
+          "fortinet": 3,
+          "juniper": 2,
+          "mikrotik": 4,
+          "nokia": 1,
+          "paloalto": 2,
+          "vyos": 2
+        },
+        "severities": {
+          "critical": 0,
+          "warning": 0,
+          "info": 20
+        }
+      },
+      {
+        "name": "rollback_wave",
+        "path": "test-data/synthetic/scenarios/rollback_wave.json",
+        "focus_areas": [
+          "change",
+          "rollback",
+          "approval"
+        ],
+        "protocols": [
+          "bgp",
+          "lacp",
+          "lldp"
+        ],
+        "event_types": [
+          "approval_granted",
+          "auto_rollback_executed",
+          "post_check_failed",
+          "precheck_passed",
+          "wave_deploy_started"
+        ],
+        "counts": {
+          "devices": 48,
+          "links": 72,
+          "events": 32
+        },
+        "vendor_mix": {
+          "arista": 8,
+          "cisco": 4,
+          "f5": 8,
+          "fortinet": 4,
+          "juniper": 6,
+          "mikrotik": 2,
+          "nokia": 6,
+          "paloalto": 7,
+          "vyos": 3
+        },
+        "severities": {
+          "critical": 1,
+          "warning": 4,
+          "info": 27
+        }
+      },
+      {
+        "name": "security_incident",
+        "path": "test-data/synthetic/scenarios/security_incident.json",
+        "focus_areas": [
+          "security",
+          "policy",
+          "isolation"
+        ],
+        "protocols": [
+          "fdb",
+          "lldp",
+          "vxlan"
+        ],
+        "event_types": [
+          "isolation_workflow_triggered",
+          "policy_violation",
+          "rogue_mac_detected",
+          "unexpected_config_change"
+        ],
+        "counts": {
+          "devices": 72,
+          "links": 100,
+          "events": 16
+        },
+        "vendor_mix": {
+          "arista": 6,
+          "cisco": 5,
+          "f5": 7,
+          "fortinet": 13,
+          "juniper": 9,
+          "mikrotik": 10,
+          "nokia": 8,
+          "paloalto": 5,
+          "vyos": 9
+        },
+        "severities": {
+          "critical": 16,
+          "warning": 0,
+          "info": 0
+        }
+      },
+      {
+        "name": "wireless_edge",
+        "path": "test-data/synthetic/scenarios/wireless_edge.json",
+        "focus_areas": [
+          "wireless",
+          "edge",
+          "telemetry"
+        ],
+        "protocols": [
+          "capwap",
+          "fdb",
+          "lldp"
+        ],
+        "event_types": [
+          "wireless_ap_joined",
+          "wireless_client_auth_warning",
+          "wireless_client_roam",
+          "wlan_policy_sync"
+        ],
+        "counts": {
+          "devices": 36,
+          "links": 46,
+          "events": 13
+        },
+        "vendor_mix": {
+          "arista": 10,
+          "cisco": 7,
+          "f5": 3,
+          "fortinet": 2,
+          "juniper": 3,
+          "mikrotik": 5,
+          "nokia": 2,
+          "paloalto": 1,
+          "vyos": 3
+        },
+        "severities": {
+          "critical": 0,
+          "warning": 1,
+          "info": 12
+        }
+      }
+    ],
+    "summary": {
+      "scenario_count": 7,
+      "required_scenarios": [
+        "normal",
+        "large_scale",
+        "failure",
+        "security_incident"
+      ],
+      "missing_required_scenarios": [],
+      "expanded_scenarios": [
+        "rollback_wave",
+        "hybrid_cloud",
+        "wireless_edge"
+      ],
+      "missing_expanded_scenarios": [],
+      "focus_areas_present": [
+        "approval",
+        "baseline",
+        "bgp",
+        "change",
+        "cloud",
+        "edge",
+        "failure",
+        "hybrid",
+        "inventory",
+        "isolation",
+        "policy",
+        "recovery",
+        "retry",
+        "rollback",
+        "scale",
+        "security",
+        "telemetry",
+        "throughput",
+        "topology",
+        "wireless"
+      ],
+      "protocols_present": [
+        "bgp",
+        "capwap",
+        "cdp",
+        "cloud",
+        "fdb",
+        "lacp",
+        "lldp",
+        "vxlan"
+      ],
+      "total_devices": 558,
+      "total_links": 893,
+      "total_events": 175
+    },
+    "pass": {
+      "required_scenarios_present": true,
+      "expanded_scenarios_present": true,
+      "scenario_count_floor": true,
+      "normal_has_only_info_events": true,
+      "failure_has_critical_signal": true,
+      "security_incident_has_critical_burst": true,
+      "large_scale_meets_floor": true,
+      "expanded_focus_areas_present": true,
+      "rollback_wave_has_rollback_signal": true,
+      "hybrid_cloud_has_hybrid_signal": true,
+      "wireless_edge_has_wireless_signal": true
+    }
+  },
+  "soak_matrix": {
+    "runs": [
+      {
+        "scenario": "failure",
+        "seed": 20260219,
+        "started_at": "2026-03-22T20:56:32.057236+00:00",
+        "duration_sec": 5,
+        "tick_ms": 10,
+        "session_timeout_sec": 30,
+        "refresh_interval_sec": 10,
+        "metrics": {
+          "processed_events": 425,
+          "duplicates": 37,
+          "duplicate_ratio": 0.087059,
+          "critical_seen": 37,
+          "warnings_seen": 388,
+          "info_seen": 0,
+          "session_refresh_count": 0,
+          "forced_logout_count": 0,
+          "max_queue_depth": 440,
+          "throughput_eps": 85.0
+        },
+        "pass": {
+          "duplicate_ratio_under_0_2": true,
+          "forced_logout_zero": true
+        }
+      },
+      {
+        "scenario": "security_incident",
+        "seed": 20260320,
+        "started_at": "2026-03-22T20:56:37.067141+00:00",
+        "duration_sec": 5,
+        "tick_ms": 10,
+        "session_timeout_sec": 30,
+        "refresh_interval_sec": 10,
+        "metrics": {
+          "processed_events": 372,
+          "duplicates": 32,
+          "duplicate_ratio": 0.086022,
+          "critical_seen": 372,
+          "warnings_seen": 0,
+          "info_seen": 0,
+          "session_refresh_count": 0,
+          "forced_logout_count": 0,
+          "max_queue_depth": 298,
+          "throughput_eps": 74.4
+        },
+        "pass": {
+          "duplicate_ratio_under_0_2": true,
+          "forced_logout_zero": true
+        }
+      },
+      {
+        "scenario": "rollback_wave",
+        "seed": 20260421,
+        "started_at": "2026-03-22T20:56:42.091507+00:00",
+        "duration_sec": 5,
+        "tick_ms": 10,
+        "session_timeout_sec": 30,
+        "refresh_interval_sec": 10,
+        "metrics": {
+          "processed_events": 418,
+          "duplicates": 31,
+          "duplicate_ratio": 0.074163,
+          "critical_seen": 6,
+          "warnings_seen": 56,
+          "info_seen": 356,
+          "session_refresh_count": 0,
+          "forced_logout_count": 0,
+          "max_queue_depth": 414,
+          "throughput_eps": 83.6
+        },
+        "pass": {
+          "duplicate_ratio_under_0_2": true,
+          "forced_logout_zero": true
+        }
+      },
+      {
+        "scenario": "large_scale",
+        "seed": 20260522,
+        "started_at": "2026-03-22T20:56:47.090817+00:00",
+        "duration_sec": 5,
+        "tick_ms": 5,
+        "session_timeout_sec": 30,
+        "refresh_interval_sec": 10,
+        "metrics": {
+          "processed_events": 747,
+          "duplicates": 62,
+          "duplicate_ratio": 0.082999,
+          "critical_seen": 0,
+          "warnings_seen": 0,
+          "info_seen": 747,
+          "session_refresh_count": 0,
+          "forced_logout_count": 0,
+          "max_queue_depth": 758,
+          "throughput_eps": 149.4
+        },
+        "pass": {
+          "duplicate_ratio_under_0_2": true,
+          "forced_logout_zero": true
+        }
+      }
+    ],
+    "summary": {
+      "run_count": 4,
+      "total_processed_events": 1962,
+      "max_duplicate_ratio": 0.087059,
+      "max_queue_depth": 758,
+      "max_throughput_eps": 149.4
+    },
+    "pass": {
+      "runs_executed": true,
+      "all_runs_healthy": true,
+      "large_scale_has_high_volume": true
+    }
+  },
+  "eve_plan": {
+    "path": "docs/operational-validation/eve-global-vendor-test-plan.md",
+    "first_wave_vendors": [
+      "Juniper",
+      "Fortinet",
+      "Palo Alto",
+      "F5",
+      "Nokia",
+      "VyOS",
+      "MikroTik"
+    ],
+    "second_wave_vendors": [
+      "Arista cEOS/vEOS (entitled access)",
+      "Cisco Nexus/CSR/ASAv (entitled trial/support access)",
+      "Check Point CloudGuard (marketplace trial)",
+      "Dell OS10-V (entitled support access)"
+    ],
+    "mandatory_test_cases": [
+      "Device identity accuracy by vendor OS family",
+      "Link reflection accuracy (LLDP/CDP/route-derived links)",
+      "Candidate queue split for low-confidence links",
+      "Parser robustness on partial/timeout/malformed outputs",
+      "Dry-run -> approval -> wave -> post-check execution chain",
+      "Post-check failure rollback and P95 rollback time",
+      "401/403/session-expiry resilience under polling load",
+      "Closed-loop action gating and trace completeness"
+    ],
+    "acceptance_gates": [
+      "Topology reflection regressions: 0 blocking defects",
+      "Approval ID <-> Execution ID traceability: 100%",
+      "Rollback P95 within policy target",
+      "No persistent session/polling instability during soak",
+      "Evidence reports generated and archived"
+    ],
+    "evidence_files": [
+      "docs/reports/kpi-readiness-30d-latest.json",
+      "docs/reports/kpi-readiness-30d-latest.md",
+      "docs/reports/northbound-soak-72h-latest.json",
+      "docs/reports/northbound-soak-72h-latest.md"
+    ],
+    "pass": {
+      "required_first_wave_vendors_present": true,
+      "first_wave_vendor_count_floor": true,
+      "mandatory_case_count_floor": true,
+      "acceptance_gate_count_floor": true,
+      "evidence_file_count_floor": true
+    }
+  },
+  "summary": {
+    "overall_pass": true,
+    "checked_fixture_scenarios": 7,
+    "executed_soak_runs": 4,
+    "total_processed_events": 1962
+  }
+}

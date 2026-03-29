@@ -1,0 +1,21 @@
+{
+  "id": "inventory.extreme_exos.show_version_kv",
+  "fixture_group": "global_switch",
+  "type": "inventory",
+  "device_type": "extreme_exos",
+  "commands": {
+    "show inventory|textfsm": null,
+    "show inventory": "",
+    "show version": "Image : ExtremeXOS version 31.7.1.4\nSystem Type: X670-G2-48x-4q\nSystem Serial Number: 1808G-12345\n"
+  },
+  "expected": {
+    "min_rows": 1,
+    "parser_contains": "generic_heuristic_inventory",
+    "contains_rows": [
+      {
+        "model_name": "X670-G2-48x-4q",
+        "serial_number": "1808G-12345"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "inventory.huawei_vrp.display_device_and_esn",
+  "type": "inventory",
+  "device_type": "huawei_vrp",
+  "commands": {
+    "display esn": "ESN: 210235A1B2C3D4E5\n",
+    "display device": "Slot 1:\nBoard Type: LPU\nBarCode: 123456\nDescription: Line Processing Unit\n",
+    "display version": "Huawei CE6865-48S8CQ-EI Versatile Routing Platform Software\n"
+  },
+  "expected": {
+    "min_rows": 2,
+    "parser_contains": "huawei_inventory",
+    "contains_rows": [
+      {
+        "name": "Chassis",
+        "serial_number": "210235A1B2C3D4E5"
+      },
+      {
+        "name": "Slot 1",
+        "model_name": "LPU"
+      }
+    ]
+  }
+}

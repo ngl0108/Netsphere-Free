@@ -1,0 +1,34 @@
+{
+  "id": "neighbors.f5_ltm.lldp_neighbors_real_i5800",
+  "fixture_group": "global_switch",
+  "type": "neighbors",
+  "device_type": "f5_ltm",
+  "driver_mode": "generic",
+  "commands": {
+    "show net lldp-neighbors|textfsm": null,
+    "show net lldp-neighbors": "-------------------------------------------------------------------------\nNet::LLDP Neighbors\n-------------------------------------------------------------------------\nLocal Port  Chassis ID          Port ID           System Name\n-------------------------------------------------------------------------\n1.1         00:2a:b1:cc:20:00   Ethernet1/1       Core-SW-01\n1.2         00:2a:b1:cc:20:00   Ethernet1/2       Core-SW-01\n",
+    "show cdp neighbors detail|textfsm": null,
+    "show cdp neighbors detail": ""
+  },
+  "expected": {
+    "min_rows": 2,
+    "driver_contains": "GenericDriver",
+    "required_protocols": [
+      "LLDP"
+    ],
+    "contains_rows": [
+      {
+        "local_interface": "1.1",
+        "remote_interface": "Ethernet1/1",
+        "neighbor_name": "Core-SW-01",
+        "protocol": "LLDP"
+      },
+      {
+        "local_interface": "1.2",
+        "remote_interface": "Ethernet1/2",
+        "neighbor_name": "Core-SW-01",
+        "protocol": "LLDP"
+      }
+    ]
+  }
+}

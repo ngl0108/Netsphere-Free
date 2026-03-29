@@ -1,0 +1,27 @@
+{
+  "id": "neighbors.nokia_sros.lldp_detail",
+  "fixture_group": "global_switch",
+  "type": "neighbors",
+  "device_type": "nokia_sros",
+  "driver_mode": "manager",
+  "commands": {
+    "show lldp neighbors detail|textfsm": null,
+    "show lldp neighbors detail": "Local Intf: 1/1/c1/1\nPort id: 1/1/c2/1\nSystem Name: SR-EDGE-02\nManagement Address: 10.42.0.2\n",
+    "show cdp neighbors detail|textfsm": null,
+    "show cdp neighbors detail": ""
+  },
+  "expected": {
+    "min_rows": 1,
+    "driver_contains": "GenericDriver",
+    "required_protocols": [
+      "LLDP"
+    ],
+    "contains_rows": [
+      {
+        "neighbor_name": "SR-EDGE-02",
+        "mgmt_ip": "10.42.0.2",
+        "protocol": "LLDP"
+      }
+    ]
+  }
+}

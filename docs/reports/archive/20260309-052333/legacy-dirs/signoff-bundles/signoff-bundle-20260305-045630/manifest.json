@@ -1,0 +1,61 @@
+﻿{
+    "generated_at":  "2026-03-05T04:56:30.9308372+09:00",
+    "bundle_root":  "C:\\Users\\ngl01\\Desktop\\김병윤\\0. 개인\\0. 개인프로젝트정리\\Pyside Gui Config 프로그램\\docs\\reports\\signoff-bundles\\signoff-bundle-20260305-045630",
+    "files_count":  9,
+    "files":  [
+                  {
+                      "file":  "reports\\20260305-all-cloud-suite-20260305-030335.json",
+                      "size_bytes":  3836,
+                      "last_write_time":  "2026-03-05T03:03:52.8852172+09:00",
+                      "sha256":  "933DEDA667466C2E00BF979BAEC43682CA5F6454D567270CE8204D9795FF92F7"
+                  },
+                  {
+                      "file":  "reports\\20260305-all-cloud-suite-20260305-030335.md",
+                      "size_bytes":  1198,
+                      "last_write_time":  "2026-03-05T03:03:52.9166055+09:00",
+                      "sha256":  "935BC2D3CEC278EC687A83B0E51368130583A2242C875B7366FDEB48EF4E2A7F"
+                  },
+                  {
+                      "file":  "reports\\kpi-readiness-30d-latest.json",
+                      "size_bytes":  12676,
+                      "last_write_time":  "2026-03-05T04:02:49.1152320+09:00",
+                      "sha256":  "82F0A83BBBE8F186D6D5F9294DD6A84AC1D77D2001776A7C72579BB9CDA3CAA4"
+                  },
+                  {
+                      "file":  "reports\\kpi-readiness-30d-latest.md",
+                      "size_bytes":  3086,
+                      "last_write_time":  "2026-03-05T04:02:49.1162378+09:00",
+                      "sha256":  "83E677B40A79492C8139FDBD3EDD861184B6D2AA58B988B68935A326155B7D08"
+                  },
+                  {
+                      "file":  "reports\\northbound-soak-72h-latest.json",
+                      "size_bytes":  637,
+                      "last_write_time":  "2026-03-05T04:56:06.4986877+09:00",
+                      "sha256":  "3E686FD1A933B8F1E85101BD8D75C3114672E102090E6817A587358EA021D42A"
+                  },
+                  {
+                      "file":  "reports\\northbound-soak-72h-latest.md",
+                      "size_bytes":  503,
+                      "last_write_time":  "2026-03-05T04:56:06.4992121+09:00",
+                      "sha256":  "F55DABFB4EE0B784ABCCA1C5C3166FCFDD7583EF78556F802E30BEA9DB2BFCC1"
+                  },
+                  {
+                      "file":  "reports\\northbound-soak-72h-progress.log",
+                      "size_bytes":  17550,
+                      "last_write_time":  "2026-03-05T04:56:06.4976380+09:00",
+                      "sha256":  "84B3A55769F40B8487875DDCA659D4A29F14522BA6D9669299FAF9FF7C080409"
+                  },
+                  {
+                      "file":  "reports\\northbound-soak-72h-run.log",
+                      "size_bytes":  29754,
+                      "last_write_time":  "2026-03-05T04:56:06.4971107+09:00",
+                      "sha256":  "A8638E0C4FB573FEE7085572F032A39A2BDDB24B90A72550AB6E85070DF16286"
+                  },
+                  {
+                      "file":  "reports\\northbound-soak-72h-run-state.json",
+                      "size_bytes":  454,
+                      "last_write_time":  "2026-03-05T04:32:39.8820012+09:00",
+                      "sha256":  "CD591E63F0855BAECB6B0B907E58EABD02ABD8DB1DDF3F08E62ED8E127AA4989"
+                  }
+              ]
+}

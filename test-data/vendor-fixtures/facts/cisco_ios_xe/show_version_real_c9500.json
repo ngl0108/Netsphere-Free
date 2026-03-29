@@ -1,0 +1,30 @@
+{
+  "id": "facts.cisco_ios_xe.show_version_real_c9500",
+  "fixture_group": "global_switch",
+  "type": "facts",
+  "device_type": "cisco_ios_xe",
+  "driver_mode": "generic",
+  "commands": {
+    "show version": "Cisco IOS XE Software, Version 17.06.04\nCore-9K uptime is 38 weeks, 5 days, 4 hours, 21 minutes\ncisco C9500-24Y4C (X86) processor with 2942186K/6147K bytes of memory.\nProcessor board ID FDO2411XXXX\nModel Number                       : C9500-24Y4C\nSystem Serial Number               : FDO2411XXXX\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "cisco_ios_xe"
+      },
+      "model": {
+        "equals": "C9500-24Y4C"
+      },
+      "serial_number": {
+        "equals": "FDO2411XXXX"
+      },
+      "os_version": {
+        "equals": "17.06.04"
+      },
+      "uptime": {
+        "contains": "38 weeks, 5 days, 4 hours, 21 minutes"
+      }
+    }
+  }
+}

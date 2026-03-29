@@ -1,0 +1,27 @@
+{
+  "id": "facts.soltech_switch.show_version_domestic_switch",
+  "fixture_group": "domestic_switch",
+  "type": "facts",
+  "device_type": "soltech_switch",
+  "driver_mode": "manager",
+  "commands": {
+    "show version": "Soltech NOS Software, Version 9.1.7\nSystem Name : SOLTECH-LAB\nModel : SFC5248XG\nSerial Number : STX12345678\nSystem uptime is 42 days, 10:11:12\n"
+  },
+  "expected": {
+    "driver_contains": "SoltechDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "Soltech"
+      },
+      "hostname": {
+        "equals": "SOLTECH-LAB"
+      },
+      "model": {
+        "equals": "SFC5248XG"
+      },
+      "raw_output": {
+        "contains": "Soltech NOS Software"
+      }
+    }
+  }
+}

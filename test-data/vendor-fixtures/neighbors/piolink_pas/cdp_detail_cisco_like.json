@@ -1,0 +1,35 @@
+{
+  "id": "neighbors.piolink_pas.cdp_detail_cisco_like",
+  "fixture_group": "domestic_switch",
+  "type": "neighbors",
+  "device_type": "piolink_pas",
+  "driver_mode": "manager",
+  "commands": {
+    "show lldp neighbors detail|textfsm": null,
+    "show lldp neighbors detail": "",
+    "show lldp neighbors|textfsm": null,
+    "show lldp neighbors": "",
+    "show cdp neighbors detail|textfsm": null,
+    "show cdp neighbors detail": "Device ID: PAS-DIST-1\nEntry address(es):\n  IP address: 172.20.10.2\nPlatform: piolink PAS,  Capabilities: Router Switch\nInterface: GigabitEthernet1/0/1,  Port ID (outgoing port): GigabitEthernet0/1\n"
+  },
+  "expected": {
+    "min_rows": 1,
+    "driver_contains": "GenericDriver",
+    "required_protocols": [
+      "CDP"
+    ],
+    "contains_rows": [
+      {
+        "neighbor_name": "PAS-DIST-1",
+        "mgmt_ip": "172.20.10.2",
+        "local_interface": {
+          "contains": "GigabitEthernet1/0/1"
+        },
+        "remote_interface": {
+          "contains": "GigabitEthernet0/1"
+        },
+        "protocol": "CDP"
+      }
+    ]
+  }
+}

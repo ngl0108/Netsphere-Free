@@ -1,0 +1,27 @@
+{
+  "id": "facts.coreedge_switch.show_version_domestic_switch",
+  "fixture_group": "domestic_switch",
+  "type": "facts",
+  "device_type": "coreedge_switch",
+  "driver_mode": "manager",
+  "commands": {
+    "show version": "CoreEdge Switch Software, Version 7.3.4\nSystem Name : COREEDGE-LAB\nModel : C3300-48GT\nSerial Number : CE12345678\nSystem uptime is 31 days, 03:21:11\n"
+  },
+  "expected": {
+    "driver_contains": "CoreEdgeDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "CoreEdge"
+      },
+      "hostname": {
+        "equals": "COREEDGE-LAB"
+      },
+      "model": {
+        "equals": "C3300-48GT"
+      },
+      "raw_output": {
+        "contains": "CoreEdge Switch Software"
+      }
+    }
+  }
+}

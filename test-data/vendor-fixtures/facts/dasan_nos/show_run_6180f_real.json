@@ -1,0 +1,21 @@
+{
+  "id": "facts.dasan_nos.show_run_6180f_real",
+  "fixture_group": "domestic_switch",
+  "type": "facts",
+  "device_type": "dasan_nos",
+  "driver_mode": "manager",
+  "commands": {
+    "show run": "# show run\n\nBuilding configuration...\n\nCurrent configuration:\nhostname taeyoungENT\n!\nbridge\n !\n set vlan pvid 1-8 1\n set vlan pvid 9-10 2\n !\n set vlan create 1-2\n !\n set vlan add br1 1-8 untagged\n set vlan add br2 9-10 untagged\n !\n!\ninterface no shutdown lo\n!\ninterface no shutdown br1-br2\n!\ninterface br1\n ip address 112.xxx.xxx.126/25\n ip address 61.xx.xxx.158/27\n!\ninterface br2\n ip address 222.xx.xxx.166/30\n!\nip route 0.0.0.0/0 222.xx.xxx.165\n"
+  },
+  "expected": {
+    "driver_contains": "DasanDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "Dasan"
+      },
+      "hostname": {
+        "equals": "taeyoungENT"
+      }
+    }
+  }
+}

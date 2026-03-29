@@ -1,0 +1,1038 @@
+﻿{
+    "generated_at":  "2026-03-05T03:03:52.8303160+09:00",
+    "base_url":  "http://localhost:8000",
+    "kpi_snapshot":  {
+                         "success":  true,
+                         "data":  {
+                                      "generated_at":  1772647431,
+                                      "readiness":  {
+                                                        "status":  "critical",
+                                                        "required_checks_total":  18,
+                                                        "pass_count":  9,
+                                                        "fail_count":  6,
+                                                        "unknown_count":  3
+                                                    },
+                                      "snapshot":  {
+                                                       "event_log_id":  477,
+                                                       "event_id":  "OPS_KPI_READINESS_SNAPSHOT",
+                                                       "source":  "OpsKPI",
+                                                       "severity":  "error",
+                                                       "payload":  {
+                                                                       "generated_at":  1772647431,
+                                                                       "generated_at_utc":  "2026-03-04T18:03:51+00:00",
+                                                                       "run_type":  "manual_api",
+                                                                       "scope":  {
+                                                                                     "site_id":  null,
+                                                                                     "discovery_days":  30,
+                                                                                     "discovery_limit":  300,
+                                                                                     "require_sample_minimums":  true
+                                                                                 },
+                                                                       "readiness":  {
+                                                                                         "status":  "critical",
+                                                                                         "required_checks_total":  18,
+                                                                                         "pass_count":  9,
+                                                                                         "fail_count":  6,
+                                                                                         "unknown_count":  3,
+                                                                                         "failed_check_ids":  [
+                                                                                                                  "plug_scan.auto_reflection_rate_pct",
+                                                                                                                  "plug_scan.false_positive_rate_pct",
+                                                                                                                  "autonomy.auto_action_rate_pct",
+                                                                                                                  "sample.change.events",
+                                                                                                                  "sample.northbound.deliveries",
+                                                                                                                  "sample.autonomy.actions_executed"
+                                                                                                              ],
+                                                                                         "unknown_check_ids":  [
+                                                                                                                   "plug_scan.first_map_p50_seconds",
+                                                                                                                   "plug_scan.first_map_p95_seconds",
+                                                                                                                   "change.rollback_p95_ms",
+                                                                                                                   "autonomy.mttd_improvement_pct",
+                                                                                                                   "autonomy.mttr_improvement_pct"
+                                                                                                               ]
+                                                                                     },
+                                                                       "evidence":  {
+                                                                                        "sample_minimums_enforced":  true,
+                                                                                        "sample_totals":  {
+                                                                                                              "discovery_jobs":  18,
+                                                                                                              "change_events":  0,
+                                                                                                              "northbound_deliveries":  0,
+                                                                                                              "autonomy_issues_created":  11,
+                                                                                                              "autonomy_actions_executed":  0
+                                                                                                          },
+                                                                                        "sample_thresholds":  {
+                                                                                                                  "discovery_jobs":  1,
+                                                                                                                  "change_events":  1,
+                                                                                                                  "northbound_deliveries":  1,
+                                                                                                                  "autonomy_issues_created":  1,
+                                                                                                                  "autonomy_actions_executed":  1
+                                                                                                              }
+                                                                                    }
+                                                                   }
+                                                   }
+                                  }
+                     },
+    "kpi_history":  {
+                        "success":  true,
+                        "data":  {
+                                     "range":  {
+                                                   "days":  30,
+                                                   "since":  1770055431,
+                                                   "limit":  90
+                                               },
+                                     "filters":  {
+                                                     "site_id":  null,
+                                                     "status":  null
+                                                 },
+                                     "totals":  {
+                                                    "count":  15,
+                                                    "by_status":  {
+                                                                      "critical":  15
+                                                                  }
+                                                },
+                                     "latest":  {
+                                                    "event_log_id":  477,
+                                                    "generated_at":  1772647431,
+                                                    "generated_at_utc":  "2026-03-04T18:03:51+00:00",
+                                                    "generated_date":  "2026-03-04",
+                                                    "severity":  "error",
+                                                    "source":  "OpsKPI",
+                                                    "run_type":  "manual_api",
+                                                    "scope":  {
+                                                                  "site_id":  null,
+                                                                  "discovery_days":  30,
+                                                                  "discovery_limit":  300,
+                                                                  "require_sample_minimums":  true
+                                                              },
+                                                    "readiness":  {
+                                                                      "status":  "critical",
+                                                                      "required_checks_total":  18,
+                                                                      "pass_count":  9,
+                                                                      "fail_count":  6,
+                                                                      "unknown_count":  3,
+                                                                      "failed_check_ids":  [
+                                                                                               "plug_scan.auto_reflection_rate_pct",
+                                                                                               "plug_scan.false_positive_rate_pct",
+                                                                                               "autonomy.auto_action_rate_pct",
+                                                                                               "sample.change.events",
+                                                                                               "sample.northbound.deliveries",
+                                                                                               "sample.autonomy.actions_executed"
+                                                                                           ],
+                                                                      "unknown_check_ids":  [
+                                                                                                "plug_scan.first_map_p50_seconds",
+                                                                                                "plug_scan.first_map_p95_seconds",
+                                                                                                "change.rollback_p95_ms",
+                                                                                                "autonomy.mttd_improvement_pct",
+                                                                                                "autonomy.mttr_improvement_pct"
+                                                                                            ]
+                                                                  },
+                                                    "evidence":  {
+                                                                     "sample_minimums_enforced":  true,
+                                                                     "sample_totals":  {
+                                                                                           "discovery_jobs":  18,
+                                                                                           "change_events":  0,
+                                                                                           "northbound_deliveries":  0,
+                                                                                           "autonomy_issues_created":  11,
+                                                                                           "autonomy_actions_executed":  0
+                                                                                       },
+                                                                     "sample_thresholds":  {
+                                                                                               "discovery_jobs":  1,
+                                                                                               "change_events":  1,
+                                                                                               "northbound_deliveries":  1,
+                                                                                               "autonomy_issues_created":  1,
+                                                                                               "autonomy_actions_executed":  1
+                                                                                           }
+                                                                 }
+                                                },
+                                     "trend_by_day":  [
+                                                          {
+                                                              "healthy":  0,
+                                                              "warning":  0,
+                                                              "critical":  1,
+                                                              "insufficient_data":  0,
+                                                              "total":  1,
+                                                              "date":  "2026-02-17"
+                                                          },
+                                                          {
+                                                              "healthy":  0,
+                                                              "warning":  0,
+                                                              "critical":  2,
+                                                              "insufficient_data":  0,
+                                                              "total":  2,
+                                                              "date":  "2026-02-18"
+                                                          },
+                                                          {
+                                                              "healthy":  0,
+                                                              "warning":  0,
+                                                              "critical":  1,
+                                                              "insufficient_data":  0,
+                                                              "total":  1,
+                                                              "date":  "2026-02-25"
+                                                          },
+                                                          {
+                                                              "healthy":  0,
+                                                              "warning":  0,
+                                                              "critical":  1,
+                                                              "insufficient_data":  0,
+                                                              "total":  1,
+                                                              "date":  "2026-02-26"
+                                                          },
+                                                          {
+                                                              "healthy":  0,
+                                                              "warning":  0,
+                                                              "critical":  2,
+                                                              "insufficient_data":  0,
+                                                              "total":  2,
+                                                              "date":  "2026-02-27"
+                                                          },
+                                                          {
+                                                              "healthy":  0,
+                                                              "warning":  0,
+                                                              "critical":  2,
+                                                              "insufficient_data":  0,
+                                                              "total":  2,
+                                                              "date":  "2026-03-01"
+                                                          },
+                                                          {
+                                                              "healthy":  0,
+                                                              "warning":  0,
+                                                              "critical":  1,
+                                                              "insufficient_data":  0,
+                                                              "total":  1,
+                                                              "date":  "2026-03-02"
+                                                          },
+                                                          {
+                                                              "healthy":  0,
+                                                              "warning":  0,
+                                                              "critical":  1,
+                                                              "insufficient_data":  0,
+                                                              "total":  1,
+                                                              "date":  "2026-03-03"
+                                                          },
+                                                          {
+                                                              "healthy":  0,
+                                                              "warning":  0,
+                                                              "critical":  4,
+                                                              "insufficient_data":  0,
+                                                              "total":  4,
+                                                              "date":  "2026-03-04"
+                                                          }
+                                                      ],
+                                     "items":  [
+                                                   {
+                                                       "event_log_id":  477,
+                                                       "generated_at":  1772647431,
+                                                       "generated_at_utc":  "2026-03-04T18:03:51+00:00",
+                                                       "generated_date":  "2026-03-04",
+                                                       "severity":  "error",
+                                                       "source":  "OpsKPI",
+                                                       "run_type":  "manual_api",
+                                                       "scope":  {
+                                                                     "site_id":  null,
+                                                                     "discovery_days":  30,
+                                                                     "discovery_limit":  300,
+                                                                     "require_sample_minimums":  true
+                                                                 },
+                                                       "readiness":  {
+                                                                         "status":  "critical",
+                                                                         "required_checks_total":  18,
+                                                                         "pass_count":  9,
+                                                                         "fail_count":  6,
+                                                                         "unknown_count":  3,
+                                                                         "failed_check_ids":  [
+                                                                                                  "plug_scan.auto_reflection_rate_pct",
+                                                                                                  "plug_scan.false_positive_rate_pct",
+                                                                                                  "autonomy.auto_action_rate_pct",
+                                                                                                  "sample.change.events",
+                                                                                                  "sample.northbound.deliveries",
+                                                                                                  "sample.autonomy.actions_executed"
+                                                                                              ],
+                                                                         "unknown_check_ids":  [
+                                                                                                   "plug_scan.first_map_p50_seconds",
+                                                                                                   "plug_scan.first_map_p95_seconds",
+                                                                                                   "change.rollback_p95_ms",
+                                                                                                   "autonomy.mttd_improvement_pct",
+                                                                                                   "autonomy.mttr_improvement_pct"
+                                                                                               ]
+                                                                     },
+                                                       "evidence":  {
+                                                                        "sample_minimums_enforced":  true,
+                                                                        "sample_totals":  {
+                                                                                              "discovery_jobs":  18,
+                                                                                              "change_events":  0,
+                                                                                              "northbound_deliveries":  0,
+                                                                                              "autonomy_issues_created":  11,
+                                                                                              "autonomy_actions_executed":  0
+                                                                                          },
+                                                                        "sample_thresholds":  {
+                                                                                                  "discovery_jobs":  1,
+                                                                                                  "change_events":  1,
+                                                                                                  "northbound_deliveries":  1,
+                                                                                                  "autonomy_issues_created":  1,
+                                                                                                  "autonomy_actions_executed":  1
+                                                                                              }
+                                                                    }
+                                                   },
+                                                   {
+                                                       "event_log_id":  389,
+                                                       "generated_at":  1772639930,
+                                                       "generated_at_utc":  "2026-03-04T15:58:50+00:00",
+                                                       "generated_date":  "2026-03-04",
+                                                       "severity":  "error",
+                                                       "source":  "OpsKPI",
+                                                       "run_type":  "manual_api",
+                                                       "scope":  {
+                                                                     "site_id":  null,
+                                                                     "discovery_days":  30,
+                                                                     "discovery_limit":  300,
+                                                                     "require_sample_minimums":  true
+                                                                 },
+                                                       "readiness":  {
+                                                                         "status":  "critical",
+                                                                         "required_checks_total":  18,
+                                                                         "pass_count":  9,
+                                                                         "fail_count":  6,
+                                                                         "unknown_count":  3,
+                                                                         "failed_check_ids":  [
+                                                                                                  "plug_scan.auto_reflection_rate_pct",
+                                                                                                  "plug_scan.false_positive_rate_pct",
+                                                                                                  "autonomy.auto_action_rate_pct",
+                                                                                                  "sample.change.events",
+                                                                                                  "sample.northbound.deliveries",
+                                                                                                  "sample.autonomy.actions_executed"
+                                                                                              ],
+                                                                         "unknown_check_ids":  [
+                                                                                                   "plug_scan.first_map_p50_seconds",
+                                                                                                   "plug_scan.first_map_p95_seconds",
+                                                                                                   "change.rollback_p95_ms",
+                                                                                                   "autonomy.mttd_improvement_pct",
+                                                                                                   "autonomy.mttr_improvement_pct"
+                                                                                               ]
+                                                                     },
+                                                       "evidence":  {
+                                                                        "sample_minimums_enforced":  true,
+                                                                        "sample_totals":  {
+                                                                                              "discovery_jobs":  18,
+                                                                                              "change_events":  0,
+                                                                                              "northbound_deliveries":  0,
+                                                                                              "autonomy_issues_created":  11,
+                                                                                              "autonomy_actions_executed":  0
+                                                                                          },
+                                                                        "sample_thresholds":  {
+                                                                                                  "discovery_jobs":  1,
+                                                                                                  "change_events":  1,
+                                                                                                  "northbound_deliveries":  1,
+                                                                                                  "autonomy_issues_created":  1,
+                                                                                                  "autonomy_actions_executed":  1
+                                                                                              }
+                                                                    }
+                                                   },
+                                                   {
+                                                       "event_log_id":  386,
+                                                       "generated_at":  1772639528,
+                                                       "generated_at_utc":  "2026-03-04T15:52:08+00:00",
+                                                       "generated_date":  "2026-03-04",
+                                                       "severity":  "error",
+                                                       "source":  "OpsKPI",
+                                                       "run_type":  "manual_api",
+                                                       "scope":  {
+                                                                     "site_id":  null,
+                                                                     "discovery_days":  30,
+                                                                     "discovery_limit":  300,
+                                                                     "require_sample_minimums":  true
+                                                                 },
+                                                       "readiness":  {
+                                                                         "status":  "critical",
+                                                                         "required_checks_total":  18,
+                                                                         "pass_count":  9,
+                                                                         "fail_count":  6,
+                                                                         "unknown_count":  3,
+                                                                         "failed_check_ids":  [
+                                                                                                  "plug_scan.auto_reflection_rate_pct",
+                                                                                                  "plug_scan.false_positive_rate_pct",
+                                                                                                  "autonomy.auto_action_rate_pct",
+                                                                                                  "sample.change.events",
+                                                                                                  "sample.northbound.deliveries",
+                                                                                                  "sample.autonomy.actions_executed"
+                                                                                              ],
+                                                                         "unknown_check_ids":  [
+                                                                                                   "plug_scan.first_map_p50_seconds",
+                                                                                                   "plug_scan.first_map_p95_seconds",
+                                                                                                   "change.rollback_p95_ms",
+                                                                                                   "autonomy.mttd_improvement_pct",
+                                                                                                   "autonomy.mttr_improvement_pct"
+                                                                                               ]
+                                                                     },
+                                                       "evidence":  {
+                                                                        "sample_minimums_enforced":  true,
+                                                                        "sample_totals":  {
+                                                                                              "discovery_jobs":  18,
+                                                                                              "change_events":  0,
+                                                                                              "northbound_deliveries":  0,
+                                                                                              "autonomy_issues_created":  11,
+                                                                                              "autonomy_actions_executed":  0
+                                                                                          },
+                                                                        "sample_thresholds":  {
+                                                                                                  "discovery_jobs":  1,
+                                                                                                  "change_events":  1,
+                                                                                                  "northbound_deliveries":  1,
+                                                                                                  "autonomy_issues_created":  1,
+                                                                                                  "autonomy_actions_executed":  1
+                                                                                              }
+                                                                    }
+                                                   },
+                                                   {
+                                                       "event_log_id":  381,
+                                                       "generated_at":  1772639411,
+                                                       "generated_at_utc":  "2026-03-04T15:50:11+00:00",
+                                                       "generated_date":  "2026-03-04",
+                                                       "severity":  "error",
+                                                       "source":  "OpsKPI",
+                                                       "run_type":  "manual_api",
+                                                       "scope":  {
+                                                                     "site_id":  null,
+                                                                     "discovery_days":  30,
+                                                                     "discovery_limit":  300,
+                                                                     "require_sample_minimums":  true
+                                                                 },
+                                                       "readiness":  {
+                                                                         "status":  "critical",
+                                                                         "required_checks_total":  18,
+                                                                         "pass_count":  9,
+                                                                         "fail_count":  6,
+                                                                         "unknown_count":  3,
+                                                                         "failed_check_ids":  [
+                                                                                                  "plug_scan.auto_reflection_rate_pct",
+                                                                                                  "plug_scan.false_positive_rate_pct",
+                                                                                                  "autonomy.auto_action_rate_pct",
+                                                                                                  "sample.change.events",
+                                                                                                  "sample.northbound.deliveries",
+                                                                                                  "sample.autonomy.actions_executed"
+                                                                                              ],
+                                                                         "unknown_check_ids":  [
+                                                                                                   "plug_scan.first_map_p50_seconds",
+                                                                                                   "plug_scan.first_map_p95_seconds",
+                                                                                                   "change.rollback_p95_ms",
+                                                                                                   "autonomy.mttd_improvement_pct",
+                                                                                                   "autonomy.mttr_improvement_pct"
+                                                                                               ]
+                                                                     },
+                                                       "evidence":  {
+                                                                        "sample_minimums_enforced":  true,
+                                                                        "sample_totals":  {
+                                                                                              "discovery_jobs":  18,
+                                                                                              "change_events":  0,
+                                                                                              "northbound_deliveries":  0,
+                                                                                              "autonomy_issues_created":  11,
+                                                                                              "autonomy_actions_executed":  0
+                                                                                          },
+                                                                        "sample_thresholds":  {
+                                                                                                  "discovery_jobs":  1,
+                                                                                                  "change_events":  1,
+                                                                                                  "northbound_deliveries":  1,
+                                                                                                  "autonomy_issues_created":  1,
+                                                                                                  "autonomy_actions_executed":  1
+                                                                                              }
+                                                                    }
+                                                   },
+                                                   {
+                                                       "event_log_id":  380,
+                                                       "generated_at":  1772565300,
+                                                       "generated_at_utc":  "2026-03-03T19:15:00+00:00",
+                                                       "generated_date":  "2026-03-03",
+                                                       "severity":  "error",
+                                                       "source":  "OpsKPI.Celery",
+                                                       "run_type":  "daily_scheduler",
+                                                       "scope":  {
+                                                                     "site_id":  null,
+                                                                     "discovery_days":  30,
+                                                                     "discovery_limit":  300,
+                                                                     "require_sample_minimums":  true
+                                                                 },
+                                                       "readiness":  {
+                                                                         "status":  "critical",
+                                                                         "required_checks_total":  18,
+                                                                         "pass_count":  9,
+                                                                         "fail_count":  6,
+                                                                         "unknown_count":  3,
+                                                                         "failed_check_ids":  [
+                                                                                                  "plug_scan.auto_reflection_rate_pct",
+                                                                                                  "plug_scan.false_positive_rate_pct",
+                                                                                                  "autonomy.auto_action_rate_pct",
+                                                                                                  "sample.change.events",
+                                                                                                  "sample.northbound.deliveries",
+                                                                                                  "sample.autonomy.actions_executed"
+                                                                                              ],
+                                                                         "unknown_check_ids":  [
+                                                                                                   "plug_scan.first_map_p50_seconds",
+                                                                                                   "plug_scan.first_map_p95_seconds",
+                                                                                                   "change.rollback_p95_ms",
+                                                                                                   "autonomy.mttd_improvement_pct",
+                                                                                                   "autonomy.mttr_improvement_pct"
+                                                                                               ]
+                                                                     },
+                                                       "evidence":  {
+                                                                        "sample_minimums_enforced":  true,
+                                                                        "sample_totals":  {
+                                                                                              "discovery_jobs":  18,
+                                                                                              "change_events":  0,
+                                                                                              "northbound_deliveries":  0,
+                                                                                              "autonomy_issues_created":  11,
+                                                                                              "autonomy_actions_executed":  0
+                                                                                          },
+                                                                        "sample_thresholds":  {
+                                                                                                  "discovery_jobs":  1,
+                                                                                                  "change_events":  1,
+                                                                                                  "northbound_deliveries":  1,
+                                                                                                  "autonomy_issues_created":  1,
+                                                                                                  "autonomy_actions_executed":  1
+                                                                                              }
+                                                                    }
+                                                   },
+                                                   {
+                                                       "event_log_id":  370,
+                                                       "generated_at":  1772478900,
+                                                       "generated_at_utc":  "2026-03-02T19:15:00+00:00",
+                                                       "generated_date":  "2026-03-02",
+                                                       "severity":  "error",
+                                                       "source":  "OpsKPI.Celery",
+                                                       "run_type":  "daily_scheduler",
+                                                       "scope":  {
+                                                                     "site_id":  null,
+                                                                     "discovery_days":  30,
+                                                                     "discovery_limit":  300,
+                                                                     "require_sample_minimums":  true
+                                                                 },
+                                                       "readiness":  {
+                                                                         "status":  "critical",
+                                                                         "required_checks_total":  18,
+                                                                         "pass_count":  9,
+                                                                         "fail_count":  6,
+                                                                         "unknown_count":  3,
+                                                                         "failed_check_ids":  [
+                                                                                                  "plug_scan.auto_reflection_rate_pct",
+                                                                                                  "plug_scan.false_positive_rate_pct",
+                                                                                                  "autonomy.auto_action_rate_pct",
+                                                                                                  "sample.change.events",
+                                                                                                  "sample.northbound.deliveries",
+                                                                                                  "sample.autonomy.actions_executed"
+                                                                                              ],
+                                                                         "unknown_check_ids":  [
+                                                                                                   "plug_scan.first_map_p50_seconds",
+                                                                                                   "plug_scan.first_map_p95_seconds",
+                                                                                                   "change.rollback_p95_ms",
+                                                                                                   "autonomy.mttd_improvement_pct",
+                                                                                                   "autonomy.mttr_improvement_pct"
+                                                                                               ]
+                                                                     },
+                                                       "evidence":  {
+                                                                        "sample_minimums_enforced":  true,
+                                                                        "sample_totals":  {
+                                                                                              "discovery_jobs":  18,
+                                                                                              "change_events":  0,
+                                                                                              "northbound_deliveries":  0,
+                                                                                              "autonomy_issues_created":  11,
+                                                                                              "autonomy_actions_executed":  0
+                                                                                          },
+                                                                        "sample_thresholds":  {
+                                                                                                  "discovery_jobs":  1,
+                                                                                                  "change_events":  1,
+                                                                                                  "northbound_deliveries":  1,
+                                                                                                  "autonomy_issues_created":  1,
+                                                                                                  "autonomy_actions_executed":  1
+                                                                                              }
+                                                                    }
+                                                   },
+                                                   {
+                                                       "event_log_id":  362,
+                                                       "generated_at":  1772392500,
+                                                       "generated_at_utc":  "2026-03-01T19:15:00+00:00",
+                                                       "generated_date":  "2026-03-01",
+                                                       "severity":  "error",
+                                                       "source":  "OpsKPI.Celery",
+                                                       "run_type":  "daily_scheduler",
+                                                       "scope":  {
+                                                                     "site_id":  null,
+                                                                     "discovery_days":  30,
+                                                                     "discovery_limit":  300,
+                                                                     "require_sample_minimums":  true
+                                                                 },
+                                                       "readiness":  {
+                                                                         "status":  "critical",
+                                                                         "required_checks_total":  18,
+                                                                         "pass_count":  9,
+                                                                         "fail_count":  6,
+                                                                         "unknown_count":  3,
+                                                                         "failed_check_ids":  [
+                                                                                                  "plug_scan.auto_reflection_rate_pct",
+                                                                                                  "plug_scan.false_positive_rate_pct",
+                                                                                                  "autonomy.auto_action_rate_pct",
+                                                                                                  "sample.change.events",
+                                                                                                  "sample.northbound.deliveries",
+                                                                                                  "sample.autonomy.actions_executed"
+                                                                                              ],
+                                                                         "unknown_check_ids":  [
+                                                                                                   "plug_scan.first_map_p50_seconds",
+                                                                                                   "plug_scan.first_map_p95_seconds",
+                                                                                                   "change.rollback_p95_ms",
+                                                                                                   "autonomy.mttd_improvement_pct",
+                                                                                                   "autonomy.mttr_improvement_pct"
+                                                                                               ]
+                                                                     },
+                                                       "evidence":  {
+                                                                        "sample_minimums_enforced":  true,
+                                                                        "sample_totals":  {
+                                                                                              "discovery_jobs":  18,
+                                                                                              "change_events":  0,
+                                                                                              "northbound_deliveries":  0,
+                                                                                              "autonomy_issues_created":  11,
+                                                                                              "autonomy_actions_executed":  0
+                                                                                          },
+                                                                        "sample_thresholds":  {
+                                                                                                  "discovery_jobs":  1,
+                                                                                                  "change_events":  1,
+                                                                                                  "northbound_deliveries":  1,
+                                                                                                  "autonomy_issues_created":  1,
+                                                                                                  "autonomy_actions_executed":  1
+                                                                                              }
+                                                                    }
+                                                   },
+                                                   {
+                                                       "event_log_id":  353,
+                                                       "generated_at":  1772342992,
+                                                       "generated_at_utc":  "2026-03-01T05:29:52+00:00",
+                                                       "generated_date":  "2026-03-01",
+                                                       "severity":  "error",
+                                                       "source":  "OpsKPI.Celery",
+                                                       "run_type":  "daily_scheduler",
+                                                       "scope":  {
+                                                                     "site_id":  null,
+                                                                     "discovery_days":  30,
+                                                                     "discovery_limit":  300,
+                                                                     "require_sample_minimums":  true
+                                                                 },
+                                                       "readiness":  {
+                                                                         "status":  "critical",
+                                                                         "required_checks_total":  18,
+                                                                         "pass_count":  9,
+                                                                         "fail_count":  6,
+                                                                         "unknown_count":  3,
+                                                                         "failed_check_ids":  [
+                                                                                                  "plug_scan.auto_reflection_rate_pct",
+                                                                                                  "plug_scan.false_positive_rate_pct",
+                                                                                                  "autonomy.auto_action_rate_pct",
+                                                                                                  "sample.change.events",
+                                                                                                  "sample.northbound.deliveries",
+                                                                                                  "sample.autonomy.actions_executed"
+                                                                                              ],
+                                                                         "unknown_check_ids":  [
+                                                                                                   "plug_scan.first_map_p50_seconds",
+                                                                                                   "plug_scan.first_map_p95_seconds",
+                                                                                                   "change.rollback_p95_ms",
+                                                                                                   "autonomy.mttd_improvement_pct",
+                                                                                                   "autonomy.mttr_improvement_pct"
+                                                                                               ]
+                                                                     },
+                                                       "evidence":  {
+                                                                        "sample_minimums_enforced":  true,
+                                                                        "sample_totals":  {
+                                                                                              "discovery_jobs":  18,
+                                                                                              "change_events":  0,
+                                                                                              "northbound_deliveries":  0,
+                                                                                              "autonomy_issues_created":  11,
+                                                                                              "autonomy_actions_executed":  0
+                                                                                          },
+                                                                        "sample_thresholds":  {
+                                                                                                  "discovery_jobs":  1,
+                                                                                                  "change_events":  1,
+                                                                                                  "northbound_deliveries":  1,
+                                                                                                  "autonomy_issues_created":  1,
+                                                                                                  "autonomy_actions_executed":  1
+                                                                                              }
+                                                                    }
+                                                   },
+                                                   {
+                                                       "event_log_id":  338,
+                                                       "generated_at":  1772219700,
+                                                       "generated_at_utc":  "2026-02-27T19:15:00+00:00",
+                                                       "generated_date":  "2026-02-27",
+                                                       "severity":  "error",
+                                                       "source":  "OpsKPI.Celery",
+                                                       "run_type":  "daily_scheduler",
+                                                       "scope":  {
+                                                                     "site_id":  null,
+                                                                     "discovery_days":  30,
+                                                                     "discovery_limit":  300,
+                                                                     "require_sample_minimums":  true
+                                                                 },
+                                                       "readiness":  {
+                                                                         "status":  "critical",
+                                                                         "required_checks_total":  18,
+                                                                         "pass_count":  9,
+                                                                         "fail_count":  6,
+                                                                         "unknown_count":  3,
+                                                                         "failed_check_ids":  [
+                                                                                                  "plug_scan.auto_reflection_rate_pct",
+                                                                                                  "plug_scan.false_positive_rate_pct",
+                                                                                                  "autonomy.auto_action_rate_pct",
+                                                                                                  "sample.change.events",
+                                                                                                  "sample.northbound.deliveries",
+                                                                                                  "sample.autonomy.actions_executed"
+                                                                                              ],
+                                                                         "unknown_check_ids":  [
+                                                                                                   "plug_scan.first_map_p50_seconds",
+                                                                                                   "plug_scan.first_map_p95_seconds",
+                                                                                                   "change.rollback_p95_ms",
+                                                                                                   "autonomy.mttd_improvement_pct",
+                                                                                                   "autonomy.mttr_improvement_pct"
+                                                                                               ]
+                                                                     },
+                                                       "evidence":  {
+                                                                        "sample_minimums_enforced":  true,
+                                                                        "sample_totals":  {
+                                                                                              "discovery_jobs":  18,
+                                                                                              "change_events":  0,
+                                                                                              "northbound_deliveries":  0,
+                                                                                              "autonomy_issues_created":  11,
+                                                                                              "autonomy_actions_executed":  0
+                                                                                          },
+                                                                        "sample_thresholds":  {
+                                                                                                  "discovery_jobs":  1,
+                                                                                                  "change_events":  1,
+                                                                                                  "northbound_deliveries":  1,
+                                                                                                  "autonomy_issues_created":  1,
+                                                                                                  "autonomy_actions_executed":  1
+                                                                                              }
+                                                                    }
+                                                   },
+                                                   {
+                                                       "event_log_id":  315,
+                                                       "generated_at":  1772162792,
+                                                       "generated_at_utc":  "2026-02-27T03:26:32+00:00",
+                                                       "generated_date":  "2026-02-27",
+                                                       "severity":  "error",
+                                                       "source":  "OpsKPI.Celery",
+                                                       "run_type":  "daily_scheduler",
+                                                       "scope":  {
+                                                                     "site_id":  null,
+                                                                     "discovery_days":  30,
+                                                                     "discovery_limit":  300,
+                                                                     "require_sample_minimums":  true
+                                                                 },
+                                                       "readiness":  {
+                                                                         "status":  "critical",
+                                                                         "required_checks_total":  18,
+                                                                         "pass_count":  9,
+                                                                         "fail_count":  6,
+                                                                         "unknown_count":  3,
+                                                                         "failed_check_ids":  [
+                                                                                                  "plug_scan.auto_reflection_rate_pct",
+                                                                                                  "plug_scan.false_positive_rate_pct",
+                                                                                                  "autonomy.auto_action_rate_pct",
+                                                                                                  "sample.change.events",
+                                                                                                  "sample.northbound.deliveries",
+                                                                                                  "sample.autonomy.actions_executed"
+                                                                                              ],
+                                                                         "unknown_check_ids":  [
+                                                                                                   "plug_scan.first_map_p50_seconds",
+                                                                                                   "plug_scan.first_map_p95_seconds",
+                                                                                                   "change.rollback_p95_ms",
+                                                                                                   "autonomy.mttd_improvement_pct",
+                                                                                                   "autonomy.mttr_improvement_pct"
+                                                                                               ]
+                                                                     },
+                                                       "evidence":  {
+                                                                        "sample_minimums_enforced":  true,
+                                                                        "sample_totals":  {
+                                                                                              "discovery_jobs":  18,
+                                                                                              "change_events":  0,
+                                                                                              "northbound_deliveries":  0,
+                                                                                              "autonomy_issues_created":  11,
+                                                                                              "autonomy_actions_executed":  0
+                                                                                          },
+                                                                        "sample_thresholds":  {
+                                                                                                  "discovery_jobs":  1,
+                                                                                                  "change_events":  1,
+                                                                                                  "northbound_deliveries":  1,
+                                                                                                  "autonomy_issues_created":  1,
+                                                                                                  "autonomy_actions_executed":  1
+                                                                                              }
+                                                                    }
+                                                   },
+                                                   {
+                                                       "event_log_id":  314,
+                                                       "generated_at":  1772094420,
+                                                       "generated_at_utc":  "2026-02-26T08:27:00+00:00",
+                                                       "generated_date":  "2026-02-26",
+                                                       "severity":  "error",
+                                                       "source":  "OpsKPI.Celery",
+                                                       "run_type":  "daily_scheduler",
+                                                       "scope":  {
+                                                                     "site_id":  null,
+                                                                     "discovery_days":  30,
+                                                                     "discovery_limit":  300,
+                                                                     "require_sample_minimums":  true
+                                                                 },
+                                                       "readiness":  {
+                                                                         "status":  "critical",
+                                                                         "required_checks_total":  18,
+                                                                         "pass_count":  9,
+                                                                         "fail_count":  6,
+                                                                         "unknown_count":  3,
+                                                                         "failed_check_ids":  [
+                                                                                                  "plug_scan.auto_reflection_rate_pct",
+                                                                                                  "plug_scan.false_positive_rate_pct",
+                                                                                                  "autonomy.auto_action_rate_pct",
+                                                                                                  "sample.change.events",
+                                                                                                  "sample.northbound.deliveries",
+                                                                                                  "sample.autonomy.actions_executed"
+                                                                                              ],
+                                                                         "unknown_check_ids":  [
+                                                                                                   "plug_scan.first_map_p50_seconds",
+                                                                                                   "plug_scan.first_map_p95_seconds",
+                                                                                                   "change.rollback_p95_ms",
+                                                                                                   "autonomy.mttd_improvement_pct",
+                                                                                                   "autonomy.mttr_improvement_pct"
+                                                                                               ]
+                                                                     },
+                                                       "evidence":  {
+                                                                        "sample_minimums_enforced":  true,
+                                                                        "sample_totals":  {
+                                                                                              "discovery_jobs":  18,
+                                                                                              "change_events":  0,
+                                                                                              "northbound_deliveries":  0,
+                                                                                              "autonomy_issues_created":  11,
+                                                                                              "autonomy_actions_executed":  0
+                                                                                          },
+                                                                        "sample_thresholds":  {
+                                                                                                  "discovery_jobs":  1,
+                                                                                                  "change_events":  1,
+                                                                                                  "northbound_deliveries":  1,
+                                                                                                  "autonomy_issues_created":  1,
+                                                                                                  "autonomy_actions_executed":  1
+                                                                                              }
+                                                                    }
+                                                   },
+                                                   {
+                                                       "event_log_id":  312,
+                                                       "generated_at":  1771991466,
+                                                       "generated_at_utc":  "2026-02-25T03:51:06+00:00",
+                                                       "generated_date":  "2026-02-25",
+                                                       "severity":  "error",
+                                                       "source":  "OpsKPI.Celery",
+                                                       "run_type":  "daily_scheduler",
+                                                       "scope":  {
+                                                                     "site_id":  null,
+                                                                     "discovery_days":  30,
+                                                                     "discovery_limit":  300,
+                                                                     "require_sample_minimums":  true
+                                                                 },
+                                                       "readiness":  {
+                                                                         "status":  "critical",
+                                                                         "required_checks_total":  18,
+                                                                         "pass_count":  9,
+                                                                         "fail_count":  6,
+                                                                         "unknown_count":  3,
+                                                                         "failed_check_ids":  [
+                                                                                                  "plug_scan.auto_reflection_rate_pct",
+                                                                                                  "plug_scan.false_positive_rate_pct",
+                                                                                                  "autonomy.auto_action_rate_pct",
+                                                                                                  "sample.change.events",
+                                                                                                  "sample.northbound.deliveries",
+                                                                                                  "sample.autonomy.actions_executed"
+                                                                                              ],
+                                                                         "unknown_check_ids":  [
+                                                                                                   "plug_scan.first_map_p50_seconds",
+                                                                                                   "plug_scan.first_map_p95_seconds",
+                                                                                                   "change.rollback_p95_ms",
+                                                                                                   "autonomy.mttd_improvement_pct",
+                                                                                                   "autonomy.mttr_improvement_pct"
+                                                                                               ]
+                                                                     },
+                                                       "evidence":  {
+                                                                        "sample_minimums_enforced":  true,
+                                                                        "sample_totals":  {
+                                                                                              "discovery_jobs":  18,
+                                                                                              "change_events":  0,
+                                                                                              "northbound_deliveries":  0,
+                                                                                              "autonomy_issues_created":  11,
+                                                                                              "autonomy_actions_executed":  0
+                                                                                          },
+                                                                        "sample_thresholds":  {
+                                                                                                  "discovery_jobs":  1,
+                                                                                                  "change_events":  1,
+                                                                                                  "northbound_deliveries":  1,
+                                                                                                  "autonomy_issues_created":  1,
+                                                                                                  "autonomy_actions_executed":  1
+                                                                                              }
+                                                                    }
+                                                   },
+                                                   {
+                                                       "event_log_id":  310,
+                                                       "generated_at":  1771442100,
+                                                       "generated_at_utc":  "2026-02-18T19:15:00+00:00",
+                                                       "generated_date":  "2026-02-18",
+                                                       "severity":  "error",
+                                                       "source":  "OpsKPI.Celery",
+                                                       "run_type":  "daily_scheduler",
+                                                       "scope":  {
+                                                                     "site_id":  null,
+                                                                     "discovery_days":  30,
+                                                                     "discovery_limit":  300,
+                                                                     "require_sample_minimums":  true
+                                                                 },
+                                                       "readiness":  {
+                                                                         "status":  "critical",
+                                                                         "required_checks_total":  18,
+                                                                         "pass_count":  9,
+                                                                         "fail_count":  6,
+                                                                         "unknown_count":  3,
+                                                                         "failed_check_ids":  [
+                                                                                                  "plug_scan.auto_reflection_rate_pct",
+                                                                                                  "plug_scan.false_positive_rate_pct",
+                                                                                                  "autonomy.auto_action_rate_pct",
+                                                                                                  "sample.change.events",
+                                                                                                  "sample.northbound.deliveries",
+                                                                                                  "sample.autonomy.actions_executed"
+                                                                                              ],
+                                                                         "unknown_check_ids":  [
+                                                                                                   "plug_scan.first_map_p50_seconds",
+                                                                                                   "plug_scan.first_map_p95_seconds",
+                                                                                                   "change.rollback_p95_ms",
+                                                                                                   "autonomy.mttd_improvement_pct",
+                                                                                                   "autonomy.mttr_improvement_pct"
+                                                                                               ]
+                                                                     },
+                                                       "evidence":  {
+                                                                        "sample_minimums_enforced":  true,
+                                                                        "sample_totals":  {
+                                                                                              "discovery_jobs":  18,
+                                                                                              "change_events":  0,
+                                                                                              "northbound_deliveries":  0,
+                                                                                              "autonomy_issues_created":  11,
+                                                                                              "autonomy_actions_executed":  0
+                                                                                          },
+                                                                        "sample_thresholds":  {
+                                                                                                  "discovery_jobs":  1,
+                                                                                                  "change_events":  1,
+                                                                                                  "northbound_deliveries":  1,
+                                                                                                  "autonomy_issues_created":  1,
+                                                                                                  "autonomy_actions_executed":  1
+                                                                                              }
+                                                                    }
+                                                   },
+                                                   {
+                                                       "event_log_id":  308,
+                                                       "generated_at":  1771389823,
+                                                       "generated_at_utc":  "2026-02-18T04:43:43+00:00",
+                                                       "generated_date":  "2026-02-18",
+                                                       "severity":  "error",
+                                                       "source":  "OpsKPI.Celery",
+                                                       "run_type":  "daily_scheduler",
+                                                       "scope":  {
+                                                                     "site_id":  null,
+                                                                     "discovery_days":  30,
+                                                                     "discovery_limit":  300,
+                                                                     "require_sample_minimums":  true
+                                                                 },
+                                                       "readiness":  {
+                                                                         "status":  "critical",
+                                                                         "required_checks_total":  18,
+                                                                         "pass_count":  9,
+                                                                         "fail_count":  6,
+                                                                         "unknown_count":  3,
+                                                                         "failed_check_ids":  [
+                                                                                                  "plug_scan.auto_reflection_rate_pct",
+                                                                                                  "plug_scan.false_positive_rate_pct",
+                                                                                                  "autonomy.auto_action_rate_pct",
+                                                                                                  "sample.change.events",
+                                                                                                  "sample.northbound.deliveries",
+                                                                                                  "sample.autonomy.actions_executed"
+                                                                                              ],
+                                                                         "unknown_check_ids":  [
+                                                                                                   "plug_scan.first_map_p50_seconds",
+                                                                                                   "plug_scan.first_map_p95_seconds",
+                                                                                                   "change.rollback_p95_ms",
+                                                                                                   "autonomy.mttd_improvement_pct",
+                                                                                                   "autonomy.mttr_improvement_pct"
+                                                                                               ]
+                                                                     },
+                                                       "evidence":  {
+                                                                        "sample_minimums_enforced":  true,
+                                                                        "sample_totals":  {
+                                                                                              "discovery_jobs":  18,
+                                                                                              "change_events":  0,
+                                                                                              "northbound_deliveries":  0,
+                                                                                              "autonomy_issues_created":  11,
+                                                                                              "autonomy_actions_executed":  0
+                                                                                          },
+                                                                        "sample_thresholds":  {
+                                                                                                  "discovery_jobs":  1,
+                                                                                                  "change_events":  1,
+                                                                                                  "northbound_deliveries":  1,
+                                                                                                  "autonomy_issues_created":  1,
+                                                                                                  "autonomy_actions_executed":  1
+                                                                                              }
+                                                                    }
+                                                   },
+                                                   {
+                                                       "event_log_id":  76,
+                                                       "generated_at":  1771340993,
+                                                       "generated_at_utc":  "2026-02-17T15:09:53+00:00",
+                                                       "generated_date":  "2026-02-17",
+                                                       "severity":  "error",
+                                                       "source":  "OpsKPI",
+                                                       "run_type":  "manual_api",
+                                                       "scope":  {
+                                                                     "site_id":  null,
+                                                                     "discovery_days":  30,
+                                                                     "discovery_limit":  300,
+                                                                     "require_sample_minimums":  false
+                                                                 },
+                                                       "readiness":  {
+                                                                         "status":  "critical",
+                                                                         "required_checks_total":  13,
+                                                                         "pass_count":  7,
+                                                                         "fail_count":  3,
+                                                                         "unknown_count":  3,
+                                                                         "failed_check_ids":  [
+                                                                                                  "plug_scan.auto_reflection_rate_pct",
+                                                                                                  "plug_scan.false_positive_rate_pct",
+                                                                                                  "autonomy.auto_action_rate_pct",
+                                                                                                  "sample.change.events",
+                                                                                                  "sample.northbound.deliveries",
+                                                                                                  "sample.autonomy.actions_executed"
+                                                                                              ],
+                                                                         "unknown_check_ids":  [
+                                                                                                   "plug_scan.first_map_p50_seconds",
+                                                                                                   "plug_scan.first_map_p95_seconds",
+                                                                                                   "change.rollback_p95_ms",
+                                                                                                   "autonomy.mttd_improvement_pct",
+                                                                                                   "autonomy.mttr_improvement_pct"
+                                                                                               ]
+                                                                     },
+                                                       "evidence":  {
+                                                                        "sample_minimums_enforced":  false,
+                                                                        "sample_totals":  {
+                                                                                              "discovery_jobs":  17,
+                                                                                              "change_events":  0,
+                                                                                              "northbound_deliveries":  0,
+                                                                                              "autonomy_issues_created":  11,
+                                                                                              "autonomy_actions_executed":  0
+                                                                                          },
+                                                                        "sample_thresholds":  {
+                                                                                                  "discovery_jobs":  1,
+                                                                                                  "change_events":  1,
+                                                                                                  "northbound_deliveries":  1,
+                                                                                                  "autonomy_issues_created":  1,
+                                                                                                  "autonomy_actions_executed":  1
+                                                                                              }
+                                                                    }
+                                                   }
+                                               ]
+                                 }
+                    },
+    "logs":  {
+                 "backend":  "docs/reports/daily/20260305-backend.log",
+                 "celery_worker":  "docs/reports/daily/20260305-celery-worker.log",
+                 "celery_beat":  "docs/reports/daily/20260305-celery-beat.log"
+             }
+}

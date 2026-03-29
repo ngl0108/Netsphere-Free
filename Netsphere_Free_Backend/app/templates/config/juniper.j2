@@ -1,0 +1,29 @@
+{# Juniper JunOS Template #}
+{% for block in blocks %}
+
+{% if block.type == "vlan" %}
+set vlans {{ block.name }} vlan-id {{ block.id }}
+{% endif %}
+
+{% if block.type == "interface" %}
+{% if block.description %}set interfaces {{ block.name }} description "{{ block.description }}"{% endif %}
+{% if block.admin_status == "down" %}set interfaces {{ block.name }} disable{% else %}delete interfaces {{ block.name }} disable{% endif %}
+
+{% if block.ipv4_address %}
+set interfaces {{ block.name }} unit 0 family inet address {{ block.ipv4_address }}/{{ block.cidr }}
+{% endif %}
+
+{% if block.vlan_mode == "access" %}
+set interfaces {{ block.name }} unit 0 family ethernet-switching interface-mode access
+set interfaces {{ block.name }} unit 0 family ethernet-switching vlan members {{ block.vlan_id }}
+{% elif block.vlan_mode == "trunk" %}
+set interfaces {{ block.name }} unit 0 family ethernet-switching interface-mode trunk
+set interfaces {{ block.name }} unit 0 family ethernet-switching vlan members [ {{ block.allowed_vlans }} ]
+{% endif %}
+{% endif %}
+
+{% if block.type == "route" %}
+set routing-options static route {{ block.destination }}/{{ block.cidr }} next-hop {{ block.next_hop }}
+{% endif %}
+
+{% endfor %}

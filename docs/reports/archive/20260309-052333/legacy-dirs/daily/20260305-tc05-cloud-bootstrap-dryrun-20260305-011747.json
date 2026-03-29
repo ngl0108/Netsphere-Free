@@ -1,0 +1,51 @@
+﻿{
+    "generated_at":  "2026-03-05T01:17:48.2011579+09:00",
+    "results":  [
+                    {
+                        "account_id":  1,
+                        "name":  "aws-hq",
+                        "provider":  "aws",
+                        "status":  "failed",
+                        "total_targets":  1,
+                        "dry_run_targets":  0,
+                        "success_targets":  0,
+                        "failed_targets":  1,
+                        "execution_id":  "cloud_bootstrap_execution:ce280b2e5699ca69ad2ac5df",
+                        "message":  null,
+                        "target_resource_id":  "i-0633250163187fa47"
+                    },
+                    {
+                        "account_id":  2,
+                        "name":  "gcp-hq",
+                        "provider":  "gcp",
+                        "status":  "ok",
+                        "total_targets":  1,
+                        "dry_run_targets":  1,
+                        "success_targets":  0,
+                        "failed_targets":  0,
+                        "execution_id":  "cloud_bootstrap_execution:7178c42d9caab090e766352e",
+                        "message":  null,
+                        "target_resource_id":  "https://www.googleapis.com/compute/v1/projects/project-fe8bba10-b4f2-4640-8dc/zones/us-central1-c/instances/gcp-edge-1"
+                    },
+                    {
+                        "account_id":  5,
+                        "name":  "azure-hq",
+                        "provider":  "azure",
+                        "status":  "skipped",
+                        "reason":  "no_vm_like_resource"
+                    },
+                    {
+                        "account_id":  8,
+                        "name":  "ncp-hq",
+                        "provider":  "naver",
+                        "status":  "ok",
+                        "total_targets":  1,
+                        "dry_run_targets":  1,
+                        "success_targets":  0,
+                        "failed_targets":  0,
+                        "execution_id":  "cloud_bootstrap_execution:ce1bfda05344cd344b2461ef",
+                        "message":  null,
+                        "target_resource_id":  "132709335"
+                    }
+                ]
+}

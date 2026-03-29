@@ -1,0 +1,21 @@
+{
+  "id": "inventory.soltech_switch.show_inventory_cisco_like",
+  "fixture_group": "domestic_switch",
+  "type": "inventory",
+  "device_type": "soltech_switch",
+  "commands": {
+    "show inventory|textfsm": null,
+    "show inventory": "NAME: \"1\", DESCR: \"Soltech Chassis\"\nPID: SFC5248XG , VID: V01, SN: STX12345678\n\nNAME: \"PSU1\", DESCR: \"Power Supply\"\nPID: ST-PSU-AC , VID: V02, SN: STXPSU1234\n"
+  },
+  "expected": {
+    "min_rows": 2,
+    "parser_contains": "cisco_show_inventory",
+    "contains_rows": [
+      {
+        "name": "1",
+        "model_name": "SFC5248XG",
+        "serial_number": "STX12345678"
+      }
+    ]
+  }
+}

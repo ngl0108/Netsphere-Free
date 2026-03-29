@@ -1,0 +1,24 @@
+{
+  "id": "facts.linux_mlsoft.baseline_generic",
+  "type": "facts",
+  "device_type": "linux_mlsoft",
+  "driver_mode": "generic",
+  "commands": {
+    "show version": "Synthetic linux_mlsoft software output\nVersion: 1.0-test\nModel: LINUX_MLSOFT-SIM\n",
+    "display version": "Synthetic linux_mlsoft display output\nVRP Version V1R0 Test\nModel: LINUX_MLSOFT-SIM\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "linux_mlsoft"
+      },
+      "hostname": {
+        "equals": "fixture-host"
+      },
+      "raw_output": {
+        "contains": "Synthetic"
+      }
+    }
+  }
+}

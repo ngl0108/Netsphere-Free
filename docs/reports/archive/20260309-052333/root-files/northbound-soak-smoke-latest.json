@@ -1,0 +1,167 @@
+{
+  "run_id": "20260228-080941",
+  "generated_at_utc": "2026-02-28 08:11:54",
+  "status": "fail",
+  "summary": {
+    "duration_seconds": 108,
+    "interval_seconds": 30.0,
+    "total_attempts": 4,
+    "success_count": 0,
+    "failure_count": 4,
+    "success_rate_pct": 0.0,
+    "attempts_p95": null
+  },
+  "thresholds": {
+    "min_success_rate_pct": 95.0,
+    "max_attempts_p95": 3,
+    "max_failed_24h": 5,
+    "min_signature_valid_rate_pct": 100.0
+  },
+  "scope": {
+    "base_url": "http://localhost:8000",
+    "modes": [
+      "jira",
+      "servicenow",
+      "splunk",
+      "elastic"
+    ],
+    "mode_urls": {
+      "jira": "set",
+      "servicenow": "set",
+      "splunk": "set",
+      "elastic": "set"
+    }
+  },
+  "mode_stats": [
+    {
+      "mode": "jira",
+      "attempts": 1,
+      "success": 0,
+      "fail": 1,
+      "success_rate_pct": 0.0,
+      "attempts_p95": null
+    },
+    {
+      "mode": "servicenow",
+      "attempts": 1,
+      "success": 0,
+      "fail": 1,
+      "success_rate_pct": 0.0,
+      "attempts_p95": null
+    },
+    {
+      "mode": "splunk",
+      "attempts": 1,
+      "success": 0,
+      "fail": 1,
+      "success_rate_pct": 0.0,
+      "attempts_p95": null
+    },
+    {
+      "mode": "elastic",
+      "attempts": 1,
+      "success": 0,
+      "fail": 1,
+      "success_rate_pct": 0.0,
+      "attempts_p95": null
+    }
+  ],
+  "northbound_kpi": {
+    "window_days": 30,
+    "status": "idle",
+    "success_rate_pct": 100.0,
+    "avg_attempts": 0.0,
+    "p95_attempts": 0,
+    "failure_causes": [],
+    "modes": [],
+    "totals": {
+      "deliveries": 0,
+      "success": 0,
+      "failed": 0,
+      "failed_24h": 0
+    }
+  },
+  "local_receiver": {
+    "enabled": true,
+    "total_requests": 0,
+    "signature_valid": 0,
+    "signature_invalid": 0,
+    "signature_valid_rate_pct": 0.0,
+    "responses_2xx": 0,
+    "responses_5xx": 0,
+    "fail_every": 10,
+    "enforce_signature": false
+  },
+  "checks": [
+    {
+      "id": "northbound.success_rate_pct",
+      "value": 0.0,
+      "threshold": 95.0,
+      "operator": ">=",
+      "status": "fail"
+    },
+    {
+      "id": "northbound.attempts_p95",
+      "value": 0.0,
+      "threshold": 3.0,
+      "operator": "<=",
+      "status": "pass"
+    },
+    {
+      "id": "northbound.failed_24h",
+      "value": 0.0,
+      "threshold": 5.0,
+      "operator": "<=",
+      "status": "pass"
+    },
+    {
+      "id": "receiver.signature_valid_rate_pct",
+      "value": 0.0,
+      "threshold": 100.0,
+      "operator": ">=",
+      "status": "fail"
+    }
+  ],
+  "samples": [
+    {
+      "index": 1,
+      "mode": "jira",
+      "http_status": 400,
+      "latency_ms": 3251.89,
+      "ok": false,
+      "attempts": 0,
+      "delivery_status_code": 0,
+      "timestamp": "2026-02-28T08:09:44.525499+00:00"
+    },
+    {
+      "index": 2,
+      "mode": "servicenow",
+      "http_status": 400,
+      "latency_ms": 3203.22,
+      "ok": false,
+      "attempts": 0,
+      "delivery_status_code": 0,
+      "timestamp": "2026-02-28T08:10:17.770946+00:00"
+    },
+    {
+      "index": 3,
+      "mode": "splunk",
+      "http_status": 400,
+      "latency_ms": 3250.65,
+      "ok": false,
+      "attempts": 0,
+      "delivery_status_code": 0,
+      "timestamp": "2026-02-28T08:10:51.059691+00:00"
+    },
+    {
+      "index": 4,
+      "mode": "elastic",
+      "http_status": 400,
+      "latency_ms": 3312.61,
+      "ok": false,
+      "attempts": 0,
+      "delivery_status_code": 0,
+      "timestamp": "2026-02-28T08:11:24.397595+00:00"
+    }
+  ]
+}

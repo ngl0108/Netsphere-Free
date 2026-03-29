@@ -1,0 +1,27 @@
+services:
+  collector-local:
+    build:
+      context: ./Netsphere_Free_Backend
+      dockerfile: Dockerfile
+    container_name: netsphere-preview-collector-local
+    env_file:
+      - .env.preview.collector-local
+    environment:
+      PYTHONUTF8: "1"
+    ports:
+      - "127.0.0.1:18080:8000"
+    volumes:
+      - ./preview-installer/data:/app/preview-installer/data
+      - ./preview-installer/run:/app/preview-installer/run
+      - ./Netsphere_Free_Frontend/dist:/app/Netsphere_Free_Frontend/dist:ro
+      - ./Netsphere_Free_Backend/reports_cache:/app/reports_cache
+      - ./scenario-lab:/app/scenario-lab:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/auth/bootstrap/status', timeout=5).read()\""]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000

@@ -1,0 +1,24 @@
+{
+  "id": "inventory.f5_ltm.show_sys_hardware_real_i5800",
+  "fixture_group": "global_switch",
+  "type": "inventory",
+  "device_type": "f5_ltm",
+  "commands": {
+    "show sys hardware": "Sys::Hardware\nChassis Information\n  Chassis Serial     ZPE2345XXXX\n  Hardware Version   Name: BIG-IP i5800\n\nHardware Features\n  Type               Name           Revision  Status\n  power-supply       psu1           1         up\n  power-supply       psu2           1         up\n"
+  },
+  "expected": {
+    "min_rows": 3,
+    "parser_contains": "f5_bigip_inventory",
+    "contains_rows": [
+      {
+        "name": "Chassis",
+        "model_name": "BIG-IP i5800",
+        "serial_number": "ZPE2345XXXX"
+      },
+      {
+        "name": "psu1",
+        "model_name": "power-supply"
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "facts.nokia_sros.show_version_missing_model_variant",
+  "fixture_group": "global_switch",
+  "type": "facts",
+  "device_type": "nokia_sros",
+  "driver_mode": "generic",
+  "commands": {
+    "show version": "Synthetic nokia_sros software output\nVersion: 1.0-test\n",
+    "display version": "Synthetic nokia_sros display output\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "nokia_sros"
+      },
+      "hostname": {
+        "equals": "fixture-host"
+      },
+      "raw_output": {
+        "contains": "Synthetic"
+      }
+    }
+  }
+}

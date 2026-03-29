@@ -1,0 +1,30 @@
+{
+  "id": "facts.dasan_nos.show_system_info",
+  "fixture_group": "domestic_switch",
+  "type": "facts",
+  "device_type": "dasan_nos",
+  "driver_mode": "manager",
+  "commands": {
+    "show system info": "System Name        : Dasan-Switch\nSystem Type        : V8240\nSerial Number      : DS12345678\nNOS Version        : 5.02\nUp Time            : 10 day(s), 2 hour(s)\n"
+  },
+  "expected": {
+    "driver_contains": "DasanDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "Dasan"
+      },
+      "hostname": {
+        "equals": "Dasan-Switch"
+      },
+      "model": {
+        "equals": "V8240"
+      },
+      "serial_number": {
+        "equals": "DS12345678"
+      },
+      "os_version": {
+        "equals": "5.02"
+      }
+    }
+  }
+}

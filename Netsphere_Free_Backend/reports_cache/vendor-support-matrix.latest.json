@@ -1,0 +1,1442 @@
+{
+  "generated_at": "2026-03-10T06:25:13.769801+00:00",
+  "source_report_generated_at": "2026-03-10T06:25:13.768802+00:00",
+  "summary": {
+    "total_supported_device_types": 49,
+    "covered_device_types": 49,
+    "coverage_pct": 100.0,
+    "readiness": {
+      "full": 18,
+      "extended": 6,
+      "basic": 25,
+      "partial": 0,
+      "none": 0
+    }
+  },
+  "rows": [
+    {
+      "device_type": "alcatel_aos",
+      "readiness": "full",
+      "readiness_score": 100,
+      "totals": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0
+        },
+        "inventory": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "neighbors": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default",
+        "global_switch"
+      ],
+      "driver_modes": [
+        "generic",
+        "manager"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "arista",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "arista_eos",
+      "readiness": "extended",
+      "readiness_score": 60,
+      "totals": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "inventory": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default",
+        "global_switch"
+      ],
+      "driver_modes": [
+        "generic",
+        "manager"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "aruba_os",
+      "readiness": "full",
+      "readiness_score": 100,
+      "totals": {
+        "total": 6,
+        "passed": 6,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "inventory": {
+          "total": 3,
+          "passed": 3,
+          "failed": 0
+        },
+        "neighbors": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default",
+        "global_switch"
+      ],
+      "driver_modes": [
+        "generic",
+        "manager"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "checkpoint_gaia",
+      "readiness": "extended",
+      "readiness_score": 60,
+      "totals": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "inventory": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default",
+        "global_switch"
+      ],
+      "driver_modes": [
+        "generic",
+        "manager"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "cisco_ios",
+      "readiness": "extended",
+      "readiness_score": 70,
+      "totals": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "neighbors": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default",
+        "global_switch"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "cisco_ios_xe",
+      "readiness": "extended",
+      "readiness_score": 60,
+      "totals": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "inventory": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default",
+        "global_switch"
+      ],
+      "driver_modes": [
+        "generic",
+        "manager"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "cisco_nxos",
+      "readiness": "full",
+      "readiness_score": 100,
+      "totals": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "inventory": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "neighbors": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default",
+        "global_switch"
+      ],
+      "driver_modes": [
+        "generic",
+        "manager"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "cisco_wlc",
+      "readiness": "full",
+      "readiness_score": 100,
+      "totals": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0
+        },
+        "inventory": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "neighbors": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default",
+        "global_switch"
+      ],
+      "driver_modes": [
+        "generic",
+        "manager"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "cisco_xe",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "coreedge_switch",
+      "readiness": "full",
+      "readiness_score": 100,
+      "totals": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "inventory": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "neighbors": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "domestic_switch"
+      ],
+      "driver_modes": [
+        "manager"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "dasan",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "dasan_nos",
+      "readiness": "full",
+      "readiness_score": 100,
+      "totals": {
+        "total": 7,
+        "passed": 7,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 4,
+          "passed": 4,
+          "failed": 0
+        },
+        "inventory": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0
+        },
+        "neighbors": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "domestic_switch"
+      ],
+      "driver_modes": [
+        "manager"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "dell_force10",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "dell_os10",
+      "readiness": "full",
+      "readiness_score": 100,
+      "totals": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "inventory": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "neighbors": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default",
+        "global_switch"
+      ],
+      "driver_modes": [
+        "generic",
+        "manager"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "extreme_exos",
+      "readiness": "full",
+      "readiness_score": 100,
+      "totals": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "inventory": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "neighbors": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default",
+        "global_switch"
+      ],
+      "driver_modes": [
+        "generic",
+        "manager"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "extreme_netiron",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "f5_ltm",
+      "readiness": "full",
+      "readiness_score": 100,
+      "totals": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0
+        },
+        "inventory": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "neighbors": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default",
+        "global_switch"
+      ],
+      "driver_modes": [
+        "generic",
+        "manager"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "fortinet",
+      "readiness": "full",
+      "readiness_score": 100,
+      "totals": {
+        "total": 6,
+        "passed": 6,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0
+        },
+        "inventory": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0
+        },
+        "neighbors": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default",
+        "global_switch"
+      ],
+      "driver_modes": [
+        "generic",
+        "manager"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "handream",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "handream_sg",
+      "readiness": "full",
+      "readiness_score": 100,
+      "totals": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0
+        },
+        "inventory": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "neighbors": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default",
+        "domestic_switch"
+      ],
+      "driver_modes": [
+        "generic",
+        "manager"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "hp_comware",
+      "readiness": "full",
+      "readiness_score": 100,
+      "totals": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0
+        },
+        "inventory": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "neighbors": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default",
+        "global_switch"
+      ],
+      "driver_modes": [
+        "generic",
+        "manager"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "hp_procurve",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "huawei",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "huawei_vrp",
+      "readiness": "extended",
+      "readiness_score": 60,
+      "totals": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "inventory": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default",
+        "global_switch"
+      ],
+      "driver_modes": [
+        "generic",
+        "manager"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "juniper",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "juniper_junos",
+      "readiness": "extended",
+      "readiness_score": 60,
+      "totals": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "inventory": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default",
+        "global_switch"
+      ],
+      "driver_modes": [
+        "generic",
+        "manager"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "linux",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "linux_ahnlab",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "linux_aircuve",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "linux_axgate",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "linux_genians",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "linux_mlsoft",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "linux_monitorapp",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "linux_netman",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "linux_nexg",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "linux_nixtech",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "linux_secui",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "linux_sga",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "linux_trinitysoft",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "linux_wins",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "nokia_sros",
+      "readiness": "full",
+      "readiness_score": 100,
+      "totals": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0
+        },
+        "inventory": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "neighbors": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default",
+        "global_switch"
+      ],
+      "driver_modes": [
+        "generic",
+        "manager"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "nst_switch",
+      "readiness": "full",
+      "readiness_score": 100,
+      "totals": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "inventory": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "neighbors": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "domestic_switch"
+      ],
+      "driver_modes": [
+        "manager"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "paloalto_panos",
+      "readiness": "full",
+      "readiness_score": 100,
+      "totals": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "inventory": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "neighbors": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default",
+        "global_switch"
+      ],
+      "driver_modes": [
+        "generic",
+        "manager"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "piolink_pas",
+      "readiness": "full",
+      "readiness_score": 100,
+      "totals": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0
+        },
+        "inventory": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "neighbors": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default",
+        "domestic_switch"
+      ],
+      "driver_modes": [
+        "generic",
+        "manager"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "soltech_switch",
+      "readiness": "full",
+      "readiness_score": 100,
+      "totals": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "inventory": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "neighbors": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "domestic_switch"
+      ],
+      "driver_modes": [
+        "manager"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "ubiquoss",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "ubiquoss_l2",
+      "readiness": "full",
+      "readiness_score": 100,
+      "totals": {
+        "total": 5,
+        "passed": 5,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0
+        },
+        "inventory": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        },
+        "neighbors": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "domestic_switch"
+      ],
+      "driver_modes": [
+        "manager"
+      ],
+      "covered": true
+    },
+    {
+      "device_type": "ubiquoss_l3",
+      "readiness": "basic",
+      "readiness_score": 30,
+      "totals": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "by_type": {
+        "facts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0
+        }
+      },
+      "fixture_groups": [
+        "default"
+      ],
+      "driver_modes": [
+        "generic"
+      ],
+      "covered": true
+    }
+  ],
+  "source": "generated"
+}

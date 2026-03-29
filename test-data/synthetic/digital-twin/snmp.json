@@ -1,0 +1,295 @@
+{
+  "meta": {
+    "seed": 3765885100,
+    "generated_at": "2026-02-19T15:11:40+00:00",
+    "cases": [
+      "normal",
+      "timeout",
+      "partial",
+      "malformed"
+    ],
+    "vendors": [
+      "cisco",
+      "arista",
+      "juniper",
+      "fortinet",
+      "paloalto",
+      "f5",
+      "nokia",
+      "vyos",
+      "mikrotik"
+    ]
+  },
+  "vendors": {
+    "cisco": {
+      "normal": {
+        "status": "ok",
+        "sysinfo": {
+          "sysName": "C9K-688",
+          "sysDescr": "cisco synthetic campus_switch",
+          "sysObjectID": "1.3.6.1.4.1.9.1.2504"
+        },
+        "oids": {
+          "1.0.8802.1.1.2.1.3.2.0": "lldpEnabled",
+          "1.3.6.1.2.1.17.1.2.0": "bridgeEnabled",
+          "1.3.6.1.2.1.15.2.0": "bgpEnabled"
+        }
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "SNMP request timed out"
+      },
+      "partial": {
+        "status": "ok",
+        "sysinfo": {
+          "sysName": "cisco-partial"
+        },
+        "oids": {}
+      },
+      "malformed": {
+        "status": "malformed",
+        "sysinfo": "!!invalid!!"
+      }
+    },
+    "arista": {
+      "normal": {
+        "status": "ok",
+        "sysinfo": {
+          "sysName": "VEOS-923",
+          "sysDescr": "arista synthetic datacenter_switch",
+          "sysObjectID": "1.3.6.1.4.1.30065.1.3011"
+        },
+        "oids": {
+          "1.0.8802.1.1.2.1.3.2.0": "lldpEnabled",
+          "1.3.6.1.2.1.17.1.2.0": "bridgeEnabled",
+          "1.3.6.1.2.1.15.2.0": "bgpEnabled"
+        }
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "SNMP request timed out"
+      },
+      "partial": {
+        "status": "ok",
+        "sysinfo": {
+          "sysName": "arista-partial"
+        },
+        "oids": {}
+      },
+      "malformed": {
+        "status": "malformed",
+        "sysinfo": "!!invalid!!"
+      }
+    },
+    "juniper": {
+      "normal": {
+        "status": "ok",
+        "sysinfo": {
+          "sysName": "QFX-001",
+          "sysDescr": "juniper synthetic datacenter_switch",
+          "sysObjectID": "1.3.6.1.4.1.2636.1.1.1.2.144"
+        },
+        "oids": {
+          "1.0.8802.1.1.2.1.3.2.0": "lldpEnabled",
+          "1.3.6.1.2.1.17.1.2.0": "bridgeEnabled",
+          "1.3.6.1.2.1.15.2.0": "bgpEnabled"
+        }
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "SNMP request timed out"
+      },
+      "partial": {
+        "status": "ok",
+        "sysinfo": {
+          "sysName": "juniper-partial"
+        },
+        "oids": {}
+      },
+      "malformed": {
+        "status": "malformed",
+        "sysinfo": "!!invalid!!"
+      }
+    },
+    "fortinet": {
+      "normal": {
+        "status": "ok",
+        "sysinfo": {
+          "sysName": "FGT-841",
+          "sysDescr": "fortinet synthetic security",
+          "sysObjectID": "1.3.6.1.4.1.12356.101.1"
+        },
+        "oids": {
+          "1.0.8802.1.1.2.1.3.2.0": "lldpEnabled",
+          "1.3.6.1.2.1.17.1.2.0": "bridgeEnabled",
+          "1.3.6.1.2.1.15.2.0": "bgpEnabled"
+        }
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "SNMP request timed out"
+      },
+      "partial": {
+        "status": "ok",
+        "sysinfo": {
+          "sysName": "fortinet-partial"
+        },
+        "oids": {}
+      },
+      "malformed": {
+        "status": "malformed",
+        "sysinfo": "!!invalid!!"
+      }
+    },
+    "paloalto": {
+      "normal": {
+        "status": "ok",
+        "sysinfo": {
+          "sysName": "PA-486",
+          "sysDescr": "paloalto synthetic security",
+          "sysObjectID": "1.3.6.1.4.1.25461.2.3.30"
+        },
+        "oids": {
+          "1.0.8802.1.1.2.1.3.2.0": "lldpEnabled",
+          "1.3.6.1.2.1.17.1.2.0": "bridgeEnabled",
+          "1.3.6.1.2.1.15.2.0": "bgpEnabled"
+        }
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "SNMP request timed out"
+      },
+      "partial": {
+        "status": "ok",
+        "sysinfo": {
+          "sysName": "paloalto-partial"
+        },
+        "oids": {}
+      },
+      "malformed": {
+        "status": "malformed",
+        "sysinfo": "!!invalid!!"
+      }
+    },
+    "f5": {
+      "normal": {
+        "status": "ok",
+        "sysinfo": {
+          "sysName": "BIGIP-206",
+          "sysDescr": "f5 synthetic adc",
+          "sysObjectID": "1.3.6.1.4.1.3375.2.1.3.4.1"
+        },
+        "oids": {
+          "1.0.8802.1.1.2.1.3.2.0": "lldpEnabled",
+          "1.3.6.1.2.1.17.1.2.0": "bridgeEnabled",
+          "1.3.6.1.2.1.15.2.0": "bgpEnabled"
+        }
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "SNMP request timed out"
+      },
+      "partial": {
+        "status": "ok",
+        "sysinfo": {
+          "sysName": "f5-partial"
+        },
+        "oids": {}
+      },
+      "malformed": {
+        "status": "malformed",
+        "sysinfo": "!!invalid!!"
+      }
+    },
+    "nokia": {
+      "normal": {
+        "status": "ok",
+        "sysinfo": {
+          "sysName": "SR-461",
+          "sysDescr": "nokia synthetic routing",
+          "sysObjectID": "1.3.6.1.4.1.6527.1.3.4.1"
+        },
+        "oids": {
+          "1.0.8802.1.1.2.1.3.2.0": "lldpEnabled",
+          "1.3.6.1.2.1.17.1.2.0": "bridgeEnabled",
+          "1.3.6.1.2.1.15.2.0": "bgpEnabled"
+        }
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "SNMP request timed out"
+      },
+      "partial": {
+        "status": "ok",
+        "sysinfo": {
+          "sysName": "nokia-partial"
+        },
+        "oids": {}
+      },
+      "malformed": {
+        "status": "malformed",
+        "sysinfo": "!!invalid!!"
+      }
+    },
+    "vyos": {
+      "normal": {
+        "status": "ok",
+        "sysinfo": {
+          "sysName": "VYOS-022",
+          "sysDescr": "vyos synthetic routing",
+          "sysObjectID": "1.3.6.1.4.1.8072.3.2.10"
+        },
+        "oids": {
+          "1.0.8802.1.1.2.1.3.2.0": "lldpEnabled",
+          "1.3.6.1.2.1.17.1.2.0": "bridgeEnabled",
+          "1.3.6.1.2.1.15.2.0": "bgpEnabled"
+        }
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "SNMP request timed out"
+      },
+      "partial": {
+        "status": "ok",
+        "sysinfo": {
+          "sysName": "vyos-partial"
+        },
+        "oids": {}
+      },
+      "malformed": {
+        "status": "malformed",
+        "sysinfo": "!!invalid!!"
+      }
+    },
+    "mikrotik": {
+      "normal": {
+        "status": "ok",
+        "sysinfo": {
+          "sysName": "CHR-468",
+          "sysDescr": "mikrotik synthetic routing",
+          "sysObjectID": "1.3.6.1.4.1.14988.1"
+        },
+        "oids": {
+          "1.0.8802.1.1.2.1.3.2.0": "lldpEnabled",
+          "1.3.6.1.2.1.17.1.2.0": "bridgeEnabled",
+          "1.3.6.1.2.1.15.2.0": "bgpEnabled"
+        }
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "SNMP request timed out"
+      },
+      "partial": {
+        "status": "ok",
+        "sysinfo": {
+          "sysName": "mikrotik-partial"
+        },
+        "oids": {}
+      },
+      "malformed": {
+        "status": "malformed",
+        "sysinfo": "!!invalid!!"
+      }
+    }
+  }
+}

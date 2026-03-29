@@ -1,0 +1,25 @@
+{
+  "id": "inventory.alcatel_aos.show_chassis_real_os6900",
+  "fixture_group": "global_switch",
+  "type": "inventory",
+  "device_type": "alcatel_aos",
+  "commands": {
+    "show chassis": "Chassis 1\n  Model Name:             OS6900-X48C6,\n  Description:            48x 10G/25G SFP28, 6x 40G/100G QSFP28,\n  Serial Number:          P248XXXX,\n\nChassis 2\n  Model Name:             OS6900-X48C6,\n  Description:            48x 10G/25G SFP28, 6x 40G/100G QSFP28,\n  Serial Number:          P248YYYY,\n"
+  },
+  "expected": {
+    "min_rows": 2,
+    "parser_contains": "alcatel_aos_inventory",
+    "contains_rows": [
+      {
+        "name": "Chassis 1",
+        "model_name": "OS6900-X48C6",
+        "serial_number": "P248XXXX"
+      },
+      {
+        "name": "Chassis 2",
+        "model_name": "OS6900-X48C6",
+        "serial_number": "P248YYYY"
+      }
+    ]
+  }
+}

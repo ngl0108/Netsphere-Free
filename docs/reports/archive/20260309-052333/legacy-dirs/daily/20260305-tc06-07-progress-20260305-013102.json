@@ -1,0 +1,19 @@
+﻿{
+    "generated_at":  "2026-03-05T01:31:02.3113087+09:00",
+    "live_bootstrap_guard_test":  {
+                                      "account":  "gcp-hq",
+                                      "expected":  "approval guard blocks live execution",
+                                      "observed_http_status":  409,
+                                      "result":  "pass"
+                                  },
+    "soak":  {
+                 "process_id":  11652,
+                 "progress_log":  "docs/reports/soak/northbound-soak-72h-progress.log",
+                 "recent_tail":  "[2026-03-04 16:19:39Z] PROGRESS run_id=20260304-155536 idx=13 mode=jira ok=True attempts=1 status_code=200 success_rate=100.0% ok=13 fail=0\n[2026-03-04 16:21:39Z] PROGRESS run_id=20260304-155536 idx=14 mode=servicenow ok=True attempts=1 status_code=200 success_rate=100.0% ok=14 fail=0\n[2026-03-04 16:23:39Z] PROGRESS run_id=20260304-155536 idx=15 mode=splunk ok=True attempts=1 status_code=200 success_rate=100.0% ok=15 fail=0\n[2026-03-04 16:25:39Z] PROGRESS run_id=20260304-155536 idx=16 mode=elastic ok=True attempts=1 status_code=200 success_rate=100.0% ok=16 fail=0\n[2026-03-04 16:27:39Z] PROGRESS run_id=20260304-155536 idx=17 mode=jira ok=True attempts=1 status_code=200 success_rate=100.0% ok=17 fail=0\n[2026-03-04 16:29:39Z] PROGRESS run_id=20260304-155536 idx=18 mode=servicenow ok=True attempts=1 status_code=200 success_rate=100.0% ok=18 fail=0"
+             },
+    "notes":  [
+                  "AWS dry-run target is currently stopped; precheck_failed observed as designed.",
+                  "Azure account currently has no virtual_machine normalized resource, so dry-run target skipped.",
+                  "GCP/NCP dry-run path executed with status ok."
+              ]
+}

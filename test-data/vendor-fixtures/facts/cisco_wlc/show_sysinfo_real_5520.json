@@ -1,0 +1,31 @@
+{
+  "id": "facts.cisco_wlc.show_sysinfo_real_5520",
+  "fixture_group": "global_switch",
+  "type": "facts",
+  "device_type": "cisco_wlc",
+  "driver_mode": "generic",
+  "commands": {
+    "show sysinfo": "Manufacturer's Name.............................. Cisco Systems Inc.\nProduct Name..................................... Cisco Controller\nProduct Version.................................. 8.10.183.0\nSystem Name...................................... WLC-5520-Pri\nSystem Up Time................................... 120 days 14 hrs 30 mins 12 secs\n",
+    "show inventory": "Burned-in MAC Address............................ 00:11:22:aa:bb:cc\nMaximum number of APs supported.................. 1500\nNAME: \"Chassis\"    , DESCR: \"Cisco 5520 Wireless LAN Controller\"\nPID: AIR-CT5520-K9,  VID: V02,  SN: FDO2115XXXX\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "cisco_wlc"
+      },
+      "hostname": {
+        "equals": "WLC-5520-Pri"
+      },
+      "model": {
+        "equals": "Cisco Controller"
+      },
+      "serial_number": {
+        "equals": "FDO2115XXXX"
+      },
+      "os_version": {
+        "equals": "8.10.183.0"
+      }
+    }
+  }
+}

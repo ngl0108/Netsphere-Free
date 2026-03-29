@@ -1,0 +1,35 @@
+{
+  "id": "facts.juniper_junos.show_version_real_qfx5120",
+  "fixture_group": "global_switch",
+  "type": "facts",
+  "device_type": "juniper_junos",
+  "driver_mode": "generic",
+  "commands": {
+    "show version": "Hostname: QFX5120-VC\nModel: qfx5120-48y-8c\nJunos: 20.4R3-S2.3\n",
+    "show system uptime": "System booted: 2025-10-15 02:10:15 KST (20w3d 16:14 ago)\n 6:25PM  up 143 days, 16:14, 1 user, load averages: 0.15, 0.12, 0.10\n",
+    "show chassis hardware": "Hardware inventory:\nItem             Version  Part number  Serial number     Description\nChassis                                VD37XXXXXXXX      Virtual Chassis\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "juniper_junos"
+      },
+      "hostname": {
+        "equals": "QFX5120-VC"
+      },
+      "model": {
+        "equals": "qfx5120-48y-8c"
+      },
+      "serial_number": {
+        "equals": "VD37XXXXXXXX"
+      },
+      "os_version": {
+        "equals": "20.4R3-S2.3"
+      },
+      "uptime": {
+        "equals": "20w3d 16:14"
+      }
+    }
+  }
+}

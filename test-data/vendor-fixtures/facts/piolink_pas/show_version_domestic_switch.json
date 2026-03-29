@@ -1,0 +1,24 @@
+{
+  "id": "facts.piolink_pas.show_version_domestic_switch",
+  "fixture_group": "domestic_switch",
+  "type": "facts",
+  "device_type": "piolink_pas",
+  "driver_mode": "manager",
+  "commands": {
+    "show version": "PIOLINK PAS Appliance OS 3.9.1\nModel : PAS-K620\nBuild Date : 2026-01-14\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "hostname": {
+        "equals": "fixture-host"
+      },
+      "vendor": {
+        "equals": "cisco_ios"
+      },
+      "raw_output": {
+        "contains": "PIOLINK PAS Appliance OS"
+      }
+    }
+  }
+}

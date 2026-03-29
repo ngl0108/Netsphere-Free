@@ -1,0 +1,21 @@
+{
+  "id": "inventory.cisco_nxos.show_inventory_real",
+  "fixture_group": "global_switch",
+  "type": "inventory",
+  "device_type": "cisco_nxos",
+  "commands": {
+    "show inventory|textfsm": null,
+    "show inventory": "NAME: \"Chassis\",  DESCR: \"Nexus9000 C93180YC-EX Chassis\"\nPID: N9K-C93180YC-EX     ,  VID: V03 ,  SN: FDO2112XXXX\n\nNAME: \"Power Supply 1\",  DESCR: \"Nexus9000 C93180YC-EX 500W AC PS\"\nPID: NXA-PAC-500W-PI     ,  VID: V01 ,  SN: DTM2109ZZZZ\n"
+  },
+  "expected": {
+    "min_rows": 2,
+    "parser_contains": "cisco_show_inventory",
+    "contains_rows": [
+      {
+        "name": "Chassis",
+        "model_name": "N9K-C93180YC-EX",
+        "serial_number": "FDO2112XXXX"
+      }
+    ]
+  }
+}

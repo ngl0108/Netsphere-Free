@@ -1,0 +1,28 @@
+{
+  "id": "neighbors.cisco_ios.lldp_raw_generic",
+  "type": "neighbors",
+  "device_type": "cisco_ios",
+  "driver_mode": "generic",
+  "commands": {
+    "show lldp neighbors detail|textfsm": null,
+    "show lldp neighbors detail": "Local Intf: Gi1/0/1\nChassis id: 0011.2233.4455\nPort id: Gi0/1\nSystem Name: CORE-SW\nManagement Address: 10.0.0.1\nSystem Description: DASAN Switch\n\nLocal Intf: Gi1/0/2\nPort id: Gi0/2\nSystem Name: EDGE-SW\n",
+    "show cdp neighbors detail|textfsm": null,
+    "show cdp neighbors detail": ""
+  },
+  "expected": {
+    "min_rows": 2,
+    "driver_contains": "GenericDriver",
+    "required_protocols": [
+      "LLDP"
+    ],
+    "contains_rows": [
+      {
+        "local_interface": "Gi1/0/1",
+        "remote_interface": "Gi0/1",
+        "neighbor_name": "CORE-SW",
+        "mgmt_ip": "10.0.0.1",
+        "protocol": "LLDP"
+      }
+    ]
+  }
+}

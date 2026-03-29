@@ -1,0 +1,28 @@
+{
+  "id": "neighbors.alcatel_aos.lldp_remote_system_real",
+  "fixture_group": "global_switch",
+  "type": "neighbors",
+  "device_type": "alcatel_aos",
+  "driver_mode": "generic",
+  "commands": {
+    "show lldp remote-system|textfsm": null,
+    "show lldp remote-system": "Local Port     : 1/1/49\nChassis ID     : 00:2a:b1:cc:20:00\nPort ID        : Ethernet 1/1\nSystem Name    : Spine-01\nSystem Descr   : Alcatel-Lucent Enterprise OS6900-X48C6 8.7.468.R02\n",
+    "show cdp neighbors detail|textfsm": null,
+    "show cdp neighbors detail": ""
+  },
+  "expected": {
+    "min_rows": 1,
+    "driver_contains": "GenericDriver",
+    "required_protocols": [
+      "LLDP"
+    ],
+    "contains_rows": [
+      {
+        "local_interface": "1/1/49",
+        "remote_interface": "Ethernet 1/1",
+        "neighbor_name": "Spine-01",
+        "protocol": "LLDP"
+      }
+    ]
+  }
+}

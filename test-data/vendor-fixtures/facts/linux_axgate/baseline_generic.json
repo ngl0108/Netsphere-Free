@@ -1,0 +1,24 @@
+{
+  "id": "facts.linux_axgate.baseline_generic",
+  "type": "facts",
+  "device_type": "linux_axgate",
+  "driver_mode": "generic",
+  "commands": {
+    "show version": "Synthetic linux_axgate software output\nVersion: 1.0-test\nModel: LINUX_AXGATE-SIM\n",
+    "display version": "Synthetic linux_axgate display output\nVRP Version V1R0 Test\nModel: LINUX_AXGATE-SIM\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "linux_axgate"
+      },
+      "hostname": {
+        "equals": "fixture-host"
+      },
+      "raw_output": {
+        "contains": "Synthetic"
+      }
+    }
+  }
+}

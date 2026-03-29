@@ -1,0 +1,46 @@
+{
+  "base_seed": 20260219,
+  "generated_at": "2026-02-19T11:50:19+00:00",
+  "files": [
+    {
+      "path": "test-data/synthetic/digital-twin/gnmi.json",
+      "sha256": "e2edb893d61ffea4dbdba241a92d5bd3ebb79cf2782eeaa04842954423db9855"
+    },
+    {
+      "path": "test-data/synthetic/digital-twin/snmp.json",
+      "sha256": "54637b17eaae0316f2b2a478999e796d5a1d7f6a6595a4a8482eaa77adb6f23c"
+    },
+    {
+      "path": "test-data/synthetic/digital-twin/ssh.json",
+      "sha256": "81de85d83e2b9cc42e3ea4ed478ee701029ef64d194e3a49d0a1c2cbe2d4d7c6"
+    },
+    {
+      "path": "test-data/synthetic/scenarios/failure.json",
+      "sha256": "0e67271d120be225e9ab23e0871b7d4effe2d8f1d914f18db22ea802e4d57c97"
+    },
+    {
+      "path": "test-data/synthetic/scenarios/hybrid_cloud.json",
+      "sha256": "0ebae6ce1f12db351c56763b0a6bb260ee451850ca6751779f28d7afe5a6fd8a"
+    },
+    {
+      "path": "test-data/synthetic/scenarios/large_scale.json",
+      "sha256": "44913b0a1b16aa43d1535e2ba7b4c2d75f8aed5ed4c1c2dd8990a559226c98ea"
+    },
+    {
+      "path": "test-data/synthetic/scenarios/normal.json",
+      "sha256": "bd3014345a3be7871bda6ca0a50b493097d98ca49e487255b17ac673abb1699d"
+    },
+    {
+      "path": "test-data/synthetic/scenarios/rollback_wave.json",
+      "sha256": "5f316a79138678595f8a1024926f8fd251b230c9847a6021e0a9fd4c027fd8d8"
+    },
+    {
+      "path": "test-data/synthetic/scenarios/security_incident.json",
+      "sha256": "a18dbee20f87a244fd3396598405201be4369c4ac7415f547cd6ffc11b94859b"
+    },
+    {
+      "path": "test-data/synthetic/scenarios/wireless_edge.json",
+      "sha256": "dc3b98ae1db2f0c3f632a5e02b870cbeefaf5237c1dfa14db6fb3885894901ef"
+    }
+  ]
+}

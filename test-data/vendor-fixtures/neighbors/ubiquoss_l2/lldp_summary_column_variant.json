@@ -1,0 +1,34 @@
+{
+  "id": "neighbors.ubiquoss_l2.lldp_summary_column_variant",
+  "fixture_group": "domestic_switch",
+  "type": "neighbors",
+  "device_type": "ubiquoss_l2",
+  "driver_mode": "manager",
+  "commands": {
+    "show lldp neighbors detail|textfsm": null,
+    "show lldp neighbors detail": "",
+    "show lldp neighbors|textfsm": null,
+    "show lldp neighbors": "Device ID           Local Intf   Holdtme   Capability   Port ID\nSwitch-Edge-01      Gi0/10       120       S            Gi0/1\nSwitch-Edge-02      Gi0/11       120       S            Gi0/2\n",
+    "show cdp neighbors detail|textfsm": null,
+    "show cdp neighbors detail": ""
+  },
+  "expected": {
+    "min_rows": 2,
+    "driver_contains": "UbiquossDriver",
+    "required_protocols": [
+      "LLDP"
+    ],
+    "contains_rows": [
+      {
+        "neighbor_name": "Switch-Edge-01",
+        "local_interface": "Gi0/10",
+        "remote_interface": "Gi0/1"
+      },
+      {
+        "neighbor_name": "Switch-Edge-02",
+        "local_interface": "Gi0/11",
+        "remote_interface": "Gi0/2"
+      }
+    ]
+  }
+}

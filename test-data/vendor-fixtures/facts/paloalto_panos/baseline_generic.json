@@ -1,0 +1,24 @@
+{
+  "id": "facts.paloalto_panos.baseline_generic",
+  "type": "facts",
+  "device_type": "paloalto_panos",
+  "driver_mode": "generic",
+  "commands": {
+    "show version": "Synthetic paloalto_panos software output\nVersion: 1.0-test\nModel: PALOALTO_PANOS-SIM\n",
+    "display version": "Synthetic paloalto_panos display output\nVRP Version V1R0 Test\nModel: PALOALTO_PANOS-SIM\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "paloalto_panos"
+      },
+      "hostname": {
+        "equals": "fixture-host"
+      },
+      "raw_output": {
+        "contains": "Synthetic"
+      }
+    }
+  }
+}

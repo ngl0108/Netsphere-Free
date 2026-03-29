@@ -1,0 +1,21 @@
+{
+  "id": "inventory.nst_switch.show_inventory_cisco_like",
+  "fixture_group": "domestic_switch",
+  "type": "inventory",
+  "device_type": "nst_switch",
+  "commands": {
+    "show inventory|textfsm": null,
+    "show inventory": "NAME: \"1\", DESCR: \"NST Chassis\"\nPID: NST-4828G , VID: V01, SN: NST12345678\n\nNAME: \"PSU-A\", DESCR: \"Redundant PSU\"\nPID: NST-PSU , VID: V01, SN: NSTPSU1234\n"
+  },
+  "expected": {
+    "min_rows": 2,
+    "parser_contains": "cisco_show_inventory",
+    "contains_rows": [
+      {
+        "name": "1",
+        "model_name": "NST-4828G",
+        "serial_number": "NST12345678"
+      }
+    ]
+  }
+}

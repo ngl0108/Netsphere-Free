@@ -1,0 +1,21 @@
+{
+  "id": "inventory.handream_sg.show_inventory_cisco_like",
+  "fixture_group": "domestic_switch",
+  "type": "inventory",
+  "device_type": "handream_sg",
+  "commands": {
+    "show inventory|textfsm": null,
+    "show inventory": "NAME: \"1\", DESCR: \"HanDreamnet SG Chassis\"\nPID: SG5000 , VID: V03, SN: HDSG5000A9\n\nNAME: \"PSU-A\", DESCR: \"Power Supply A\"\nPID: SG-PSU-AC , VID: V02, SN: HDSGPSU1234\n"
+  },
+  "expected": {
+    "min_rows": 2,
+    "parser_contains": "cisco_show_inventory",
+    "contains_rows": [
+      {
+        "name": "1",
+        "model_name": "SG5000",
+        "serial_number": "HDSG5000A9"
+      }
+    ]
+  }
+}

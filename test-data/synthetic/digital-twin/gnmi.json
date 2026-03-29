@@ -1,0 +1,277 @@
+{
+  "meta": {
+    "seed": 3765885100,
+    "generated_at": "2026-02-19T15:11:40+00:00",
+    "cases": [
+      "normal",
+      "timeout",
+      "partial",
+      "malformed"
+    ],
+    "vendors": [
+      "cisco",
+      "arista",
+      "juniper",
+      "fortinet",
+      "paloalto",
+      "f5",
+      "nokia",
+      "vyos",
+      "mikrotik"
+    ]
+  },
+  "vendors": {
+    "cisco": {
+      "normal": {
+        "status": "ok",
+        "telemetry": {
+          "interfaces_up": 43,
+          "interfaces_total": 26,
+          "cpu_pct": 22.97,
+          "mem_pct": 53.02
+        }
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "gNMI stream timeout"
+      },
+      "partial": {
+        "status": "ok",
+        "telemetry": {
+          "interfaces_up": 1
+        }
+      },
+      "malformed": {
+        "status": "malformed",
+        "telemetry": [
+          "unexpected",
+          "list"
+        ]
+      }
+    },
+    "arista": {
+      "normal": {
+        "status": "ok",
+        "telemetry": {
+          "interfaces_up": 48,
+          "interfaces_total": 77,
+          "cpu_pct": 53.09,
+          "mem_pct": 61.56
+        }
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "gNMI stream timeout"
+      },
+      "partial": {
+        "status": "ok",
+        "telemetry": {
+          "interfaces_up": 11
+        }
+      },
+      "malformed": {
+        "status": "malformed",
+        "telemetry": [
+          "unexpected",
+          "list"
+        ]
+      }
+    },
+    "juniper": {
+      "normal": {
+        "status": "ok",
+        "telemetry": {
+          "interfaces_up": 31,
+          "interfaces_total": 33,
+          "cpu_pct": 36.29,
+          "mem_pct": 40.34
+        }
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "gNMI stream timeout"
+      },
+      "partial": {
+        "status": "ok",
+        "telemetry": {
+          "interfaces_up": 11
+        }
+      },
+      "malformed": {
+        "status": "malformed",
+        "telemetry": [
+          "unexpected",
+          "list"
+        ]
+      }
+    },
+    "fortinet": {
+      "normal": {
+        "status": "ok",
+        "telemetry": {
+          "interfaces_up": 26,
+          "interfaces_total": 96,
+          "cpu_pct": 35.9,
+          "mem_pct": 62.35
+        }
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "gNMI stream timeout"
+      },
+      "partial": {
+        "status": "ok",
+        "telemetry": {
+          "interfaces_up": 8
+        }
+      },
+      "malformed": {
+        "status": "malformed",
+        "telemetry": [
+          "unexpected",
+          "list"
+        ]
+      }
+    },
+    "paloalto": {
+      "normal": {
+        "status": "ok",
+        "telemetry": {
+          "interfaces_up": 24,
+          "interfaces_total": 85,
+          "cpu_pct": 11.61,
+          "mem_pct": 44.58
+        }
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "gNMI stream timeout"
+      },
+      "partial": {
+        "status": "ok",
+        "telemetry": {
+          "interfaces_up": 2
+        }
+      },
+      "malformed": {
+        "status": "malformed",
+        "telemetry": [
+          "unexpected",
+          "list"
+        ]
+      }
+    },
+    "f5": {
+      "normal": {
+        "status": "ok",
+        "telemetry": {
+          "interfaces_up": 39,
+          "interfaces_total": 36,
+          "cpu_pct": 34.72,
+          "mem_pct": 50.57
+        }
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "gNMI stream timeout"
+      },
+      "partial": {
+        "status": "ok",
+        "telemetry": {
+          "interfaces_up": 10
+        }
+      },
+      "malformed": {
+        "status": "malformed",
+        "telemetry": [
+          "unexpected",
+          "list"
+        ]
+      }
+    },
+    "nokia": {
+      "normal": {
+        "status": "ok",
+        "telemetry": {
+          "interfaces_up": 22,
+          "interfaces_total": 96,
+          "cpu_pct": 24.49,
+          "mem_pct": 20.12
+        }
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "gNMI stream timeout"
+      },
+      "partial": {
+        "status": "ok",
+        "telemetry": {
+          "interfaces_up": 7
+        }
+      },
+      "malformed": {
+        "status": "malformed",
+        "telemetry": [
+          "unexpected",
+          "list"
+        ]
+      }
+    },
+    "vyos": {
+      "normal": {
+        "status": "ok",
+        "telemetry": {
+          "interfaces_up": 29,
+          "interfaces_total": 48,
+          "cpu_pct": 23.12,
+          "mem_pct": 18.03
+        }
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "gNMI stream timeout"
+      },
+      "partial": {
+        "status": "ok",
+        "telemetry": {
+          "interfaces_up": 7
+        }
+      },
+      "malformed": {
+        "status": "malformed",
+        "telemetry": [
+          "unexpected",
+          "list"
+        ]
+      }
+    },
+    "mikrotik": {
+      "normal": {
+        "status": "ok",
+        "telemetry": {
+          "interfaces_up": 27,
+          "interfaces_total": 96,
+          "cpu_pct": 43.89,
+          "mem_pct": 52.77
+        }
+      },
+      "timeout": {
+        "status": "timeout",
+        "error": "gNMI stream timeout"
+      },
+      "partial": {
+        "status": "ok",
+        "telemetry": {
+          "interfaces_up": 11
+        }
+      },
+      "malformed": {
+        "status": "malformed",
+        "telemetry": [
+          "unexpected",
+          "list"
+        ]
+      }
+    }
+  }
+}

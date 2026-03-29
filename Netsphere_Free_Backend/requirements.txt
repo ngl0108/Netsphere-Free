@@ -1,0 +1,46 @@
+fastapi
+uvicorn[standard]
+python-multipart
+sqlalchemy
+# Async DB drivers (for SQLAlchemy AsyncSession)
+asyncpg
+aiosqlite
+pydantic[email]
+pydantic-settings
+requests
+# Auth & Security
+python-jose[cryptography] # [FIX] Required for License verification
+PyJWT
+passlib
+argon2-cffi
+# SNMP (Latest standard for Python 3.11+)
+pysnmp==4.4.12
+pyasn1==0.4.8
+# SSH & Device Management
+netmiko
+ntc-templates  # TextFSM templates for structured device output parsing
+napalm  # [NEW] Multi-vendor abstraction layer (Juniper, Arista, etc.)
+paramiko
+pygnmi
+# Environment
+python-dotenv
+# Celery/Redis
+celery
+redis
+# PostgreSQL Driver
+psycopg2-binary
+# Network Scanning
+python-nmap
+openpyxl
+reportlab
+prometheus-client
+prometheus-fastapi-instrumentator
+scp
+
+# Cloud
+boto3
+azure-identity
+azure-mgmt-network
+google-cloud-compute
+ncloud-vpc
+ncloud-vserver

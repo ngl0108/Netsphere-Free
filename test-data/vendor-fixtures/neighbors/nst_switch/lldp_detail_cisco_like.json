@@ -1,0 +1,29 @@
+{
+  "id": "neighbors.nst_switch.lldp_detail_cisco_like",
+  "fixture_group": "domestic_switch",
+  "type": "neighbors",
+  "device_type": "nst_switch",
+  "driver_mode": "manager",
+  "commands": {
+    "show lldp neighbors detail|textfsm": null,
+    "show lldp neighbors detail": "Local Intf: Gi1/0/5\nChassis id: 0011.2233.4455\nPort id: Gi0/1\nSystem Name: NST-EDGE-01\nManagement Address: 10.62.1.1\n",
+    "show cdp neighbors detail|textfsm": null,
+    "show cdp neighbors detail": ""
+  },
+  "expected": {
+    "min_rows": 1,
+    "driver_contains": "NSTDriver",
+    "required_protocols": [
+      "LLDP"
+    ],
+    "contains_rows": [
+      {
+        "local_interface": "Gi1/0/5",
+        "remote_interface": "Gi0/1",
+        "neighbor_name": "NST-EDGE-01",
+        "mgmt_ip": "10.62.1.1",
+        "protocol": "LLDP"
+      }
+    ]
+  }
+}

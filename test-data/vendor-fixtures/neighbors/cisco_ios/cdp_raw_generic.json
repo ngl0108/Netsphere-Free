@@ -1,0 +1,34 @@
+{
+  "id": "neighbors.cisco_ios.cdp_raw_generic",
+  "type": "neighbors",
+  "device_type": "cisco_ios",
+  "driver_mode": "generic",
+  "commands": {
+    "show lldp neighbors detail|textfsm": null,
+    "show lldp neighbors detail": "",
+    "show lldp neighbors|textfsm": null,
+    "show lldp neighbors": "",
+    "show cdp neighbors detail|textfsm": null,
+    "show cdp neighbors detail": "Device ID: DIST-SW\nEntry address(es):\n  IP address: 10.0.0.2\nPlatform: cisco WS-C3850,  Capabilities: Switch IGMP\nInterface: GigabitEthernet1/0/3,  Port ID (outgoing port): GigabitEthernet0/3\n"
+  },
+  "expected": {
+    "min_rows": 1,
+    "driver_contains": "GenericDriver",
+    "required_protocols": [
+      "CDP"
+    ],
+    "contains_rows": [
+      {
+        "neighbor_name": "DIST-SW",
+        "mgmt_ip": "10.0.0.2",
+        "local_interface": {
+          "contains": "GigabitEthernet1/0/3"
+        },
+        "remote_interface": {
+          "contains": "GigabitEthernet0/3"
+        },
+        "protocol": "CDP"
+      }
+    ]
+  }
+}

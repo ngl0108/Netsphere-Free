@@ -1,0 +1,31 @@
+{
+  "id": "neighbors.hp_comware.lldp_verbose_real",
+  "fixture_group": "global_switch",
+  "type": "neighbors",
+  "device_type": "hp_comware",
+  "driver_mode": "generic",
+  "commands": {
+    "display lldp neighbor-information verbose|textfsm": null,
+    "display lldp neighbor-information verbose": "LLDP neighbor-information of port 49[FortyGigE1/0/49]:\nNeighbor index : 1\nChassis type   : MAC address\nChassis ID     : 002a-b1cc-2000\nPort ID type   : Interface name\nPort ID        : FortyGigE1/0/1\nSystem name    : Spine-01\nManagement address                : 10.255.255.101\n",
+    "display lldp neighbor-information brief|textfsm": null,
+    "display lldp neighbor-information brief": "",
+    "show cdp neighbors detail|textfsm": null,
+    "show cdp neighbors detail": ""
+  },
+  "expected": {
+    "min_rows": 1,
+    "driver_contains": "GenericDriver",
+    "required_protocols": [
+      "LLDP"
+    ],
+    "contains_rows": [
+      {
+        "local_interface": "FortyGigE1/0/49",
+        "remote_interface": "FortyGigE1/0/1",
+        "neighbor_name": "Spine-01",
+        "mgmt_ip": "10.255.255.101",
+        "protocol": "LLDP"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "facts.ubiquoss.baseline_generic",
+  "type": "facts",
+  "device_type": "ubiquoss",
+  "driver_mode": "generic",
+  "commands": {
+    "show version": "Synthetic ubiquoss software output\nVersion: 1.0-test\nModel: UBIQUOSS-SIM\n",
+    "display version": "Synthetic ubiquoss display output\nVRP Version V1R0 Test\nModel: UBIQUOSS-SIM\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "ubiquoss"
+      },
+      "hostname": {
+        "equals": "fixture-host"
+      },
+      "raw_output": {
+        "contains": "Synthetic"
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "neighbors.cisco_wlc.neighbor_summary_real_5520",
+  "fixture_group": "global_switch",
+  "type": "neighbors",
+  "device_type": "cisco_wlc",
+  "driver_mode": "generic",
+  "commands": {
+    "show lldp neighbors detail|textfsm": null,
+    "show lldp neighbors detail": "",
+    "show lldp neighbors|textfsm": null,
+    "show lldp neighbors": "Device ID        Local Intrfce     Holdtme    Capability  Platform         Port ID\n---------------- ----------------- ---------- ----------  ---------------- ---------\nCore-SW-01       1                 100        B,R         Cisco IOS Softwa Te1/1/1\n",
+    "show cdp neighbors|textfsm": null,
+    "show cdp neighbors": "Device ID        Local Intrfce     Holdtme    Capability  Platform         Port ID\n---------------- ----------------- ---------- ----------  ---------------- ---------\nCore-SW-01       1                 162        R S I       WS-C3850-24T     TenGigabitEthernet1/1/1\n"
+  },
+  "expected": {
+    "min_rows": 2,
+    "driver_contains": "GenericDriver",
+    "required_protocols": [
+      "CDP",
+      "LLDP"
+    ],
+    "contains_rows": [
+      {
+        "local_interface": "1",
+        "remote_interface": "TenGigabitEthernet1/1/1",
+        "neighbor_name": "Core-SW-01",
+        "protocol": "CDP"
+      },
+      {
+        "local_interface": "1",
+        "remote_interface": "Te1/1/1",
+        "neighbor_name": "Core-SW-01",
+        "protocol": "LLDP"
+      }
+    ]
+  }
+}

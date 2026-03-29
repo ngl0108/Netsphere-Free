@@ -1,0 +1,21 @@
+{
+  "id": "inventory.ubiquoss_l2.show_inventory_cisco_like",
+  "fixture_group": "domestic_switch",
+  "type": "inventory",
+  "device_type": "ubiquoss_l2",
+  "commands": {
+    "show inventory|textfsm": null,
+    "show inventory": "NAME: \"1\", DESCR: \"Ubiquoss Chassis\"\nPID: E4200-48T , VID: V01, SN: UBQ4200A001\n\nNAME: \"Fan Tray\", DESCR: \"Cooling Module\"\nPID: FAN-E4200 , VID: V01, SN: UBFAN334455\n"
+  },
+  "expected": {
+    "min_rows": 2,
+    "parser_contains": "cisco_show_inventory",
+    "contains_rows": [
+      {
+        "name": "1",
+        "model_name": "E4200-48T",
+        "serial_number": "UBQ4200A001"
+      }
+    ]
+  }
+}

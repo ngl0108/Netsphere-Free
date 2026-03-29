@@ -1,0 +1,24 @@
+{
+  "id": "facts.huawei.baseline_generic",
+  "type": "facts",
+  "device_type": "huawei",
+  "driver_mode": "generic",
+  "commands": {
+    "show version": "Synthetic huawei software output\nVersion: 1.0-test\nModel: HUAWEI-SIM\n",
+    "display version": "Synthetic huawei display output\nVRP Version V1R0 Test\nModel: HUAWEI-SIM\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "huawei"
+      },
+      "hostname": {
+        "equals": "fixture-host"
+      },
+      "raw_output": {
+        "contains": "Synthetic"
+      }
+    }
+  }
+}

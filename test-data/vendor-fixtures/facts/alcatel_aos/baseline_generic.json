@@ -1,0 +1,24 @@
+{
+  "id": "facts.alcatel_aos.baseline_generic",
+  "type": "facts",
+  "device_type": "alcatel_aos",
+  "driver_mode": "generic",
+  "commands": {
+    "show version": "Synthetic alcatel_aos software output\nVersion: 1.0-test\nModel: ALCATEL_AOS-SIM\n",
+    "display version": "Synthetic alcatel_aos display output\nVRP Version V1R0 Test\nModel: ALCATEL_AOS-SIM\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "alcatel_aos"
+      },
+      "hostname": {
+        "equals": "fixture-host"
+      },
+      "raw_output": {
+        "contains": "Synthetic"
+      }
+    }
+  }
+}

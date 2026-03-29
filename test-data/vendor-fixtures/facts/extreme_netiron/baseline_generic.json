@@ -1,0 +1,24 @@
+{
+  "id": "facts.extreme_netiron.baseline_generic",
+  "type": "facts",
+  "device_type": "extreme_netiron",
+  "driver_mode": "generic",
+  "commands": {
+    "show version": "Synthetic extreme_netiron software output\nVersion: 1.0-test\nModel: EXTREME_NETIRON-SIM\n",
+    "display version": "Synthetic extreme_netiron display output\nVRP Version V1R0 Test\nModel: EXTREME_NETIRON-SIM\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "extreme_netiron"
+      },
+      "hostname": {
+        "equals": "fixture-host"
+      },
+      "raw_output": {
+        "contains": "Synthetic"
+      }
+    }
+  }
+}

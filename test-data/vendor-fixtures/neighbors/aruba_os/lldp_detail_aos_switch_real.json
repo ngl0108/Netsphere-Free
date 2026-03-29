@@ -1,0 +1,34 @@
+{
+  "id": "neighbors.aruba_os.lldp_detail_aos_switch_real",
+  "fixture_group": "global_switch",
+  "type": "neighbors",
+  "device_type": "aruba_os",
+  "driver_mode": "generic",
+  "commands": {
+    "show lldp neighbor-info detail|textfsm": null,
+    "show lldp neighbor-info detail": "",
+    "show lldp info remote-device detail|textfsm": null,
+    "show lldp info remote-device detail": " LLDP Remote Device Information Detail\n\n  Local Port   : Trk1\n  ChassisType  : mac-address\n  ChassisId    : 00 1a 2b cc 33 44\n  PortType     : local\n  PortId       : 512\n  SysName      : Core-SW-01\n  System Descr : ArubaOS-CX Switch 8325-48Y8C\n",
+    "show lldp neighbors detail|textfsm": null,
+    "show lldp neighbors detail": "",
+    "show lldp neighbors|textfsm": null,
+    "show lldp neighbors": "",
+    "show cdp neighbors detail|textfsm": null,
+    "show cdp neighbors detail": ""
+  },
+  "expected": {
+    "min_rows": 1,
+    "driver_contains": "GenericDriver",
+    "required_protocols": [
+      "LLDP"
+    ],
+    "contains_rows": [
+      {
+        "local_interface": "Trk1",
+        "remote_interface": "512",
+        "neighbor_name": "Core-SW-01",
+        "protocol": "LLDP"
+      }
+    ]
+  }
+}

@@ -1,0 +1,87 @@
+{# Cisco IOS / IOS-XE Template #}
+{% for block in blocks %}
+
+{% if block.type == "vlan" %}
+vlan {{ block.id }}
+ name {{ block.name }}
+ exit
+{% endif %}
+
+{% if block.type == "interface" %}
+interface {{ block.name }}
+ {% if block.description %}description {{ block.description }}{% endif %}
+ {% if block.ipv4_address %}ip address {{ block.ipv4_address }} {{ block.ipv4_mask }}{% endif %}
+ {% if block.admin_status == "up" %}no shutdown{% elif block.admin_status == "down" %}shutdown{% endif %}
+ {% if block.vlan_mode == "access" %}
+ switchport mode access
+ switchport access vlan {{ block.vlan_id }}
+ {% elif block.vlan_mode == "trunk" %}
+ switchport mode trunk
+ {% if block.native_vlan %}switchport trunk native vlan {{ block.native_vlan }}{% endif %}
+ {% if block.allowed_vlans %}switchport trunk allowed vlan {{ block.allowed_vlans }}{% endif %}
+ {% endif %}
+ exit
+{% endif %}
+
+{% if block.type == "route" %}
+ip route {{ block.destination }} {{ block.mask }} {{ block.next_hop }}
+{% endif %}
+
+{% if block.type == "ospf" %}
+router ospf {{ block.process_id }}
+ {% for net in block.networks %}
+ network {{ net.ip }} {{ net.wildcard }} area {{ net.area }}
+ {% endfor %}
+ exit
+{% endif %}
+
+{% if block.type == "global" %}
+{% if block.hostname %}hostname {{ block.hostname }}{% endif %}
+{% if block.domain_name %}ip domain-name {{ block.domain_name }}{% endif %}
+
+{% if block.banner %}
+banner motd ^{{ block.banner }}^
+{% endif %}
+
+{% if block.snmp %}
+ {% for comm in block.snmp.communities %}
+ snmp-server community {{ comm.name }} {{ comm.mode }}
+ {% endfor %}
+ {% if block.snmp.trap_server %}snmp-server host {{ block.snmp.trap_server }}{% endif %}
+{% endif %}
+
+{% if block.ntp %}
+ {% for srv in block.ntp.servers %}
+ ntp server {{ srv }}
+ {% endfor %}
+{% endif %}
+
+{% if block.logging %}
+ {% for srv in block.logging.servers %}
+ logging host {{ srv }}
+ {% endfor %}
+ {% if block.logging.level %}logging trap {{ block.logging.level }}{% endif %}
+{% endif %}
+
+{% if block.aaa %}
+ {% if block.aaa.tacacs_servers %}
+  {% for ts in block.aaa.tacacs_servers %}
+  tacacs server {{ ts.name }}
+   address ipv4 {{ ts.ip }}
+   key {{ ts.key }}
+  exit
+  {% endfor %}
+  aaa new-model
+  aaa authentication login default group tacacs+ local
+  aaa authorization exec default group tacacs+ local 
+ {% endif %}
+{% endif %}
+
+{% if block.users %}
+ {% for u in block.users %}
+ username {{ u.username }} privilege {{ u.privilege }} secret {{ u.secret }}
+ {% endfor %}
+{% endif %}
+{% endif %}
+
+{% endfor %}

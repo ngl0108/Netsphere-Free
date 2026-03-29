@@ -1,0 +1,61 @@
+# Ignore environment files with secrets
+.env
+.env.preview
+.env.preview.local
+.env.preview.collector-local
+.env.preview-intake.hosting
+.env.local
+.env.production
+.env.pro
+.env.pro.local
+Netsphere_Free_Deploy/**/.env.preview-intake
+
+# Ignore SSL certificates
+certs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+
+# Node
+node_modules/
+dist/
+
+# Database (SQLite - no longer used in production)
+*.db
+.ipDISK.db
+
+# IDE
+.idea/
+.vscode/
+.trae/
+
+# Vendor Tools (Private Keys - NEVER COMMIT)
+Vendor_Tools/
+
+# Runtime / generated
+**/logs/
+**/celerybeat-schedule.*
+*.log
+Netsphere_Free_Backend/preview_contributions/
+preview-installer/run/
+preview-installer/data/
+Netsphere_Free_Backend/reports_cache/cloud_intent_runs/
+Netsphere_Free_Backend/reports_cache/cloud_intent_state/
+Netsphere_Free_Deploy/reports/release-check.latest.json
+Netsphere_Free_Deploy/reports/release-check.latest.md
+Netsphere_Free_Frontend/test-results/
+scenario-lab/reports/*.json
+scenario-lab/reports/*.log
+
+# Keys / certs
+*.pem
+*.key
+*.ppk
+*.p12
+*.pfx
+*.crt
+*.cer

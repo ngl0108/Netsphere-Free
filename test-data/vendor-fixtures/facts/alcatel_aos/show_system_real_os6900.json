@@ -1,0 +1,32 @@
+{
+  "id": "facts.alcatel_aos.show_system_real_os6900",
+  "fixture_group": "global_switch",
+  "type": "facts",
+  "device_type": "alcatel_aos",
+  "driver_mode": "generic",
+  "commands": {
+    "show system": "System:\n  Description:  Alcatel-Lucent Enterprise OS6900-X48C6 8.7.468.R02\n  Object ID:    1.3.6.1.4.1.6486.801.1.1.2.1.11.1.2\n  Up Time:      45 days 10 hours 15 minutes 20 seconds\n  Name:         OS6900-Core\n",
+    "show chassis": "Chassis 1\n  Model Name:             OS6900-X48C6,\n  Description:            48x 10G/25G SFP28, 6x 40G/100G QSFP28,\n  Serial Number:          P248XXXX,\n",
+    "show microcode": "Package                      Release      Size     Description\n---------------------------+------------+--------+-----------------------------------\nTos                          8.7.468.R02  3452342  Alcatel-Lucent OS\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "alcatel_aos"
+      },
+      "hostname": {
+        "equals": "OS6900-Core"
+      },
+      "model": {
+        "equals": "OS6900-X48C6"
+      },
+      "serial_number": {
+        "equals": "P248XXXX"
+      },
+      "os_version": {
+        "equals": "8.7.468.R02"
+      }
+    }
+  }
+}

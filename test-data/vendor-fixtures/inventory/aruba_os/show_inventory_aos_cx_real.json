@@ -1,0 +1,26 @@
+{
+  "id": "inventory.aruba_os.show_inventory_aos_cx_real",
+  "fixture_group": "global_switch",
+  "type": "inventory",
+  "device_type": "aruba_os",
+  "commands": {
+    "show inventory|textfsm": null,
+    "show inventory": "-------------------------------------------------------------------------\nSystem      :\n-------------------------------------------------------------------------\nVendor               : Aruba\nProduct Name         : Aruba 8325-48Y8C Switch\nChassis Serial Nbr   : SG99XXXXXX\nPart Number          : JL624A\n\n-------------------------------------------------------------------------\nLine Module 1/1 :\n-------------------------------------------------------------------------\nProduct Name         : 48-port 25GbE + 8-port 100GbE Module\nSerial Nbr           : SG99XXXXXX\nPart Number          : JL624A\n\n-------------------------------------------------------------------------\nTransceiver 1/1/49 :\n-------------------------------------------------------------------------\nVendor               : Aruba\nProduct Name         : 100G QSFP28 SR4\nPart Number          : JL309A\nSerial Nbr           : XF1234567\n"
+  },
+  "expected": {
+    "min_rows": 3,
+    "parser_contains": "hpe_aruba_inventory",
+    "contains_rows": [
+      {
+        "name": "Chassis",
+        "model_name": "Aruba 8325-48Y8C Switch",
+        "serial_number": "SG99XXXXXX"
+      },
+      {
+        "name": "Line Module 1/1",
+        "model_name": "48-port 25GbE + 8-port 100GbE Module",
+        "serial_number": "SG99XXXXXX"
+      }
+    ]
+  }
+}

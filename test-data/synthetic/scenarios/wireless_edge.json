@@ -1,0 +1,1024 @@
+{
+  "scenario": "wireless_edge",
+  "title": "Wireless Edge",
+  "seed": 2172104479,
+  "generated_at": "2026-02-19T02:21:19+00:00",
+  "focus_areas": [
+    "wireless",
+    "edge",
+    "telemetry"
+  ],
+  "protocols": [
+    "capwap",
+    "fdb",
+    "lldp"
+  ],
+  "vendor_mix": {
+    "arista": 10,
+    "cisco": 7,
+    "f5": 3,
+    "fortinet": 2,
+    "juniper": 3,
+    "mikrotik": 5,
+    "nokia": 2,
+    "paloalto": 1,
+    "vyos": 3
+  },
+  "tag_mix": {
+    "wireless_access": 12,
+    "wireless_ap": 18,
+    "wireless_controller": 6
+  },
+  "counts": {
+    "devices": 36,
+    "links": 46,
+    "events": 13
+  },
+  "kpi_snapshot": {
+    "first_map_seconds_p50": 198,
+    "auto_reflection_rate_pct": 84.3,
+    "false_positive_rate_pct": 4.2
+  },
+  "devices": [
+    {
+      "id": 1,
+      "name": "FGT-0001",
+      "ip_address": "10.11.0.1",
+      "vendor": "fortinet",
+      "device_type": "fortinet",
+      "site": "hq-core",
+      "status": "online",
+      "confidence": 0.926,
+      "platform": "security",
+      "os_family": "fortios",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_controller"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "VEOS-0002",
+      "ip_address": "10.12.0.2",
+      "vendor": "arista",
+      "device_type": "arista_eos",
+      "site": "branch-a",
+      "status": "online",
+      "confidence": 0.94,
+      "platform": "datacenter_switch",
+      "os_family": "eos",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_ap"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "BIGIP-0003",
+      "ip_address": "10.13.0.3",
+      "vendor": "f5",
+      "device_type": "f5_ltm",
+      "site": "branch-b",
+      "status": "online",
+      "confidence": 0.829,
+      "platform": "adc",
+      "os_family": "tmos",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_ap"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "QFX-0004",
+      "ip_address": "10.14.0.4",
+      "vendor": "juniper",
+      "device_type": "juniper_junos",
+      "site": "dc-west",
+      "status": "online",
+      "confidence": 0.729,
+      "platform": "datacenter_switch",
+      "os_family": "junos",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_ap"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "PA-0005",
+      "ip_address": "10.15.0.5",
+      "vendor": "paloalto",
+      "device_type": "paloalto_panos",
+      "site": "dc-east",
+      "status": "online",
+      "confidence": 0.738,
+      "platform": "security",
+      "os_family": "panos",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_access"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "VEOS-0006",
+      "ip_address": "10.16.0.6",
+      "vendor": "arista",
+      "device_type": "arista_eos",
+      "site": "hq-core",
+      "status": "online",
+      "confidence": 0.846,
+      "platform": "datacenter_switch",
+      "os_family": "eos",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_access"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "CHR-0007",
+      "ip_address": "10.11.0.7",
+      "vendor": "mikrotik",
+      "device_type": "linux",
+      "site": "branch-a",
+      "status": "online",
+      "confidence": 0.844,
+      "platform": "routing",
+      "os_family": "routeros",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_controller"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "VEOS-0008",
+      "ip_address": "10.12.0.8",
+      "vendor": "arista",
+      "device_type": "arista_eos",
+      "site": "branch-b",
+      "status": "online",
+      "confidence": 0.884,
+      "platform": "datacenter_switch",
+      "os_family": "eos",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_ap"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "CHR-0009",
+      "ip_address": "10.13.0.9",
+      "vendor": "mikrotik",
+      "device_type": "linux",
+      "site": "dc-west",
+      "status": "online",
+      "confidence": 0.987,
+      "platform": "routing",
+      "os_family": "routeros",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_ap"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "C9K-0010",
+      "ip_address": "10.14.0.10",
+      "vendor": "cisco",
+      "device_type": "cisco_ios_xe",
+      "site": "dc-east",
+      "status": "online",
+      "confidence": 0.948,
+      "platform": "campus_switch",
+      "os_family": "ios_xe",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_ap"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "BIGIP-0011",
+      "ip_address": "10.15.0.11",
+      "vendor": "f5",
+      "device_type": "f5_ltm",
+      "site": "hq-core",
+      "status": "online",
+      "confidence": 0.916,
+      "platform": "adc",
+      "os_family": "tmos",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_access"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "VEOS-0012",
+      "ip_address": "10.16.0.12",
+      "vendor": "arista",
+      "device_type": "arista_eos",
+      "site": "branch-a",
+      "status": "online",
+      "confidence": 0.974,
+      "platform": "datacenter_switch",
+      "os_family": "eos",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_access"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "C9K-0013",
+      "ip_address": "10.11.0.13",
+      "vendor": "cisco",
+      "device_type": "cisco_ios_xe",
+      "site": "branch-b",
+      "status": "online",
+      "confidence": 0.751,
+      "platform": "campus_switch",
+      "os_family": "ios_xe",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_controller"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "C9K-0014",
+      "ip_address": "10.12.0.14",
+      "vendor": "cisco",
+      "device_type": "cisco_ios_xe",
+      "site": "dc-west",
+      "status": "online",
+      "confidence": 0.771,
+      "platform": "campus_switch",
+      "os_family": "ios_xe",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_ap"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "QFX-0015",
+      "ip_address": "10.13.0.15",
+      "vendor": "juniper",
+      "device_type": "juniper_junos",
+      "site": "dc-east",
+      "status": "online",
+      "confidence": 0.867,
+      "platform": "datacenter_switch",
+      "os_family": "junos",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_ap"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "SR-0016",
+      "ip_address": "10.14.0.16",
+      "vendor": "nokia",
+      "device_type": "nokia_sros",
+      "site": "hq-core",
+      "status": "online",
+      "confidence": 0.921,
+      "platform": "routing",
+      "os_family": "sros",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_ap"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "C9K-0017",
+      "ip_address": "10.15.0.17",
+      "vendor": "cisco",
+      "device_type": "cisco_ios_xe",
+      "site": "branch-a",
+      "status": "online",
+      "confidence": 0.906,
+      "platform": "campus_switch",
+      "os_family": "ios_xe",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_access"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "C9K-0018",
+      "ip_address": "10.16.0.18",
+      "vendor": "cisco",
+      "device_type": "cisco_ios_xe",
+      "site": "branch-b",
+      "status": "online",
+      "confidence": 0.999,
+      "platform": "campus_switch",
+      "os_family": "ios_xe",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_access"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "CHR-0019",
+      "ip_address": "10.11.0.19",
+      "vendor": "mikrotik",
+      "device_type": "linux",
+      "site": "dc-west",
+      "status": "online",
+      "confidence": 0.989,
+      "platform": "routing",
+      "os_family": "routeros",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_controller"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "VYOS-0020",
+      "ip_address": "10.12.0.20",
+      "vendor": "vyos",
+      "device_type": "linux",
+      "site": "dc-east",
+      "status": "online",
+      "confidence": 0.918,
+      "platform": "routing",
+      "os_family": "linux",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_ap"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "VEOS-0021",
+      "ip_address": "10.13.0.21",
+      "vendor": "arista",
+      "device_type": "arista_eos",
+      "site": "hq-core",
+      "status": "online",
+      "confidence": 0.982,
+      "platform": "datacenter_switch",
+      "os_family": "eos",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_ap"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "VYOS-0022",
+      "ip_address": "10.14.0.22",
+      "vendor": "vyos",
+      "device_type": "linux",
+      "site": "branch-a",
+      "status": "online",
+      "confidence": 0.796,
+      "platform": "routing",
+      "os_family": "linux",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_ap"
+      ]
+    },
+    {
+      "id": 23,
+      "name": "VEOS-0023",
+      "ip_address": "10.15.0.23",
+      "vendor": "arista",
+      "device_type": "arista_eos",
+      "site": "branch-b",
+      "status": "online",
+      "confidence": 0.789,
+      "platform": "datacenter_switch",
+      "os_family": "eos",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_access"
+      ]
+    },
+    {
+      "id": 24,
+      "name": "C9K-0024",
+      "ip_address": "10.16.0.24",
+      "vendor": "cisco",
+      "device_type": "cisco_ios_xe",
+      "site": "dc-west",
+      "status": "online",
+      "confidence": 0.9,
+      "platform": "campus_switch",
+      "os_family": "ios_xe",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_access"
+      ]
+    },
+    {
+      "id": 25,
+      "name": "VEOS-0025",
+      "ip_address": "10.11.0.25",
+      "vendor": "arista",
+      "device_type": "arista_eos",
+      "site": "dc-east",
+      "status": "online",
+      "confidence": 0.926,
+      "platform": "datacenter_switch",
+      "os_family": "eos",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_controller"
+      ]
+    },
+    {
+      "id": 26,
+      "name": "VYOS-0026",
+      "ip_address": "10.12.0.26",
+      "vendor": "vyos",
+      "device_type": "linux",
+      "site": "hq-core",
+      "status": "online",
+      "confidence": 0.865,
+      "platform": "routing",
+      "os_family": "linux",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_ap"
+      ]
+    },
+    {
+      "id": 27,
+      "name": "FGT-0027",
+      "ip_address": "10.13.0.27",
+      "vendor": "fortinet",
+      "device_type": "fortinet",
+      "site": "branch-a",
+      "status": "online",
+      "confidence": 0.727,
+      "platform": "security",
+      "os_family": "fortios",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_ap"
+      ]
+    },
+    {
+      "id": 28,
+      "name": "CHR-0028",
+      "ip_address": "10.14.0.28",
+      "vendor": "mikrotik",
+      "device_type": "linux",
+      "site": "branch-b",
+      "status": "online",
+      "confidence": 0.996,
+      "platform": "routing",
+      "os_family": "routeros",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_ap"
+      ]
+    },
+    {
+      "id": 29,
+      "name": "VEOS-0029",
+      "ip_address": "10.15.0.29",
+      "vendor": "arista",
+      "device_type": "arista_eos",
+      "site": "dc-west",
+      "status": "online",
+      "confidence": 0.778,
+      "platform": "datacenter_switch",
+      "os_family": "eos",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_access"
+      ]
+    },
+    {
+      "id": 30,
+      "name": "VEOS-0030",
+      "ip_address": "10.16.0.30",
+      "vendor": "arista",
+      "device_type": "arista_eos",
+      "site": "dc-east",
+      "status": "online",
+      "confidence": 0.787,
+      "platform": "datacenter_switch",
+      "os_family": "eos",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_access"
+      ]
+    },
+    {
+      "id": 31,
+      "name": "QFX-0031",
+      "ip_address": "10.11.0.31",
+      "vendor": "juniper",
+      "device_type": "juniper_junos",
+      "site": "hq-core",
+      "status": "online",
+      "confidence": 0.813,
+      "platform": "datacenter_switch",
+      "os_family": "junos",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_controller"
+      ]
+    },
+    {
+      "id": 32,
+      "name": "BIGIP-0032",
+      "ip_address": "10.12.0.32",
+      "vendor": "f5",
+      "device_type": "f5_ltm",
+      "site": "branch-a",
+      "status": "online",
+      "confidence": 0.829,
+      "platform": "adc",
+      "os_family": "tmos",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_ap"
+      ]
+    },
+    {
+      "id": 33,
+      "name": "CHR-0033",
+      "ip_address": "10.13.0.33",
+      "vendor": "mikrotik",
+      "device_type": "linux",
+      "site": "branch-b",
+      "status": "online",
+      "confidence": 0.861,
+      "platform": "routing",
+      "os_family": "routeros",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_ap"
+      ]
+    },
+    {
+      "id": 34,
+      "name": "SR-0034",
+      "ip_address": "10.14.0.34",
+      "vendor": "nokia",
+      "device_type": "nokia_sros",
+      "site": "dc-west",
+      "status": "online",
+      "confidence": 0.881,
+      "platform": "routing",
+      "os_family": "sros",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_ap"
+      ]
+    },
+    {
+      "id": 35,
+      "name": "VEOS-0035",
+      "ip_address": "10.15.0.35",
+      "vendor": "arista",
+      "device_type": "arista_eos",
+      "site": "dc-east",
+      "status": "online",
+      "confidence": 0.851,
+      "platform": "datacenter_switch",
+      "os_family": "eos",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_access"
+      ]
+    },
+    {
+      "id": 36,
+      "name": "C9K-0036",
+      "ip_address": "10.16.0.36",
+      "vendor": "cisco",
+      "device_type": "cisco_ios_xe",
+      "site": "hq-core",
+      "status": "online",
+      "confidence": 0.96,
+      "platform": "campus_switch",
+      "os_family": "ios_xe",
+      "cloud_provider": null,
+      "tags": [
+        "wireless_access"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "source_id": 1,
+      "target_id": 2,
+      "protocol": "fdb",
+      "confidence": 0.836
+    },
+    {
+      "id": 2,
+      "source_id": 1,
+      "target_id": 19,
+      "protocol": "lldp",
+      "confidence": 0.693
+    },
+    {
+      "id": 3,
+      "source_id": 1,
+      "target_id": 36,
+      "protocol": "lldp",
+      "confidence": 0.992
+    },
+    {
+      "id": 4,
+      "source_id": 2,
+      "target_id": 3,
+      "protocol": "lldp",
+      "confidence": 0.949
+    },
+    {
+      "id": 5,
+      "source_id": 2,
+      "target_id": 8,
+      "protocol": "capwap",
+      "confidence": 0.738
+    },
+    {
+      "id": 6,
+      "source_id": 3,
+      "target_id": 4,
+      "protocol": "fdb",
+      "confidence": 0.817
+    },
+    {
+      "id": 7,
+      "source_id": 4,
+      "target_id": 5,
+      "protocol": "lldp",
+      "confidence": 0.639
+    },
+    {
+      "id": 8,
+      "source_id": 5,
+      "target_id": 6,
+      "protocol": "fdb",
+      "confidence": 0.85
+    },
+    {
+      "id": 9,
+      "source_id": 6,
+      "target_id": 7,
+      "protocol": "capwap",
+      "confidence": 0.851
+    },
+    {
+      "id": 10,
+      "source_id": 7,
+      "target_id": 8,
+      "protocol": "fdb",
+      "confidence": 0.676
+    },
+    {
+      "id": 11,
+      "source_id": 7,
+      "target_id": 14,
+      "protocol": "capwap",
+      "confidence": 0.834
+    },
+    {
+      "id": 12,
+      "source_id": 8,
+      "target_id": 9,
+      "protocol": "capwap",
+      "confidence": 0.812
+    },
+    {
+      "id": 13,
+      "source_id": 9,
+      "target_id": 10,
+      "protocol": "capwap",
+      "confidence": 0.766
+    },
+    {
+      "id": 14,
+      "source_id": 9,
+      "target_id": 28,
+      "protocol": "capwap",
+      "confidence": 0.629
+    },
+    {
+      "id": 15,
+      "source_id": 10,
+      "target_id": 11,
+      "protocol": "capwap",
+      "confidence": 0.847
+    },
+    {
+      "id": 16,
+      "source_id": 10,
+      "target_id": 33,
+      "protocol": "lldp",
+      "confidence": 0.641
+    },
+    {
+      "id": 17,
+      "source_id": 11,
+      "target_id": 12,
+      "protocol": "lldp",
+      "confidence": 0.757
+    },
+    {
+      "id": 18,
+      "source_id": 11,
+      "target_id": 13,
+      "protocol": "capwap",
+      "confidence": 0.908
+    },
+    {
+      "id": 19,
+      "source_id": 12,
+      "target_id": 13,
+      "protocol": "fdb",
+      "confidence": 0.742
+    },
+    {
+      "id": 20,
+      "source_id": 13,
+      "target_id": 14,
+      "protocol": "fdb",
+      "confidence": 0.81
+    },
+    {
+      "id": 21,
+      "source_id": 13,
+      "target_id": 30,
+      "protocol": "lldp",
+      "confidence": 0.979
+    },
+    {
+      "id": 22,
+      "source_id": 14,
+      "target_id": 15,
+      "protocol": "fdb",
+      "confidence": 0.665
+    },
+    {
+      "id": 23,
+      "source_id": 15,
+      "target_id": 16,
+      "protocol": "fdb",
+      "confidence": 0.739
+    },
+    {
+      "id": 24,
+      "source_id": 16,
+      "target_id": 17,
+      "protocol": "capwap",
+      "confidence": 0.972
+    },
+    {
+      "id": 25,
+      "source_id": 17,
+      "target_id": 18,
+      "protocol": "fdb",
+      "confidence": 0.706
+    },
+    {
+      "id": 26,
+      "source_id": 18,
+      "target_id": 19,
+      "protocol": "lldp",
+      "confidence": 0.66
+    },
+    {
+      "id": 27,
+      "source_id": 19,
+      "target_id": 20,
+      "protocol": "lldp",
+      "confidence": 0.876
+    },
+    {
+      "id": 28,
+      "source_id": 20,
+      "target_id": 21,
+      "protocol": "fdb",
+      "confidence": 0.678
+    },
+    {
+      "id": 29,
+      "source_id": 21,
+      "target_id": 22,
+      "protocol": "capwap",
+      "confidence": 0.638
+    },
+    {
+      "id": 30,
+      "source_id": 21,
+      "target_id": 34,
+      "protocol": "lldp",
+      "confidence": 0.688
+    },
+    {
+      "id": 31,
+      "source_id": 22,
+      "target_id": 23,
+      "protocol": "fdb",
+      "confidence": 0.928
+    },
+    {
+      "id": 32,
+      "source_id": 23,
+      "target_id": 24,
+      "protocol": "capwap",
+      "confidence": 0.668
+    },
+    {
+      "id": 33,
+      "source_id": 24,
+      "target_id": 25,
+      "protocol": "lldp",
+      "confidence": 0.768
+    },
+    {
+      "id": 34,
+      "source_id": 25,
+      "target_id": 26,
+      "protocol": "lldp",
+      "confidence": 0.701
+    },
+    {
+      "id": 35,
+      "source_id": 25,
+      "target_id": 32,
+      "protocol": "capwap",
+      "confidence": 0.771
+    },
+    {
+      "id": 36,
+      "source_id": 26,
+      "target_id": 27,
+      "protocol": "capwap",
+      "confidence": 0.655
+    },
+    {
+      "id": 37,
+      "source_id": 27,
+      "target_id": 28,
+      "protocol": "capwap",
+      "confidence": 0.842
+    },
+    {
+      "id": 38,
+      "source_id": 28,
+      "target_id": 29,
+      "protocol": "fdb",
+      "confidence": 0.852
+    },
+    {
+      "id": 39,
+      "source_id": 29,
+      "target_id": 30,
+      "protocol": "lldp",
+      "confidence": 0.73
+    },
+    {
+      "id": 40,
+      "source_id": 29,
+      "target_id": 33,
+      "protocol": "lldp",
+      "confidence": 0.854
+    },
+    {
+      "id": 41,
+      "source_id": 30,
+      "target_id": 31,
+      "protocol": "lldp",
+      "confidence": 0.861
+    },
+    {
+      "id": 42,
+      "source_id": 31,
+      "target_id": 32,
+      "protocol": "lldp",
+      "confidence": 0.772
+    },
+    {
+      "id": 43,
+      "source_id": 32,
+      "target_id": 33,
+      "protocol": "capwap",
+      "confidence": 0.854
+    },
+    {
+      "id": 44,
+      "source_id": 33,
+      "target_id": 34,
+      "protocol": "capwap",
+      "confidence": 0.936
+    },
+    {
+      "id": 45,
+      "source_id": 34,
+      "target_id": 35,
+      "protocol": "fdb",
+      "confidence": 0.688
+    },
+    {
+      "id": 46,
+      "source_id": 35,
+      "target_id": 36,
+      "protocol": "lldp",
+      "confidence": 0.847
+    }
+  ],
+  "events": [
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "wireless_ap_joined",
+      "device_id": 1,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "wireless_ap_joined",
+      "device_id": 2,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "wireless_client_roam",
+      "device_id": 3,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "wireless_ap_joined",
+      "device_id": 4,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "wireless_client_roam",
+      "device_id": 5,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "wlan_policy_sync",
+      "device_id": 6,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "wireless_client_roam",
+      "device_id": 7,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "wireless_client_roam",
+      "device_id": 8,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "wireless_ap_joined",
+      "device_id": 9,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "wireless_ap_joined",
+      "device_id": 10,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "wireless_ap_joined",
+      "device_id": 11,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "wireless_ap_joined",
+      "device_id": 12,
+      "severity": "info"
+    },
+    {
+      "timestamp": "2026-03-08T23:32:50+00:00",
+      "type": "wireless_client_auth_warning",
+      "device_count": 9,
+      "severity": "warning"
+    }
+  ]
+}

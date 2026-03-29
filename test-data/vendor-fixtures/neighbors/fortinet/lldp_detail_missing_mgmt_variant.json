@@ -1,0 +1,28 @@
+{
+  "id": "neighbors.fortinet.lldp_detail_missing_mgmt_variant",
+  "fixture_group": "global_switch",
+  "type": "neighbors",
+  "device_type": "fortinet",
+  "driver_mode": "manager",
+  "commands": {
+    "show lldp neighbors detail|textfsm": null,
+    "show lldp neighbors detail": "Local Intf: port2\nPort id: Gi0/25\nSystem Name: DIST-FW-BACKUP\n",
+    "show cdp neighbors detail|textfsm": null,
+    "show cdp neighbors detail": ""
+  },
+  "expected": {
+    "min_rows": 1,
+    "driver_contains": "GenericDriver",
+    "required_protocols": [
+      "LLDP"
+    ],
+    "contains_rows": [
+      {
+        "local_interface": "port2",
+        "remote_interface": "Gi0/25",
+        "neighbor_name": "DIST-FW-BACKUP",
+        "protocol": "LLDP"
+      }
+    ]
+  }
+}

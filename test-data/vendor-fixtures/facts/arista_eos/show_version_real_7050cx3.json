@@ -1,0 +1,30 @@
+{
+  "id": "facts.arista_eos.show_version_real_7050cx3",
+  "fixture_group": "global_switch",
+  "type": "facts",
+  "device_type": "arista_eos",
+  "driver_mode": "generic",
+  "commands": {
+    "show version": "Arista DCS-7050CX3-32S-R\nSerial number: JPE2045XXXX\nSoftware image version: 4.27.4M\nUptime: 45 weeks, 2 days, 10 hours and 15 minutes\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "arista_eos"
+      },
+      "model": {
+        "equals": "DCS-7050CX3-32S-R"
+      },
+      "serial_number": {
+        "equals": "JPE2045XXXX"
+      },
+      "os_version": {
+        "equals": "4.27.4M"
+      },
+      "uptime": {
+        "equals": "45 weeks, 2 days, 10 hours and 15 minutes"
+      }
+    }
+  }
+}

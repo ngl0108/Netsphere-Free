@@ -1,0 +1,31 @@
+{
+  "id": "facts.cisco_ios.show_version_real_c3850",
+  "fixture_group": "global_switch",
+  "type": "facts",
+  "device_type": "cisco_ios",
+  "driver_mode": "generic",
+  "commands": {
+    "show version": "Cisco IOS Software, C3850 Software (CAT3K_CAA-UNIVERSALK9-M), Version 15.2(4)E7, RELEASE SOFTWARE (fc2)\nSwitch uptime is 2 years, 45 weeks, 3 days, 12 hours, 14 minutes\ncisco WS-C3850-24T (MIPS) processor with 4194304K/6147K bytes of memory.\nProcessor board ID FOC1935U0AA\nModel Number                       : WS-C3850-24T\nSystem Serial Number               : FOC1935U0AA\n",
+    "show inventory": "NAME: \"Switch 1\", DESCR: \"Cisco Catalyst 3850-24T-L\"\nPID: WS-C3850-24T-L    , VID: V06  , SN: FOC1935U0AA\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "cisco_ios"
+      },
+      "model": {
+        "equals": "WS-C3850-24T"
+      },
+      "serial_number": {
+        "equals": "FOC1935U0AA"
+      },
+      "os_version": {
+        "equals": "15.2(4)E7"
+      },
+      "uptime": {
+        "contains": "2 years, 45 weeks, 3 days, 12 hours, 14 minutes"
+      }
+    }
+  }
+}

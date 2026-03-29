@@ -1,0 +1,71 @@
+{# Dasan NOS Template (Similar to Cisco but slight diffs) #}
+{% for block in blocks %}
+
+{% if block.type == "vlan" %}
+bridge
+ vlan create {{ block.id }}
+ {% if block.name %}vlan add {{ block.id }} name {{ block.name }}{% endif %}
+ exit
+{% endif %}
+
+{% if block.type == "interface" %}
+interface {{ block.name }}
+ {% if block.description %}description {{ block.description }}{% endif %}
+ {% if block.admin_status == "up" %}no shutdown{% elif block.admin_status == "down" %}shutdown{% endif %}
+ {% if block.vlan_mode == "access" %}
+  bridge
+   vlan add {{ block.vlan_id }} port {{ block.port_index }} untagged
+  exit
+ {% elif block.vlan_mode == "trunk" %}
+  bridge
+   vlan add {{ block.allowed_vlans }} port {{ block.port_index }} tagged
+  exit
+ {% endif %}
+ exit
+{# Note: Dasan L3 requires 'interface vlan' or 'interface ip' often #}
+{% if block.ipv4_address %}
+ interface ip {{ block.vlan_id if block.vlan_id else 0 }}
+  ip address {{ block.ipv4_address }}/{{ block.cidr if block.cidr else 24 }}
+ exit
+{% endif %}
+{% endif %}
+
+{% if block.type == "route" %}
+ip route {{ block.destination }}/{{ block.cidr }} {{ block.next_hop }}
+{% endif %}
+
+{% if block.type == "global" %}
+{% if block.hostname %}hostname {{ block.hostname }}{% endif %}
+
+{% if block.banner %}
+banner login "{{ block.banner }}"
+{% endif %}
+
+{% if block.snmp %}
+ {% for comm in block.snmp.communities %}
+ snmp community {{ comm.mode }} {{ comm.name }}
+ {% endfor %}
+ {% if block.snmp.trap_server %}snmp trap-host {{ block.snmp.trap_server }}{% endif %}
+{% endif %}
+
+{% if block.ntp %}
+ {% for srv in block.ntp.servers %}
+ ntp server {{ srv }}
+ {% endfor %}
+{% endif %}
+
+{% if block.logging %}
+ {% for srv in block.logging.servers %}
+ syslog host {{ srv }}
+ {% endfor %}
+{% endif %}
+
+{% if block.users %}
+ {% for u in block.users %}
+ # Dasan user creation might differ, assuming typical
+ username {{ u.username }} privilege {{ u.privilege }} password {{ u.secret }}
+ {% endfor %}
+{% endif %}
+{% endif %}
+
+{% endfor %}

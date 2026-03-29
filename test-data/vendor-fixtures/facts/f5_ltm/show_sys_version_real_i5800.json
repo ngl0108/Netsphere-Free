@@ -1,0 +1,28 @@
+{
+  "id": "facts.f5_ltm.show_sys_version_real_i5800",
+  "fixture_group": "global_switch",
+  "type": "facts",
+  "device_type": "f5_ltm",
+  "driver_mode": "generic",
+  "commands": {
+    "show sys version": "Sys::Version\nMain Package\n  Product     BIG-IP\n  Version     15.1.8.2\n  Build       0.0.12\n",
+    "show sys hardware": "Sys::Hardware\nChassis Information\n  Chassis Serial     ZPE2345XXXX\n  Hardware Version   Name: BIG-IP i5800\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "f5_ltm"
+      },
+      "model": {
+        "equals": "BIG-IP i5800"
+      },
+      "serial_number": {
+        "equals": "ZPE2345XXXX"
+      },
+      "os_version": {
+        "equals": "15.1.8.2"
+      }
+    }
+  }
+}

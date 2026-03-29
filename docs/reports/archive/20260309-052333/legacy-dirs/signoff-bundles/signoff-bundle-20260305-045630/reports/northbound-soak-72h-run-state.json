@@ -1,0 +1,11 @@
+﻿{
+    "run_type":  "northbound_72h_soak",
+    "pid":  11652,
+    "started_at_local":  "2026-03-05 00:55:36",
+    "started_at_utc":  "2026-03-04 15:55:36",
+    "expected_finish_utc":  "2026-03-07 15:55:36",
+    "status":  "running",
+    "progress_log":  "docs/reports/soak/northbound-soak-72h-progress.log",
+    "latest_json":  "docs/reports/northbound-soak-72h-latest.json",
+    "latest_md":  "docs/reports/northbound-soak-72h-latest.md"
+}

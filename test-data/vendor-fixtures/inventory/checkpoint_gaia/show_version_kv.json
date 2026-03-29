@@ -1,0 +1,21 @@
+{
+  "id": "inventory.checkpoint_gaia.show_version_kv",
+  "fixture_group": "global_switch",
+  "type": "inventory",
+  "device_type": "checkpoint_gaia",
+  "commands": {
+    "show inventory|textfsm": null,
+    "show inventory": "",
+    "show version": "Check Point Gaia R81.20\nProduct Name: Check Point 6600 Appliance\nSerial Number: CPGAIA66001234\n"
+  },
+  "expected": {
+    "min_rows": 1,
+    "parser_contains": "generic_heuristic_inventory",
+    "contains_rows": [
+      {
+        "model_name": "Check Point 6600 Appliance",
+        "serial_number": "CPGAIA66001234"
+      }
+    ]
+  }
+}

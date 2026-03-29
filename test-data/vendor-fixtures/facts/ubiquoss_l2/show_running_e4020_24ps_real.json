@@ -1,0 +1,24 @@
+{
+  "id": "facts.ubiquoss_l2.show_running_e4020_24ps_real",
+  "fixture_group": "domestic_switch",
+  "type": "facts",
+  "device_type": "ubiquoss_l2",
+  "driver_mode": "manager",
+  "commands": {
+    "show running": "E4020-24PS#show running\n\nWed Jan 01 2025 09:48:12 UTC\n\nBuilding configuration...\n\n! Last configuration change at 09:34:18 Wed Jan 01 2025 by admin\n! Startup config last updated at 09:28:16 Wed Jan 01 2025 by admin\n\nhostname E4020-24PS\n\nboot system os1: UbiEnt.r255.bin\n\nip ssh port 9992\n\nservice ssh\nservice telnet\nservice timestamps log datetime localtime\n\nspanning-tree mode rstp-vlan-bridge\nspanning-tree enable\n\nvlan database\n vlan 100  name VLAN0100\n vlan 100  state enable\n\ninterface Giga0/1\n no shutdown\n switchport access vlan 100\n\ninterface Giga0/21\n no shutdown\n switchport mode trunk\n switchport trunk allowed vlan add 100\n"
+  },
+  "expected": {
+    "driver_contains": "UbiquossDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "Ubiquoss"
+      },
+      "hostname": {
+        "equals": "E4020-24PS"
+      },
+      "model": {
+        "equals": "E4020-24PS"
+      }
+    }
+  }
+}

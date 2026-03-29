@@ -1,0 +1,18 @@
+{
+  "id": "inventory.aruba_os.system_information",
+  "type": "inventory",
+  "device_type": "aruba_os",
+  "commands": {
+    "show system information": "Product Name : Aruba 8325-48Y8C\nSerial Number : CN12345678\nSystem Description : ArubaOS-CX\n"
+  },
+  "expected": {
+    "min_rows": 1,
+    "parser_contains": "hpe_aruba_inventory",
+    "contains_rows": [
+      {
+        "model_name": "Aruba 8325-48Y8C",
+        "serial_number": "CN12345678"
+      }
+    ]
+  }
+}

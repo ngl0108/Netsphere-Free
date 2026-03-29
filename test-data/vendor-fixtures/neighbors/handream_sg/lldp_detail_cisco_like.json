@@ -1,0 +1,29 @@
+{
+  "id": "neighbors.handream_sg.lldp_detail_cisco_like",
+  "fixture_group": "domestic_switch",
+  "type": "neighbors",
+  "device_type": "handream_sg",
+  "driver_mode": "manager",
+  "commands": {
+    "show lldp neighbors detail|textfsm": null,
+    "show lldp neighbors detail": "Local Intf: Gi1/0/10\nChassis id: 0022.3344.5566\nPort id: Gi0/48\nSystem Name: SG-CORE-01\nManagement Address: 10.20.1.1\nSystem Description: HanDreamnet SG Core\n\nLocal Intf: Gi1/0/11\nChassis id: 00aa.bbcc.ddee\nPort id: Gi0/24\nSystem Name: SG-ACCESS-24\nManagement Address: 10.20.1.24\n",
+    "show cdp neighbors detail|textfsm": null,
+    "show cdp neighbors detail": ""
+  },
+  "expected": {
+    "min_rows": 2,
+    "driver_contains": "GenericDriver",
+    "required_protocols": [
+      "LLDP"
+    ],
+    "contains_rows": [
+      {
+        "local_interface": "Gi1/0/10",
+        "remote_interface": "Gi0/48",
+        "neighbor_name": "SG-CORE-01",
+        "mgmt_ip": "10.20.1.1",
+        "protocol": "LLDP"
+      }
+    ]
+  }
+}

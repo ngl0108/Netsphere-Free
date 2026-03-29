@@ -1,0 +1,24 @@
+{
+  "id": "facts.dasan_nos.show_running_config_v5424g_real",
+  "fixture_group": "domestic_switch",
+  "type": "facts",
+  "device_type": "dasan_nos",
+  "driver_mode": "manager",
+  "commands": {
+    "show running-config": "V5424G# show running-config\n\nhostname V5424G\n\ntime-zone GMT+9\n\nntp 203.254.163.74\n\nbridge vlan create 2\n\nvlan add default 1-20,25-36 untagged\nvlan add br2 21-24 untagged\n\ninterface default\nno shutdown\nip address 1.1.1.1/24\n\ninterface br2\nno shutdown\nip address 2.1.1.1/24\n"
+  },
+  "expected": {
+    "driver_contains": "DasanDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "Dasan"
+      },
+      "hostname": {
+        "equals": "V5424G"
+      },
+      "model": {
+        "equals": "V5424G"
+      }
+    }
+  }
+}

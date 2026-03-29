@@ -1,0 +1,25 @@
+{
+  "id": "facts.fortinet.show_version_whitespace_variant",
+  "fixture_group": "global_switch",
+  "type": "facts",
+  "device_type": "fortinet",
+  "driver_mode": "generic",
+  "commands": {
+    "show version": "  Synthetic fortinet software output \nVersion :  1.0-test-variant\nModel: FORTINET-SIM\n",
+    "display version": "Synthetic fortinet display output\nVRP Version V1R0 Test\n"
+  },
+  "expected": {
+    "driver_contains": "GenericDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "fortinet"
+      },
+      "hostname": {
+        "equals": "fixture-host"
+      },
+      "raw_output": {
+        "contains": "Synthetic"
+      }
+    }
+  }
+}

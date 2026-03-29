@@ -1,0 +1,19 @@
+{
+  "id": "inventory.juniper_junos.chassis_hardware_raw",
+  "type": "inventory",
+  "device_type": "juniper_junos",
+  "commands": {
+    "show chassis hardware|textfsm": null,
+    "show chassis hardware": "Hardware inventory:\nItem             Version  Part number  Serial number     Description\nChassis                                JN1234AA001       Juniper QFX5100-48S-6Q\nFPC 0            REV 07   750-043852   AB1234            QFX5100-48S-6Q Board\n"
+  },
+  "expected": {
+    "min_rows": 1,
+    "parser_contains": "juniper_show_chassis_hardware",
+    "contains_rows": [
+      {
+        "name": "Chassis",
+        "serial_number": "JN1234AA001"
+      }
+    ]
+  }
+}

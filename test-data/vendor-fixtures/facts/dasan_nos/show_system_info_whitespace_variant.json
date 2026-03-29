@@ -1,0 +1,30 @@
+{
+  "id": "facts.dasan_nos.show_system_info_whitespace_variant",
+  "fixture_group": "domestic_switch",
+  "type": "facts",
+  "device_type": "dasan_nos",
+  "driver_mode": "manager",
+  "commands": {
+    "show system info": "System Name    :   Dasan-Switch-Lab\nSystem Type:V8324\nSerial Number : DS99887766\nNOS Version : 5.06\nUp Time : 12 day(s), 1 hour(s)\n"
+  },
+  "expected": {
+    "driver_contains": "DasanDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "Dasan"
+      },
+      "hostname": {
+        "equals": "Dasan-Switch-Lab"
+      },
+      "model": {
+        "equals": "V8324"
+      },
+      "serial_number": {
+        "equals": "DS99887766"
+      },
+      "os_version": {
+        "equals": "5.06"
+      }
+    }
+  }
+}

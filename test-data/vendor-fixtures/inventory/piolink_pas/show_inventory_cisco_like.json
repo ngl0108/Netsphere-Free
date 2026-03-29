@@ -1,0 +1,21 @@
+{
+  "id": "inventory.piolink_pas.show_inventory_cisco_like",
+  "fixture_group": "domestic_switch",
+  "type": "inventory",
+  "device_type": "piolink_pas",
+  "commands": {
+    "show inventory|textfsm": null,
+    "show inventory": "NAME: \"1\", DESCR: \"Piolink PAS Chassis\"\nPID: PAS-K620 , VID: V01, SN: PIOK620888\n\nNAME: \"Security Module\", DESCR: \"Inline Security Card\"\nPID: PAS-SEC-01 , VID: V01, SN: PIOSEC7700\n"
+  },
+  "expected": {
+    "min_rows": 2,
+    "parser_contains": "cisco_show_inventory",
+    "contains_rows": [
+      {
+        "name": "1",
+        "model_name": "PAS-K620",
+        "serial_number": "PIOK620888"
+      }
+    ]
+  }
+}

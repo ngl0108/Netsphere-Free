@@ -1,0 +1,527 @@
+﻿{
+    "generated_at":  "2026-03-05T01:06:39.3140385+09:00",
+    "normalized_total":  24,
+    "provider_counts":  {
+                            "aws":  9,
+                            "naver":  4,
+                            "azure":  4,
+                            "gcp":  7
+                        },
+    "account_counts":  {
+                           "gcp-hq":  7,
+                           "azure-hq":  4,
+                           "ncp-hq":  4,
+                           "aws-hq":  9
+                       },
+    "provider_region_counts":  {
+                                   "gcp/us-central1-c":  1,
+                                   "azure/koreacentral":  4,
+                                   "gcp/us-central1":  1,
+                                   "gcp/global":  5,
+                                   "naver/KR":  4,
+                                   "aws/ap-northeast-2":  9
+                               },
+    "discovery_kpi_summary":  {
+                                  "window_days":  30,
+                                  "site_id":  null,
+                                  "jobs_count":  18,
+                                  "kpi":  {
+                                              "first_map_seconds_avg":  null,
+                                              "first_map_seconds_median":  null,
+                                              "first_map_seconds_p95":  null,
+                                              "auto_reflection_rate_pct":  2.19,
+                                              "false_positive_rate_pct":  20.0,
+                                              "low_confidence_rate_pct":  0.0
+                                          },
+                                  "totals":  {
+                                                 "discovered":  868,
+                                                 "approved":  4,
+                                                 "existing":  15,
+                                                 "ignored":  1,
+                                                 "auto_reflected":  19,
+                                                 "reviewed":  5,
+                                                 "low_confidence_candidates":  0
+                                             },
+                                  "jobs":  [
+                                               {
+                                                   "job_id":  18,
+                                                   "status":  "failed",
+                                                   "created_at":  "2026-02-17 18:04:02.857832+00:00",
+                                                   "completed_at":  null,
+                                                   "totals":  {
+                                                                  "discovered":  0,
+                                                                  "approved":  0,
+                                                                  "existing":  0,
+                                                                  "ignored":  0,
+                                                                  "auto_reflected":  0,
+                                                                  "reviewed":  0,
+                                                                  "low_confidence_candidates":  0
+                                                              },
+                                                   "kpi":  {
+                                                               "first_map_seconds":  null,
+                                                               "auto_reflection_rate_pct":  0.0,
+                                                               "false_positive_rate_pct":  0.0,
+                                                               "low_confidence_rate_pct":  0.0
+                                                           }
+                                               },
+                                               {
+                                                   "job_id":  17,
+                                                   "status":  "completed",
+                                                   "created_at":  "2026-02-09 12:27:25.164318+00:00",
+                                                   "completed_at":  "2026-02-09 12:30:19.787215+00:00",
+                                                   "totals":  {
+                                                                  "discovered":  256,
+                                                                  "approved":  0,
+                                                                  "existing":  0,
+                                                                  "ignored":  0,
+                                                                  "auto_reflected":  0,
+                                                                  "reviewed":  0,
+                                                                  "low_confidence_candidates":  0
+                                                              },
+                                                   "kpi":  {
+                                                               "first_map_seconds":  null,
+                                                               "auto_reflection_rate_pct":  0.0,
+                                                               "false_positive_rate_pct":  0.0,
+                                                               "low_confidence_rate_pct":  0.0
+                                                           }
+                                               },
+                                               {
+                                                   "job_id":  16,
+                                                   "status":  "completed",
+                                                   "created_at":  "2026-02-09 05:50:42.939607+00:00",
+                                                   "completed_at":  "2026-02-09 05:50:55.208550+00:00",
+                                                   "totals":  {
+                                                                  "discovered":  1,
+                                                                  "approved":  1,
+                                                                  "existing":  0,
+                                                                  "ignored":  0,
+                                                                  "auto_reflected":  1,
+                                                                  "reviewed":  1,
+                                                                  "low_confidence_candidates":  0
+                                                              },
+                                                   "kpi":  {
+                                                               "first_map_seconds":  null,
+                                                               "auto_reflection_rate_pct":  100.0,
+                                                               "false_positive_rate_pct":  0.0,
+                                                               "low_confidence_rate_pct":  0.0
+                                                           }
+                                               },
+                                               {
+                                                   "job_id":  15,
+                                                   "status":  "completed",
+                                                   "created_at":  "2026-02-09 05:50:18.652554+00:00",
+                                                   "completed_at":  "2026-02-09 05:50:31.023875+00:00",
+                                                   "totals":  {
+                                                                  "discovered":  1,
+                                                                  "approved":  0,
+                                                                  "existing":  0,
+                                                                  "ignored":  0,
+                                                                  "auto_reflected":  0,
+                                                                  "reviewed":  0,
+                                                                  "low_confidence_candidates":  0
+                                                              },
+                                                   "kpi":  {
+                                                               "first_map_seconds":  null,
+                                                               "auto_reflection_rate_pct":  0.0,
+                                                               "false_positive_rate_pct":  0.0,
+                                                               "low_confidence_rate_pct":  0.0
+                                                           }
+                                               },
+                                               {
+                                                   "job_id":  14,
+                                                   "status":  "completed",
+                                                   "created_at":  "2026-02-09 05:46:37.655418+00:00",
+                                                   "completed_at":  "2026-02-09 05:46:50.026397+00:00",
+                                                   "totals":  {
+                                                                  "discovered":  1,
+                                                                  "approved":  0,
+                                                                  "existing":  0,
+                                                                  "ignored":  1,
+                                                                  "auto_reflected":  0,
+                                                                  "reviewed":  1,
+                                                                  "low_confidence_candidates":  0
+                                                              },
+                                                   "kpi":  {
+                                                               "first_map_seconds":  null,
+                                                               "auto_reflection_rate_pct":  0.0,
+                                                               "false_positive_rate_pct":  100.0,
+                                                               "low_confidence_rate_pct":  0.0
+                                                           }
+                                               },
+                                               {
+                                                   "job_id":  13,
+                                                   "status":  "completed",
+                                                   "created_at":  "2026-02-09 05:43:41.222399+00:00",
+                                                   "completed_at":  "2026-02-09 05:45:42.571154+00:00",
+                                                   "totals":  {
+                                                                  "discovered":  1,
+                                                                  "approved":  0,
+                                                                  "existing":  0,
+                                                                  "ignored":  0,
+                                                                  "auto_reflected":  0,
+                                                                  "reviewed":  0,
+                                                                  "low_confidence_candidates":  0
+                                                              },
+                                                   "kpi":  {
+                                                               "first_map_seconds":  null,
+                                                               "auto_reflection_rate_pct":  0.0,
+                                                               "false_positive_rate_pct":  0.0,
+                                                               "low_confidence_rate_pct":  0.0
+                                                           }
+                                               },
+                                               {
+                                                   "job_id":  12,
+                                                   "status":  "completed",
+                                                   "created_at":  "2026-02-08 11:29:37.981436+00:00",
+                                                   "completed_at":  "2026-02-08 11:29:57.355417+00:00",
+                                                   "totals":  {
+                                                                  "discovered":  32,
+                                                                  "approved":  0,
+                                                                  "existing":  3,
+                                                                  "ignored":  0,
+                                                                  "auto_reflected":  3,
+                                                                  "reviewed":  0,
+                                                                  "low_confidence_candidates":  0
+                                                              },
+                                                   "kpi":  {
+                                                               "first_map_seconds":  null,
+                                                               "auto_reflection_rate_pct":  9.38,
+                                                               "false_positive_rate_pct":  0.0,
+                                                               "low_confidence_rate_pct":  0.0
+                                                           }
+                                               },
+                                               {
+                                                   "job_id":  11,
+                                                   "status":  "completed",
+                                                   "created_at":  "2026-02-08 11:22:24.396199+00:00",
+                                                   "completed_at":  "2026-02-08 11:22:44.187518+00:00",
+                                                   "totals":  {
+                                                                  "discovered":  32,
+                                                                  "approved":  0,
+                                                                  "existing":  3,
+                                                                  "ignored":  0,
+                                                                  "auto_reflected":  3,
+                                                                  "reviewed":  0,
+                                                                  "low_confidence_candidates":  0
+                                                              },
+                                                   "kpi":  {
+                                                               "first_map_seconds":  null,
+                                                               "auto_reflection_rate_pct":  9.38,
+                                                               "false_positive_rate_pct":  0.0,
+                                                               "low_confidence_rate_pct":  0.0
+                                                           }
+                                               },
+                                               {
+                                                   "job_id":  10,
+                                                   "status":  "completed",
+                                                   "created_at":  "2026-02-08 11:02:41.127081+00:00",
+                                                   "completed_at":  "2026-02-08 11:02:45.589084+00:00",
+                                                   "totals":  {
+                                                                  "discovered":  32,
+                                                                  "approved":  0,
+                                                                  "existing":  3,
+                                                                  "ignored":  0,
+                                                                  "auto_reflected":  3,
+                                                                  "reviewed":  0,
+                                                                  "low_confidence_candidates":  0
+                                                              },
+                                                   "kpi":  {
+                                                               "first_map_seconds":  null,
+                                                               "auto_reflection_rate_pct":  9.38,
+                                                               "false_positive_rate_pct":  0.0,
+                                                               "low_confidence_rate_pct":  0.0
+                                                           }
+                                               },
+                                               {
+                                                   "job_id":  9,
+                                                   "status":  "completed",
+                                                   "created_at":  "2026-02-08 10:56:36.126117+00:00",
+                                                   "completed_at":  "2026-02-08 10:56:40.711912+00:00",
+                                                   "totals":  {
+                                                                  "discovered":  32,
+                                                                  "approved":  0,
+                                                                  "existing":  3,
+                                                                  "ignored":  0,
+                                                                  "auto_reflected":  3,
+                                                                  "reviewed":  0,
+                                                                  "low_confidence_candidates":  0
+                                                              },
+                                                   "kpi":  {
+                                                               "first_map_seconds":  null,
+                                                               "auto_reflection_rate_pct":  9.38,
+                                                               "false_positive_rate_pct":  0.0,
+                                                               "low_confidence_rate_pct":  0.0
+                                                           }
+                                               },
+                                               {
+                                                   "job_id":  8,
+                                                   "status":  "completed",
+                                                   "created_at":  "2026-02-08 10:53:30.917119+00:00",
+                                                   "completed_at":  "2026-02-08 10:53:35.528757+00:00",
+                                                   "totals":  {
+                                                                  "discovered":  32,
+                                                                  "approved":  0,
+                                                                  "existing":  3,
+                                                                  "ignored":  0,
+                                                                  "auto_reflected":  3,
+                                                                  "reviewed":  0,
+                                                                  "low_confidence_candidates":  0
+                                                              },
+                                                   "kpi":  {
+                                                               "first_map_seconds":  null,
+                                                               "auto_reflection_rate_pct":  9.38,
+                                                               "false_positive_rate_pct":  0.0,
+                                                               "low_confidence_rate_pct":  0.0
+                                                           }
+                                               },
+                                               {
+                                                   "job_id":  7,
+                                                   "status":  "completed",
+                                                   "created_at":  "2026-02-08 10:50:35.679402+00:00",
+                                                   "completed_at":  "2026-02-08 10:50:40.313490+00:00",
+                                                   "totals":  {
+                                                                  "discovered":  32,
+                                                                  "approved":  3,
+                                                                  "existing":  0,
+                                                                  "ignored":  0,
+                                                                  "auto_reflected":  3,
+                                                                  "reviewed":  3,
+                                                                  "low_confidence_candidates":  0
+                                                              },
+                                                   "kpi":  {
+                                                               "first_map_seconds":  null,
+                                                               "auto_reflection_rate_pct":  9.38,
+                                                               "false_positive_rate_pct":  0.0,
+                                                               "low_confidence_rate_pct":  0.0
+                                                           }
+                                               },
+                                               {
+                                                   "job_id":  6,
+                                                   "status":  "completed",
+                                                   "created_at":  "2026-02-08 10:47:41.734568+00:00",
+                                                   "completed_at":  "2026-02-08 10:47:46.288234+00:00",
+                                                   "totals":  {
+                                                                  "discovered":  32,
+                                                                  "approved":  0,
+                                                                  "existing":  0,
+                                                                  "ignored":  0,
+                                                                  "auto_reflected":  0,
+                                                                  "reviewed":  0,
+                                                                  "low_confidence_candidates":  0
+                                                              },
+                                                   "kpi":  {
+                                                               "first_map_seconds":  null,
+                                                               "auto_reflection_rate_pct":  0.0,
+                                                               "false_positive_rate_pct":  0.0,
+                                                               "low_confidence_rate_pct":  0.0
+                                                           }
+                                               },
+                                               {
+                                                   "job_id":  5,
+                                                   "status":  "completed",
+                                                   "created_at":  "2026-02-08 10:46:03.776406+00:00",
+                                                   "completed_at":  "2026-02-08 10:46:08.226310+00:00",
+                                                   "totals":  {
+                                                                  "discovered":  32,
+                                                                  "approved":  0,
+                                                                  "existing":  0,
+                                                                  "ignored":  0,
+                                                                  "auto_reflected":  0,
+                                                                  "reviewed":  0,
+                                                                  "low_confidence_candidates":  0
+                                                              },
+                                                   "kpi":  {
+                                                               "first_map_seconds":  null,
+                                                               "auto_reflection_rate_pct":  0.0,
+                                                               "false_positive_rate_pct":  0.0,
+                                                               "low_confidence_rate_pct":  0.0
+                                                           }
+                                               },
+                                               {
+                                                   "job_id":  4,
+                                                   "status":  "completed",
+                                                   "created_at":  "2026-02-08 10:43:09.983491+00:00",
+                                                   "completed_at":  "2026-02-08 10:43:14.572121+00:00",
+                                                   "totals":  {
+                                                                  "discovered":  32,
+                                                                  "approved":  0,
+                                                                  "existing":  0,
+                                                                  "ignored":  0,
+                                                                  "auto_reflected":  0,
+                                                                  "reviewed":  0,
+                                                                  "low_confidence_candidates":  0
+                                                              },
+                                                   "kpi":  {
+                                                               "first_map_seconds":  null,
+                                                               "auto_reflection_rate_pct":  0.0,
+                                                               "false_positive_rate_pct":  0.0,
+                                                               "low_confidence_rate_pct":  0.0
+                                                           }
+                                               },
+                                               {
+                                                   "job_id":  3,
+                                                   "status":  "completed",
+                                                   "created_at":  "2026-02-08 10:39:38.145661+00:00",
+                                                   "completed_at":  "2026-02-08 10:39:42.624925+00:00",
+                                                   "totals":  {
+                                                                  "discovered":  32,
+                                                                  "approved":  0,
+                                                                  "existing":  0,
+                                                                  "ignored":  0,
+                                                                  "auto_reflected":  0,
+                                                                  "reviewed":  0,
+                                                                  "low_confidence_candidates":  0
+                                                              },
+                                                   "kpi":  {
+                                                               "first_map_seconds":  null,
+                                                               "auto_reflection_rate_pct":  0.0,
+                                                               "false_positive_rate_pct":  0.0,
+                                                               "low_confidence_rate_pct":  0.0
+                                                           }
+                                               },
+                                               {
+                                                   "job_id":  2,
+                                                   "status":  "completed",
+                                                   "created_at":  "2026-02-08 10:16:09.968510+00:00",
+                                                   "completed_at":  "2026-02-08 10:16:14.477378+00:00",
+                                                   "totals":  {
+                                                                  "discovered":  32,
+                                                                  "approved":  0,
+                                                                  "existing":  0,
+                                                                  "ignored":  0,
+                                                                  "auto_reflected":  0,
+                                                                  "reviewed":  0,
+                                                                  "low_confidence_candidates":  0
+                                                              },
+                                                   "kpi":  {
+                                                               "first_map_seconds":  null,
+                                                               "auto_reflection_rate_pct":  0.0,
+                                                               "false_positive_rate_pct":  0.0,
+                                                               "low_confidence_rate_pct":  0.0
+                                                           }
+                                               },
+                                               {
+                                                   "job_id":  1,
+                                                   "status":  "completed",
+                                                   "created_at":  "2026-02-08 10:14:11.663669+00:00",
+                                                   "completed_at":  "2026-02-08 10:14:36.812560+00:00",
+                                                   "totals":  {
+                                                                  "discovered":  256,
+                                                                  "approved":  0,
+                                                                  "existing":  0,
+                                                                  "ignored":  0,
+                                                                  "auto_reflected":  0,
+                                                                  "reviewed":  0,
+                                                                  "low_confidence_candidates":  0
+                                                              },
+                                                   "kpi":  {
+                                                               "first_map_seconds":  null,
+                                                               "auto_reflection_rate_pct":  0.0,
+                                                               "false_positive_rate_pct":  0.0,
+                                                               "low_confidence_rate_pct":  0.0
+                                                           }
+                                               }
+                                           ]
+                              },
+    "topology_candidate_summary":  {
+                                       "scope":  {
+                                                     "job_id":  null,
+                                                     "source_device_id":  null,
+                                                     "site_id":  null
+                                                 },
+                                       "as_of":  "2026-03-04T16:06:39.290725+00:00",
+                                       "totals":  {
+                                                      "total":  0,
+                                                      "backlog_total":  0,
+                                                      "backlog_unmatched":  0,
+                                                      "backlog_low_confidence":  0,
+                                                      "resolved_total":  0,
+                                                      "resolved_promoted":  0,
+                                                      "resolved_ignored":  0,
+                                                      "stale_backlog_24h":  0,
+                                                      "resolved_24h":  0
+                                                  },
+                                       "kpi":  {
+                                                   "backlog_ratio_pct":  0.0,
+                                                   "resolved_ratio_pct":  0.0,
+                                                   "low_confidence_share_pct":  0.0
+                                               },
+                                       "by_status":  {
+
+                                                     }
+                                   },
+    "topology_candidate_trend_7d":  {
+                                        "window_days":  7,
+                                        "since":  "2026-02-25T16:06:39.299107+00:00",
+                                        "source_device_id":  null,
+                                        "site_id":  null,
+                                        "series":  [
+                                                       {
+                                                           "date":  "2026-02-25",
+                                                           "backlog_total":  0,
+                                                           "low_confidence":  0,
+                                                           "unmatched":  0,
+                                                           "resolved_total":  0,
+                                                           "promoted":  0,
+                                                           "ignored":  0
+                                                       },
+                                                       {
+                                                           "date":  "2026-02-26",
+                                                           "backlog_total":  0,
+                                                           "low_confidence":  0,
+                                                           "unmatched":  0,
+                                                           "resolved_total":  0,
+                                                           "promoted":  0,
+                                                           "ignored":  0
+                                                       },
+                                                       {
+                                                           "date":  "2026-02-27",
+                                                           "backlog_total":  0,
+                                                           "low_confidence":  0,
+                                                           "unmatched":  0,
+                                                           "resolved_total":  0,
+                                                           "promoted":  0,
+                                                           "ignored":  0
+                                                       },
+                                                       {
+                                                           "date":  "2026-02-28",
+                                                           "backlog_total":  0,
+                                                           "low_confidence":  0,
+                                                           "unmatched":  0,
+                                                           "resolved_total":  0,
+                                                           "promoted":  0,
+                                                           "ignored":  0
+                                                       },
+                                                       {
+                                                           "date":  "2026-03-01",
+                                                           "backlog_total":  0,
+                                                           "low_confidence":  0,
+                                                           "unmatched":  0,
+                                                           "resolved_total":  0,
+                                                           "promoted":  0,
+                                                           "ignored":  0
+                                                       },
+                                                       {
+                                                           "date":  "2026-03-02",
+                                                           "backlog_total":  0,
+                                                           "low_confidence":  0,
+                                                           "unmatched":  0,
+                                                           "resolved_total":  0,
+                                                           "promoted":  0,
+                                                           "ignored":  0
+                                                       },
+                                                       {
+                                                           "date":  "2026-03-03",
+                                                           "backlog_total":  0,
+                                                           "low_confidence":  0,
+                                                           "unmatched":  0,
+                                                           "resolved_total":  0,
+                                                           "promoted":  0,
+                                                           "ignored":  0
+                                                       }
+                                                   ],
+                                        "jobs":  [
+
+                                                 ]
+                                    }
+}

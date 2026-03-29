@@ -1,0 +1,27 @@
+{
+  "id": "facts.ubiquoss_l2.show_version",
+  "fixture_group": "domestic_switch",
+  "type": "facts",
+  "device_type": "ubiquoss_l2",
+  "driver_mode": "manager",
+  "commands": {
+    "show version": "Ubiquoss NOS Software, Version 3.1.2\nCopyright (c) 2000-2023 by Ubiquoss Inc.\n\nModel          : E4200\nUptime is 20 weeks, 3 days, 1 hours, 22 minutes\n"
+  },
+  "expected": {
+    "driver_contains": "UbiquossDriver",
+    "facts_contains": {
+      "vendor": {
+        "equals": "Ubiquoss"
+      },
+      "model": {
+        "equals": "E4200"
+      },
+      "os_version": {
+        "contains": "3.1.2"
+      },
+      "uptime": {
+        "contains": "20 weeks"
+      }
+    }
+  }
+}

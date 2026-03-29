@@ -1,0 +1,22 @@
+{
+  "id": "inventory.arista_eos.show_version_fallback",
+  "type": "inventory",
+  "device_type": "arista_eos",
+  "commands": {
+    "show inventory all|textfsm": null,
+    "show inventory|textfsm": null,
+    "show version detail": "Model name: DCS-7050SX3-48YC8\nSerial number: JPE12345678\n",
+    "show version": "Model name: DCS-7050SX3-48YC8\nSerial number: JPE12345678\n"
+  },
+  "expected": {
+    "min_rows": 1,
+    "parser_contains": "arista_eos_inventory",
+    "contains_rows": [
+      {
+        "name": "Chassis",
+        "model_name": "DCS-7050SX3-48YC8",
+        "serial_number": "JPE12345678"
+      }
+    ]
+  }
+}

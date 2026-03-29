@@ -1,0 +1,543 @@
+{
+  "generated_at_utc": "2026-03-09 04:13:35",
+  "query": {
+    "discovery_days": 30,
+    "discovery_limit": 300,
+    "require_sample_minimums": true,
+    "sample_min_discovery_jobs": 30,
+    "sample_min_change_events": 60,
+    "sample_min_northbound_deliveries": 500,
+    "sample_min_autonomy_issues_created": 20,
+    "sample_min_autonomy_actions_executed": 20
+  },
+  "payload": {
+    "generated_at": 1773029615,
+    "scope": {
+      "site_id": null,
+      "discovery_days": 30,
+      "discovery_limit": 300,
+      "require_sample_minimums": true
+    },
+    "readiness": {
+      "status": "healthy",
+      "required_checks_total": 18,
+      "pass_count": 18,
+      "fail_count": 0,
+      "unknown_count": 0
+    },
+    "checks": [
+      {
+        "id": "plug_scan.first_map_p50_seconds",
+        "title": "Plug & Scan first map P50",
+        "value": 22.0,
+        "threshold": 300,
+        "operator": "<=",
+        "status": "pass",
+        "pass": true,
+        "required": true,
+        "source": "discovery.kpi.summary"
+      },
+      {
+        "id": "plug_scan.first_map_p95_seconds",
+        "title": "Plug & Scan first map P95",
+        "value": 24,
+        "threshold": 900,
+        "operator": "<=",
+        "status": "pass",
+        "pass": true,
+        "required": true,
+        "source": "discovery.kpi.summary"
+      },
+      {
+        "id": "plug_scan.auto_reflection_rate_pct",
+        "title": "Plug & Scan auto reflection rate",
+        "value": 95.0,
+        "threshold": 75.0,
+        "operator": ">=",
+        "status": "pass",
+        "pass": true,
+        "required": true,
+        "source": "discovery.kpi.summary"
+      },
+      {
+        "id": "plug_scan.false_positive_rate_pct",
+        "title": "Plug & Scan false positive rate",
+        "value": 5.56,
+        "threshold": 10.0,
+        "operator": "<=",
+        "status": "pass",
+        "pass": true,
+        "required": true,
+        "source": "discovery.kpi.summary"
+      },
+      {
+        "id": "change.success_rate_pct",
+        "title": "Change success rate",
+        "value": 99.0,
+        "threshold": 98.0,
+        "operator": ">=",
+        "status": "pass",
+        "pass": true,
+        "required": true,
+        "source": "sdn.dashboard.stats.change_kpi"
+      },
+      {
+        "id": "change.failure_rate_pct",
+        "title": "Change failure rate",
+        "value": 1.0,
+        "threshold": 1.0,
+        "operator": "<=",
+        "status": "pass",
+        "pass": true,
+        "required": true,
+        "source": "sdn.dashboard.stats.change_kpi"
+      },
+      {
+        "id": "change.rollback_p95_ms",
+        "title": "Change rollback P95",
+        "value": 1200,
+        "threshold": 180000,
+        "operator": "<=",
+        "status": "pass",
+        "pass": true,
+        "required": true,
+        "source": "sdn.dashboard.stats.change_kpi"
+      },
+      {
+        "id": "change.trace_coverage_pct",
+        "title": "Approval trace coverage",
+        "value": 100.0,
+        "threshold": 100.0,
+        "operator": ">=",
+        "status": "pass",
+        "pass": true,
+        "required": true,
+        "source": "sdn.dashboard.stats.change_kpi"
+      },
+      {
+        "id": "autonomy.auto_action_rate_pct",
+        "title": "Autonomy auto action rate",
+        "value": 75.0,
+        "threshold": 60.0,
+        "operator": ">=",
+        "status": "pass",
+        "pass": true,
+        "required": true,
+        "source": "sdn.dashboard.stats.autonomy_kpi"
+      },
+      {
+        "id": "autonomy.operator_intervention_rate_pct",
+        "title": "Autonomy operator intervention rate",
+        "value": 25.0,
+        "threshold": 40.0,
+        "operator": "<=",
+        "status": "pass",
+        "pass": true,
+        "required": true,
+        "source": "sdn.dashboard.stats.autonomy_kpi"
+      },
+      {
+        "id": "autonomy.mttd_improvement_pct",
+        "title": "MTTD improvement vs baseline",
+        "value": null,
+        "threshold": 30.0,
+        "operator": ">=",
+        "status": "unknown",
+        "pass": null,
+        "required": false,
+        "source": "sdn.dashboard.stats.autonomy_kpi"
+      },
+      {
+        "id": "autonomy.mttr_improvement_pct",
+        "title": "MTTR improvement vs baseline",
+        "value": null,
+        "threshold": 40.0,
+        "operator": ">=",
+        "status": "unknown",
+        "pass": null,
+        "required": false,
+        "source": "sdn.dashboard.stats.autonomy_kpi"
+      },
+      {
+        "id": "northbound.success_rate_pct",
+        "title": "Northbound delivery success rate",
+        "value": 99.26,
+        "threshold": 95.0,
+        "operator": ">=",
+        "status": "pass",
+        "pass": true,
+        "required": true,
+        "source": "sdn.dashboard.stats.northbound_kpi"
+      },
+      {
+        "id": "northbound.p95_attempts",
+        "title": "Northbound delivery attempts P95",
+        "value": 1,
+        "threshold": 3,
+        "operator": "<=",
+        "status": "pass",
+        "pass": true,
+        "required": true,
+        "source": "sdn.dashboard.stats.northbound_kpi"
+      },
+      {
+        "id": "northbound.failed_24h",
+        "title": "Northbound failed deliveries (24h)",
+        "value": 4,
+        "threshold": 5,
+        "operator": "<=",
+        "status": "pass",
+        "pass": true,
+        "required": true,
+        "source": "sdn.dashboard.stats.northbound_kpi"
+      },
+      {
+        "id": "sample.discovery.jobs_count",
+        "title": "Sample minimum: discovery jobs",
+        "value": 30,
+        "threshold": 30,
+        "operator": ">=",
+        "status": "pass",
+        "pass": true,
+        "required": true,
+        "source": "ops.kpi.readiness.sample_gate"
+      },
+      {
+        "id": "sample.change.events",
+        "title": "Sample minimum: change events",
+        "value": 100,
+        "threshold": 60,
+        "operator": ">=",
+        "status": "pass",
+        "pass": true,
+        "required": true,
+        "source": "ops.kpi.readiness.sample_gate"
+      },
+      {
+        "id": "sample.northbound.deliveries",
+        "title": "Sample minimum: northbound deliveries",
+        "value": 538,
+        "threshold": 500,
+        "operator": ">=",
+        "status": "pass",
+        "pass": true,
+        "required": true,
+        "source": "ops.kpi.readiness.sample_gate"
+      },
+      {
+        "id": "sample.autonomy.issues_created",
+        "title": "Sample minimum: autonomy issues created",
+        "value": 20,
+        "threshold": 20,
+        "operator": ">=",
+        "status": "pass",
+        "pass": true,
+        "required": true,
+        "source": "ops.kpi.readiness.sample_gate"
+      },
+      {
+        "id": "sample.autonomy.actions_executed",
+        "title": "Sample minimum: autonomy actions executed",
+        "value": 20,
+        "threshold": 20,
+        "operator": ">=",
+        "status": "pass",
+        "pass": true,
+        "required": true,
+        "source": "ops.kpi.readiness.sample_gate"
+      }
+    ],
+    "snapshots": {
+      "discovery": {
+        "jobs_count": 30,
+        "totals": {
+          "discovered": 600,
+          "approved": 510,
+          "existing": 60,
+          "ignored": 30,
+          "auto_reflected": 570,
+          "reviewed": 540,
+          "low_confidence_candidates": 0
+        },
+        "kpi": {
+          "first_map_seconds_avg": 22.0,
+          "first_map_seconds_median": 22.0,
+          "first_map_seconds_p95": 24,
+          "auto_reflection_rate_pct": 95.0,
+          "false_positive_rate_pct": 5.56,
+          "low_confidence_rate_pct": 0.0
+        }
+      },
+      "change_kpi": {
+        "window_days": 30,
+        "status": "healthy",
+        "change_success_rate_pct": 99.0,
+        "change_failure_rate_pct": 1.0,
+        "rollback_p95_ms": 1200,
+        "rollback_success_rate_pct": 100.0,
+        "approval_execution_trace_coverage_pct": 100.0,
+        "alerts": [],
+        "failure_causes": [
+          {
+            "cause": "post_check_failed",
+            "count": 1
+          }
+        ],
+        "targets": {
+          "min_success_rate_pct": 98.0,
+          "max_failure_rate_pct": 1.0,
+          "max_rollback_p95_ms": 180000,
+          "min_trace_coverage_pct": 100.0
+        },
+        "totals": {
+          "events": 100,
+          "success": 99,
+          "failed": 1,
+          "post_check_failures": 1,
+          "rollback_attempted": 1,
+          "rollback_success": 1,
+          "approval_context_events": 100,
+          "approval_traced": 100
+        }
+      },
+      "autonomy_kpi": {
+        "window_days": 30,
+        "status": "healthy",
+        "mttd_seconds": 120.0,
+        "mttd_p95_seconds": 120,
+        "mttr_seconds": null,
+        "mttr_p95_seconds": null,
+        "auto_action_rate_pct": 75.0,
+        "operator_intervention_rate_pct": 25.0,
+        "mttd_signal_coverage_pct": 100.0,
+        "mttr_coverage_pct": 100.0,
+        "targets": {
+          "min_auto_action_rate_pct": 60.0,
+          "max_operator_intervention_rate_pct": 40.0
+        },
+        "trend_7d": [
+          {
+            "date": "2026-03-03",
+            "issues_created": 0,
+            "issues_resolved": 0,
+            "actions_executed": 0,
+            "actions_auto": 0,
+            "actions_manual": 0,
+            "auto_action_rate_pct": 0.0,
+            "operator_intervention_rate_pct": 0.0
+          },
+          {
+            "date": "2026-03-04",
+            "issues_created": 0,
+            "issues_resolved": 0,
+            "actions_executed": 0,
+            "actions_auto": 0,
+            "actions_manual": 0,
+            "auto_action_rate_pct": 0.0,
+            "operator_intervention_rate_pct": 0.0
+          },
+          {
+            "date": "2026-03-05",
+            "issues_created": 0,
+            "issues_resolved": 0,
+            "actions_executed": 0,
+            "actions_auto": 0,
+            "actions_manual": 0,
+            "auto_action_rate_pct": 0.0,
+            "operator_intervention_rate_pct": 0.0
+          },
+          {
+            "date": "2026-03-06",
+            "issues_created": 0,
+            "issues_resolved": 0,
+            "actions_executed": 0,
+            "actions_auto": 0,
+            "actions_manual": 0,
+            "auto_action_rate_pct": 0.0,
+            "operator_intervention_rate_pct": 0.0
+          },
+          {
+            "date": "2026-03-07",
+            "issues_created": 0,
+            "issues_resolved": 0,
+            "actions_executed": 0,
+            "actions_auto": 0,
+            "actions_manual": 0,
+            "auto_action_rate_pct": 0.0,
+            "operator_intervention_rate_pct": 0.0
+          },
+          {
+            "date": "2026-03-08",
+            "issues_created": 0,
+            "issues_resolved": 0,
+            "actions_executed": 0,
+            "actions_auto": 0,
+            "actions_manual": 0,
+            "auto_action_rate_pct": 0.0,
+            "operator_intervention_rate_pct": 0.0
+          },
+          {
+            "date": "2026-03-09",
+            "issues_created": 20,
+            "issues_resolved": 0,
+            "actions_executed": 20,
+            "actions_auto": 15,
+            "actions_manual": 5,
+            "auto_action_rate_pct": 75.0,
+            "operator_intervention_rate_pct": 25.0
+          }
+        ],
+        "totals": {
+          "issues_created": 20,
+          "issues_resolved": 0,
+          "mttd_samples": 20,
+          "mttr_samples": 0,
+          "actions_executed": 20,
+          "actions_auto": 15,
+          "actions_manual": 5
+        }
+      },
+      "northbound_kpi": {
+        "window_days": 30,
+        "status": "healthy",
+        "success_rate_pct": 99.26,
+        "avg_attempts": 1.01,
+        "p95_attempts": 1,
+        "failure_causes": [
+          {
+            "cause": "timeout",
+            "count": 4
+          }
+        ],
+        "modes": [
+          {
+            "mode": "servicenow",
+            "count": 137
+          },
+          {
+            "mode": "jira",
+            "count": 137
+          },
+          {
+            "mode": "splunk",
+            "count": 134
+          },
+          {
+            "mode": "elastic",
+            "count": 130
+          }
+        ],
+        "totals": {
+          "deliveries": 538,
+          "success": 534,
+          "failed": 4,
+          "failed_24h": 4
+        }
+      }
+    },
+    "evidence": {
+      "sample_minimums_enforced": true,
+      "sample_totals": {
+        "discovery_jobs": 30,
+        "change_events": 100,
+        "northbound_deliveries": 538,
+        "autonomy_issues_created": 20,
+        "autonomy_actions_executed": 20
+      },
+      "sample_thresholds": {
+        "discovery_jobs": 30,
+        "change_events": 60,
+        "northbound_deliveries": 500,
+        "autonomy_issues_created": 20,
+        "autonomy_actions_executed": 20
+      },
+      "sample_coverage": {
+        "autonomy_actions_executed": {
+          "observed": 20,
+          "threshold": 20,
+          "coverage_pct": 100.0,
+          "met": true,
+          "deficit": 0.0
+        },
+        "autonomy_issues_created": {
+          "observed": 20,
+          "threshold": 20,
+          "coverage_pct": 100.0,
+          "met": true,
+          "deficit": 0.0
+        },
+        "change_events": {
+          "observed": 100,
+          "threshold": 60,
+          "coverage_pct": 166.67,
+          "met": true,
+          "deficit": 0.0
+        },
+        "discovery_jobs": {
+          "observed": 30,
+          "threshold": 30,
+          "coverage_pct": 100.0,
+          "met": true,
+          "deficit": 0.0
+        },
+        "northbound_deliveries": {
+          "observed": 538,
+          "threshold": 500,
+          "coverage_pct": 107.6,
+          "met": true,
+          "deficit": 0.0
+        }
+      }
+    }
+  },
+  "history": {
+    "range": {
+      "days": 30,
+      "since": 1770437615,
+      "limit": 90
+    },
+    "filters": {
+      "site_id": null,
+      "status": null
+    },
+    "totals": {
+      "count": 0,
+      "by_status": {}
+    },
+    "latest": null,
+    "previous": null,
+    "coverage": {
+      "expected_days": 30,
+      "days_with_snapshots": 0,
+      "missing_days": 30,
+      "coverage_pct": 0.0,
+      "snapshots_per_active_day_avg": 0.0,
+      "latest_age_hours": null,
+      "status_transition_count": 0
+    },
+    "comparison": {
+      "available": false,
+      "latest_status": null,
+      "previous_status": null,
+      "status_direction": "unknown",
+      "status_changed": false,
+      "pass_delta": null,
+      "fail_delta": null,
+      "unknown_delta": null,
+      "sample_total_delta": {},
+      "interval_hours": null
+    },
+    "current_streak": {
+      "status": null,
+      "snapshots": 0,
+      "days": 0
+    },
+    "latest_failed_checks": [],
+    "latest_unknown_checks": [],
+    "top_failing_checks": [],
+    "top_unknown_checks": [],
+    "sample_coverage_latest": {},
+    "trend_by_day": [],
+    "items": []
+  }
+}
