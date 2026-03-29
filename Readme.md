@@ -6,6 +6,12 @@ It is designed as a discovery-first network operations workspace for teams that 
 NetSphere Free는 NetSphere 플랫폼의 공개형 시작점입니다.
 수동 점검 중심의 운영에서 벗어나 자동 탐지, 토폴로지 가시화, 정제된 데이터 수집, Connected NMS 흐름으로 넘어가고 싶은 팀을 위한 입문형 워크스페이스입니다.
 
+## Visit The Homepage / 공식 홈페이지
+
+**Explore NetSphere on the web:** [https://netsphereapp.com/](https://netsphereapp.com/)
+
+**공식 홈페이지에서 NetSphere를 먼저 확인해보세요:** [https://netsphereapp.com/](https://netsphereapp.com/)
+
 ## Why This Repository / 이 레포가 보여주는 것
 
 - Multi-vendor auto discovery and inventory collection
@@ -18,6 +24,7 @@ NetSphere Free는 NetSphere 플랫폼의 공개형 시작점입니다.
 
 | Need | Link |
 |---|---|
+| Official homepage / 공식 홈페이지 | [netsphereapp.com](https://netsphereapp.com/) |
 | Product overview / 제품 개요 | [docs/FEATURE_BROCHURE.md](docs/FEATURE_BROCHURE.md) |
 | Free edition brochure / Free 소개 자료 | [docs/PREVIEW_BROCHURE.md](docs/PREVIEW_BROCHURE.md) |
 | Documentation index / 문서 목차 | [docs/README.md](docs/README.md) |
