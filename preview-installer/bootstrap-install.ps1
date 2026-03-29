@@ -94,9 +94,6 @@ if (-not $Quiet) {
   Write-Host "NetSphere Free installed."
   Write-Host "Install dir: $InstallDir"
   Write-Host "Desktop shortcut created."
-  Write-Host "Start menu folder: NetSphere Free"
-  Write-Host "Open NetSphere Free from the desktop or start menu."
-  Write-Host "The launcher will start the local runtime and open the browser automatically."
 }
 
 if (-not $NoLaunch -and (Test-Path $launchCmd)) {

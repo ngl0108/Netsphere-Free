@@ -29,14 +29,12 @@ Expected result:
 2. Finish the installer without errors.
 3. Launch `NetSphere Free` from the desktop or start menu shortcut.
 4. Confirm the browser opens the local UI.
-5. Do not require the user to type the localhost URL manually during the normal flow.
 
 Expected result:
 
 - install succeeds
 - shortcut starts the app
 - local UI loads in the browser
-- customer can treat the product like an app launcher, not a raw local URL
 
 ## 3. First-run onboarding
 

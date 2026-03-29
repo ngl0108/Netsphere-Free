@@ -50,13 +50,6 @@ Open:
 - `http://localhost:18080`
 
 The `up.ps1` script opens the browser automatically when the UI becomes ready.
-Treat the URL as a fallback for troubleshooting, not as the primary customer instruction.
-
-Recommended operator instruction:
-
-- "Run NetSphere Free"
-- "The browser will open automatically"
-
 If you prefer not to auto-open the browser, use:
 
 ```powershell

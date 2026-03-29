@@ -1,9 +1,5 @@
 # NetSphere Free
 
-[![Website](https://img.shields.io/badge/Website-netsphereapp.com-0A66C2?style=for-the-badge)](https://netsphereapp.com/)
-[![Docs](https://img.shields.io/badge/Docs-Explore%20Guides-1f883d?style=for-the-badge)](docs/README.md)
-[![Launch](https://img.shields.io/badge/Launch-Open%20NetSphere%20Free-f59e0b?style=for-the-badge)](Netsphere_Free_Deploy/preview-collector-local/README.md)
-
 NetSphere Free is the public entry point to the NetSphere platform.
 It is designed as a discovery-first network operations workspace for teams that want to move from manual visibility to structured topology, sanitized data collection, and connected NMS workflows.
 
@@ -15,22 +11,6 @@ NetSphere Free는 NetSphere 플랫폼의 공개형 시작점입니다.
 **Explore NetSphere on the web:** [https://netsphereapp.com/](https://netsphereapp.com/)
 
 **공식 홈페이지에서 NetSphere를 먼저 확인해보세요:** [https://netsphereapp.com/](https://netsphereapp.com/)
-
-## Customer Launch Experience / 고객 실행 경험
-
-Customers do not need to memorize a local IP address to open NetSphere Free.
-The intended experience is:
-
-- Launch `NetSphere Free` from the desktop or start menu shortcut
-- Let the launcher start the local runtime automatically
-- Open the browser without manually typing a URL
-
-고객은 NetSphere Free를 열기 위해 로컬 IP 주소를 외울 필요가 없습니다.
-권장 경험은 다음과 같습니다.
-
-- 바탕화면 또는 시작 메뉴의 `NetSphere Free` 바로가기 실행
-- 런처가 로컬 런타임을 자동으로 시작
-- 사용자가 URL을 직접 입력하지 않아도 브라우저가 열림
 
 ## Why This Repository / 이 레포가 보여주는 것
 
@@ -89,10 +69,6 @@ powershell -ExecutionPolicy Bypass -File .\Netsphere_Free_Deploy\preview-collect
 ### 2. Open the UI
 
 - `http://localhost:18080`
-
-You normally should not need to type this manually because the launcher opens the browser for you.
-
-보통은 런처가 브라우저를 자동으로 열어주므로 이 주소를 직접 입력할 필요가 없습니다.
 
 ### 3. Go deeper if needed
 
