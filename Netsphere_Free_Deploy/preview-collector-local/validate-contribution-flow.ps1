@@ -8,7 +8,11 @@ $ErrorActionPreference = "Stop"
 
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
 $collectorBase = "http://localhost:18080/api/v1"
-$intakeStorage = Join-Path $repoRoot "Netsphere_Free_Backend\preview_contributions"
+$intakeStorageCandidates = @(
+  $env:NETSPHERE_PREVIEW_INTAKE_STORAGE,
+  (Join-Path $repoRoot "..\intake server\Netsphere_Intake_Server\preview_contributions"),
+  (Join-Path $repoRoot "Netsphere_Free_Backend\preview_contributions")
+)
 $sampleRaw = @"
 hostname edge-sw-01
 Mgmt IP: 10.10.1.10
@@ -17,9 +21,34 @@ Contact: admin@example.com
 snmp community public-secret
 "@
 
+function Resolve-PreviewStoragePath {
+  foreach ($candidate in $intakeStorageCandidates) {
+    if ([string]::IsNullOrWhiteSpace($candidate)) {
+      continue
+    }
+
+    $fullPath = [System.IO.Path]::GetFullPath($candidate)
+    if (Test-Path $fullPath) {
+      return $fullPath
+    }
+  }
+
+  return $null
+}
+
+function Get-PreviewStorageMessage {
+  if ([string]::IsNullOrWhiteSpace($intakeStorage)) {
+    return "No locally accessible preview contribution storage was detected."
+  }
+
+  return "Using preview contribution storage: $intakeStorage"
+}
+
+$intakeStorage = Resolve-PreviewStoragePath
+
 function Get-PreviewFileCount {
-  if (-not (Test-Path $intakeStorage)) {
-    return 0
+  if ([string]::IsNullOrWhiteSpace($intakeStorage) -or -not (Test-Path $intakeStorage)) {
+    return $null
   }
   return @((Get-ChildItem -Recurse -Filter "preview-*.json" $intakeStorage)).Count
 }
@@ -155,7 +184,7 @@ function Invoke-CollectorContributionFlow {
   } | ConvertTo-Json -Depth 6))
 
   $afterCount = Get-PreviewFileCount
-  if ($afterCount -le $beforeCount) {
+  if ($null -ne $beforeCount -and $null -ne $afterCount -and $afterCount -le $beforeCount) {
     throw "Intake storage did not receive a new preview contribution file."
   }
 
@@ -168,11 +197,16 @@ function Invoke-CollectorContributionFlow {
   }
 
   Write-Host "Collector-local contribution flow passed." -ForegroundColor Green
-  Write-Host ("New intake file count: {0} -> {1}" -f $beforeCount, $afterCount) -ForegroundColor Green
+  if ($null -ne $beforeCount -and $null -ne $afterCount) {
+    Write-Host ("New intake file count: {0} -> {1}" -f $beforeCount, $afterCount) -ForegroundColor Green
+  } else {
+    Write-Host "Skipped filesystem contribution count check because intake storage is not locally accessible." -ForegroundColor Yellow
+  }
 }
 
 Assert-HttpStatus -Url "$collectorBase/auth/bootstrap/status" -Label "collector-local bootstrap status"
 Assert-HttpStatus -Url "http://127.0.0.1:8015/api/v1/auth/bootstrap/status" -Label "preview intake bootstrap status"
+Write-Host (Get-PreviewStorageMessage) -ForegroundColor DarkGray
 
 Ensure-CollectorInitialAdmin
 Invoke-CollectorContributionFlow

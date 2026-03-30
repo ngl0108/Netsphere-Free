@@ -1,0 +1,54 @@
+{
+  "slug": "free-enterprise-visibility",
+  "title": "Free Enterprise Visibility",
+  "edition": "free",
+  "topology_kind": "enterprise",
+  "description": "본사와 다수 브랜치가 연결된 엔터프라이즈 가시성 중심 FREE 시나리오",
+  "user_counts": {
+    "admin": 1,
+    "editor": 2,
+    "viewer": 4
+  },
+  "managed_limit": 50,
+  "scale": {
+    "hq_core": 2,
+    "hq_distribution": 4,
+    "hq_access": 18,
+    "hq_security": 2,
+    "wireless_controllers": 1,
+    "wireless_aps_hq": 12,
+    "branches": 5,
+    "branch_router_per_site": 1,
+    "branch_access_per_site": 6,
+    "branch_security_per_site": 1
+  },
+  "cloud": {
+    "enabled": false,
+    "accounts": 0,
+    "resources_per_account": 0
+  },
+  "issues": {
+    "critical": 3,
+    "warning": 8,
+    "info": 5
+  },
+  "known_errors": 4,
+  "metrics_samples_per_managed_device": 4,
+  "topology_snapshots": 3,
+  "service_groups": [
+    {
+      "name": "민원 포털",
+      "criticality": "high",
+      "owner_team": "Digital Service",
+      "device_roles": ["core", "distribution", "security", "branch_router"],
+      "max_devices": 16
+    },
+    {
+      "name": "사내 업무망",
+      "criticality": "elevated",
+      "owner_team": "Enterprise Ops",
+      "device_roles": ["access", "distribution", "wireless_controller", "wireless_ap"],
+      "max_devices": 28
+    }
+  ]
+}

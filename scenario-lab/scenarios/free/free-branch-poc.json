@@ -1,0 +1,49 @@
+{
+  "slug": "free-branch-poc",
+  "title": "Free Branch PoC",
+  "edition": "free",
+  "topology_kind": "branch",
+  "description": "소규모 브랜치와 무선 엣지, 기본 NMS 체험에 맞춘 FREE PoC 시나리오",
+  "user_counts": {
+    "admin": 1,
+    "editor": 1,
+    "viewer": 2
+  },
+  "managed_limit": 50,
+  "scale": {
+    "branches": 3,
+    "branch_router_per_site": 1,
+    "branch_access_per_site": 6,
+    "branch_security_per_site": 1,
+    "wireless_aps_per_site": 4
+  },
+  "cloud": {
+    "enabled": false,
+    "accounts": 0,
+    "resources_per_account": 0
+  },
+  "issues": {
+    "critical": 2,
+    "warning": 5,
+    "info": 3
+  },
+  "known_errors": 3,
+  "metrics_samples_per_managed_device": 4,
+  "topology_snapshots": 2,
+  "service_groups": [
+    {
+      "name": "지점 업무망",
+      "criticality": "elevated",
+      "owner_team": "Branch Ops",
+      "device_roles": ["branch_router", "access", "security"],
+      "max_devices": 18
+    },
+    {
+      "name": "무선 서비스",
+      "criticality": "standard",
+      "owner_team": "Field Ops",
+      "device_roles": ["wireless_ap"],
+      "max_devices": 12
+    }
+  ]
+}

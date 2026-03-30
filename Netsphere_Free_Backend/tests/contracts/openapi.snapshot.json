@@ -624,7 +624,7 @@
             "type": "boolean"
           },
           "bundle": {
-            "format": "binary",
+            "contentMediaType": "application/octet-stream",
             "title": "Bundle",
             "type": "string"
           },
@@ -647,7 +647,7 @@
             "type": "string"
           },
           "file": {
-            "format": "binary",
+            "contentMediaType": "application/octet-stream",
             "title": "File",
             "type": "string"
           },
@@ -10846,6 +10846,13 @@
       },
       "ValidationError": {
         "properties": {
+          "ctx": {
+            "title": "Context",
+            "type": "object"
+          },
+          "input": {
+            "title": "Input"
+          },
           "loc": {
             "items": {
               "anyOf": [
@@ -15753,6 +15760,50 @@
         ]
       }
     },
+    "/api/v1/devices/Netsphere_Free_Deploy/vlan": {
+      "post": {
+        "operationId": "deploy_vlan_bulk_api_v1_devices_Netsphere_Free_Deploy_vlan_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VlanDeployRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "security": [
+          {
+            "OAuth2PasswordBearer": []
+          }
+        ],
+        "summary": "Deploy Vlan Bulk",
+        "tags": [
+          "devices"
+        ]
+      }
+    },
     "/api/v1/devices/analytics": {
       "get": {
         "operationId": "get_analytics_data_api_v1_devices_analytics_get",
@@ -15794,50 +15845,6 @@
           }
         ],
         "summary": "Get Analytics Data",
-        "tags": [
-          "devices"
-        ]
-      }
-    },
-    "/api/v1/devices/Netsphere_Free_Deploy/vlan": {
-      "post": {
-        "operationId": "deploy_vlan_bulk_api_v1_devices_deploy_vlan_post",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/VlanDeployRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "content": {
-              "application/json": {
-                "schema": {}
-              }
-            },
-            "description": "Successful Response"
-          },
-          "422": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HTTPValidationError"
-                }
-              }
-            },
-            "description": "Validation Error"
-          }
-        },
-        "security": [
-          {
-            "OAuth2PasswordBearer": []
-          }
-        ],
-        "summary": "Deploy Vlan Bulk",
         "tags": [
           "devices"
         ]
