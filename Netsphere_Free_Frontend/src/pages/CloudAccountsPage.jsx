@@ -1819,7 +1819,7 @@ const CloudAccountsPage = () => {
                         </div>
                       )}
                       <div className="mt-2 flex flex-wrap gap-2">
-                        {!!String(operation?.failure_reason_code || '').trim() ? (
+                        {String(operation?.failure_reason_code || '').trim() ? (
                           <span className={`px-2 py-0.5 rounded-full text-[11px] font-bold ${ledgerFailureReasonClass(operation.failure_reason_code)}`}>
                             {ledgerFailureReasonLabel(operation.failure_reason_code, t, operation.failure_reason_label)}
                           </span>
@@ -2782,13 +2782,13 @@ const CloudAccountsPage = () => {
                                               blockers={Number(op.blocker_count || 0)}
                                             </span>
                                           ) : null}
-                                          {!!String(op.failure_reason_code || '').trim() ? (
+                                          {String(op.failure_reason_code || '').trim() ? (
                                             <span className={`px-2 py-0.5 rounded-full font-bold ${ledgerFailureReasonClass(op.failure_reason_code)}`}>
                                               {ledgerFailureReasonLabel(op.failure_reason_code, t, op.failure_reason_label)}
                                             </span>
                                           ) : null}
                                         </div>
-                                        {!!String(op.summary || '').trim() ? (
+                                        {String(op.summary || '').trim() ? (
                                           <div className="mt-1 text-[11px] text-gray-600 dark:text-gray-300">{String(op.summary)}</div>
                                         ) : null}
                                       </div>

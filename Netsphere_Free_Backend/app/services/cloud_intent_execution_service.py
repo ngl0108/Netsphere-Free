@@ -130,6 +130,8 @@ class CloudIntentExecutionService:
     @staticmethod
     def _terraform_command_prefix() -> List[str]:
         raw = CloudIntentExecutionService.terraform_binary()
+        if Path(raw).exists():
+            return [raw]
         if any(ch.isspace() for ch in raw) or raw.startswith('"'):
             parts = [str(p).strip().strip('"') for p in shlex.split(raw, posix=False) if str(p).strip()]
             return parts or ["terraform"]

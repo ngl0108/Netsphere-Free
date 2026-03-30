@@ -14,6 +14,10 @@ const gateScript = path.resolve(
   'tools',
   'run_local_quality_gate.py',
 );
+const venvPython =
+  process.platform === 'win32'
+    ? path.resolve(repoRoot, '.venv', 'Scripts', 'python.exe')
+    : path.resolve(repoRoot, '.venv', 'bin', 'python');
 
 if (process.env.SKIP_PREBUILD_GATE === '1') {
   console.log('[prebuild-gate] SKIP_PREBUILD_GATE=1, skipping gate.');
@@ -26,15 +30,17 @@ if (!existsSync(gateScript)) {
 }
 
 const candidates =
-  process.platform === 'win32'
-    ? [
+  (existsSync(venvPython) ? [{ cmd: venvPython, args: [] }] : []).concat(
+    process.platform === 'win32'
+      ? [
         { cmd: 'python', args: [] },
         { cmd: 'py', args: ['-3'] },
       ]
-    : [
+      : [
         { cmd: 'python3', args: [] },
         { cmd: 'python', args: [] },
-      ];
+      ],
+  );
 
 const python = candidates.find((candidate) => {
   const probe = spawnSync(candidate.cmd, [...candidate.args, '--version'], {

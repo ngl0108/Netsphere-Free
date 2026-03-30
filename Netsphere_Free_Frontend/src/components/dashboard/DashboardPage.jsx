@@ -30,6 +30,7 @@ import {
 } from '../../utils/serviceOperations';
 import {
   buildDevicePath,
+  buildGrafanaAlertingCenterUrl,
   buildGrafanaFleetHealthUrl,
   buildObservabilityPath,
   buildTopologyPath,
@@ -854,6 +855,14 @@ const DashboardPage = () => {
     const status = normalizeStatusToken(releaseEvidence?.refresh?.status);
     return status === 'queued' || status === 'running';
   }, [releaseEvidence]);
+  const selectedSiteRow = useMemo(() => {
+    if (!selectedSite || !Array.isArray(sites)) return null;
+    return sites.find((site) => String(site?.id ?? '') === String(selectedSite)) || null;
+  }, [selectedSite, sites]);
+  const selectedSiteLabel = String(selectedSiteRow?.name || selectedSiteRow?.site_name || '').trim();
+  const dashboardIssueCount = Array.isArray(stats?.issues)
+    ? stats.issues.length
+    : Number(stats?.active_issues || 0);
 
   const dashboardHasActiveSignals = useMemo(() => {
     const issueCount = Array.isArray(stats?.issues)
@@ -2209,7 +2218,7 @@ const DashboardPage = () => {
               <div className="mt-3 flex flex-wrap items-center gap-2 text-[11px] text-gray-500">
                 <span className="rounded-full border border-gray-200 px-2 py-0.5 dark:border-white/10">
                   {selectedSiteRow
-                    ? `${t('dashboard_scope', 'Scope')}: ${selectedSiteRow.name}`
+                    ? `${t('dashboard_scope', 'Scope')}: ${selectedSiteLabel || String(selectedSite)}`
                     : t('dashboard_scope_global', 'Scope: Global')}
                 </span>
                 <span className={`rounded-full px-2 py-0.5 font-semibold ${statusBadgeClass(northboundStatus)}`}>
@@ -2305,7 +2314,7 @@ const DashboardPage = () => {
               </div>
               <div className="mt-1 text-xs text-gray-500">
                 {selectedSiteRow
-                  ? `${selectedSiteRow.name} ${t('dashboard_scope_suffix', 'scope')}`
+                  ? `${selectedSiteLabel || String(selectedSite)} ${t('dashboard_scope_suffix', 'scope')}`
                   : t('dashboard_scope_global', 'Scope: Global')}
               </div>
             </div>

@@ -174,6 +174,7 @@ const OperationsReportsPage = () => {
   const { toast } = useToast();
   const canOperate = isAtLeast('operator');
   const canAdmin = isAtLeast('admin');
+  const showInlineFocusedGroupCard = searchParams.get('inlineFocusCard') === '1';
   const [loading, setLoading] = useState(true);
   const [downloading, setDownloading] = useState({
     operatorPackage: false,
@@ -1298,7 +1299,7 @@ const OperationsReportsPage = () => {
                 </div>
               ) : (
                 <>
-                  {false && (focusedGroupId > 0 || focusedGroupName) ? (
+                  {showInlineFocusedGroupCard && (focusedGroupId > 0 || focusedGroupName) ? (
                     <div data-testid="operations-reports-focused-group" className="rounded-2xl border border-cyan-200/80 bg-cyan-50/70 p-4 dark:border-cyan-900/50 dark:bg-cyan-950/15">
                       <div className="flex flex-wrap items-start justify-between gap-3">
                         <div>

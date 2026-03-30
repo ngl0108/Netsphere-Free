@@ -406,7 +406,6 @@
     edition_compare_transition_free_title: 'Stay on Free when you are still validating asset visibility',
     edition_compare_transition_free_desc: 'Use Free when discovery, topology, masked parser contribution, and a small managed monitoring pool are enough for the current team and footprint.',
     edition_compare_next_policy: 'Review how the installation policy keeps masked parser contribution controlled and optional',
-    edition_compare_next_policy: 'Review how the installation policy keeps masked parser contribution controlled and optional',
     edition_compare_transition_pro_title: 'Move to Pro when operations are broader than the discovery preview',
     edition_compare_transition_pro_desc: 'Pro is the right next step once more than the Free managed-node pool needs active monitoring, or when service operations, preventive checks, approvals, evidence, and cloud control become daily work.',
     edition_compare_next_actions_title: 'Suggested next actions',

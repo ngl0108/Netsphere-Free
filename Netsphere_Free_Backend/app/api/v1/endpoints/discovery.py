@@ -15,7 +15,7 @@ from app.services.discovery_service import DiscoveryService
 from app.db.session import SessionLocal
 from app.models.discovery import DiscoveryJob, DiscoveredDevice
 from app.tasks.discovery_dispatch import dispatch_discovery_scan, dispatch_neighbor_crawl
-from app.tasks.device_sync import schedule_ssh_sync_batch
+from app.tasks.device_sync import enqueue_ssh_sync_batch, schedule_ssh_sync_batch
 from app.tasks.topology_dispatch import dispatch_topology_refresh
 from app.models.settings import SystemSetting
 from app.models.topology import TopologySnapshot
